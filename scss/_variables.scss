@@ -1,0 +1,55 @@
+// Breakpoints
+
+$breakpoints-mobile: 480px; 
+$breakpoint-desktop: 1200px; 
+
+// Font-types
+$font-titles-pages: ('Shrikhand', 'cursive');
+$font-texts-titles: ('Roboto', sans-serif);
+
+
+// Colors
+$primary-color:rgba(147, 86, 220, 1); 
+$secondary-color:rgba(255, 121, 218, 1); 
+$tertiary-color:#99E2D0; 
+$bg-color-cards-logo: #ffffff;
+$text-color: rgb(0, 0, 0); 
+$bg-grey: #F2F2F2;
+
+// Font sizes
+$font-size-title: 20px; 
+$font-size-text: 18px; 
+
+// paddings/margins 
+$padding-txts: 16px 16px 16px 16px; 
+$padding-titles: 16px 16px 16px 16px; 
+$padding-titles-cards: 16px 16px 16px 16px; 
+
+$margin-page: 0 24px 0 24px; 
+
+
+// buttons 
+$radius-btn: 8px;
+$txt-btn: #ffffff; 
+$btn-color: $secondary-color; 
+$btn-size: 24px 24px; 
+
+
+// logo
+$logo-height-home: 56px;
+$logo-height: 40px; 
+$logo-height-footer: 24px; 
+
+$logo-width-home: 176px;
+$logo-width: 40px; 
+$logo-width-footer: 24px; 
+
+
+
+// icons 
+
+// $fill-i: ; 
+$i-heart-size: 16px, 16px; 
+$i-hand-size: 16px, 16px; 
+$i-ustensils-size: 16px, 16px; 
+
