@@ -6,9 +6,14 @@ $breakpoint-desktop: 1200px;
 // Font-types
 $font-titles-pages: ('Shrikhand', 'cursive');
 $font-texts-titles: ('Roboto', sans-serif);
+// Font sizes
+$font-size-title: 20px; 
+$font-size-text: 18px; 
 
 
-// Colors
+$shadow-search: inset 0px 20px 24px -23px rgba(17, 17, 17, 0.55); 
+
+// Colors---------------
 $primary-color:rgba(147, 86, 220, 1); 
 $secondary-color:rgba(255, 121, 218, 1); 
 $tertiary-color:#99E2D0; 
@@ -16,11 +21,8 @@ $bg-color-cards-logo: #ffffff;
 $text-color: rgb(0, 0, 0); 
 $bg-grey: #F2F2F2;
 
-// Font sizes
-$font-size-title: 20px; 
-$font-size-text: 18px; 
 
-// paddings/margins 
+// paddings/margins------------
 $padding-txts: 16px 16px 16px 16px; 
 $padding-titles: 16px 16px 16px 16px; 
 $padding-titles-cards: 16px 16px 16px 16px; 
@@ -28,28 +30,53 @@ $padding-titles-cards: 16px 16px 16px 16px;
 $margin-page: 0 24px 0 24px; 
 
 
-// buttons 
-$radius-btn: 8px;
+// buttons-------------------
+$radius-btn: 24px;
 $txt-btn: #ffffff; 
 $btn-color: $secondary-color; 
-$btn-size: 24px 24px; 
+$btn-height: 48px;
+$btn-width: 192px; 
+$btn-shadow: 1px 6px 20px -4px rgba(112,112,112,0.72);
 
 
-// logo
+// logo------------------------
 $logo-height-home: 56px;
 $logo-height: 40px; 
 $logo-height-footer: 24px; 
 
-$logo-width-home: 176px;
+$logo-width-home: 192px;
 $logo-width: 40px; 
 $logo-width-footer: 24px; 
 
 
 
-// icons 
-
+// icons-----------------
 // $fill-i: ; 
 $i-heart-size: 16px, 16px; 
 $i-hand-size: 16px, 16px; 
 $i-ustensils-size: 16px, 16px; 
+
+
+// How-to part in header--------------------
+$shadow-card-nav: 2px 15px 18px -3px rgba(0,0,0,0.68);; 
+// $hover-card-nav: ; 
+$box-height: 96px; 
+$box-width: 240px; 
+$box-border: 24px; 
+$color-num-box: rgba(147, 86, 220, 1); 
+
+
+// cards for restaurants-----------------
+// card-height-restaurant: ; 
+// card-width-restaurant: ; 
+// card-shadow-restaurant: ; 
+// card-radius-restaurant: ; 
+
+
+
+// // image card for restaurants-----------------
+//  img-height-restaurant: ; 
+//  img-width-restaurant: ; 
+
+
 

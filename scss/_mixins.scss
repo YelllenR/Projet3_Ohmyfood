@@ -1,50 +1,50 @@
+// ------------------Flex behavior---------------------
 @mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@mixin flex-column{
+@mixin flex-column {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-@mixin typography-title-pages{
+
+
+// ----------------------Typo----------------------------
+@mixin typography-title-pages {
     font-family: $font-titles-pages;
     font-size: 24px;
     color: rgb(1, 1, 1);
 }
 
-@mixin typography-title{
+@mixin typography-title {
     font-family: $font-texts-titles;
     font-size: 24px;
     color: rgb(1, 1, 1);
 }
 
-@mixin typography-txts{
+@mixin typography-txts {
     font-family: $font-texts-titles;
     font-size: 16px;
     color: rgb(1, 1, 1);
 }
 
-@mixin typography-footer{
+@mixin typography-footer {
     font-family: $font-texts-titles;
     font-size: 8px;
     color: rgb(255, 255, 255);
 }
 
-// @mixin media-query{ --For media queries
-//     @media screen {
-//         @content;
-//     }
-// }
 
 
-// color gradients for buttons
+
+// ----------------------Button----------------------------
 @mixin btn-gradient {
-    background: linear-gradient(175deg, rgba(255, 121, 218, 1) 2%, rgba(147, 86, 220, 1) 74%);
+    background: linear-gradient(174deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
     color: $txt-btn;
 }
 
@@ -52,21 +52,38 @@
     background: linear-gradient(5deg, rgba(255, 121, 218, 1) 14%, rgba(147, 86, 220, 1) 48%);
 }
 
-@mixin logo-pages{
+
+@mixin btn-styling {
+    height: $btn-height;
+    width: $btn-width;
+    @include btn-gradient();
+    border-radius: $radius-btn;
+    border-style: none; 
+    box-shadow: $btn-shadow;
+}
+
+
+
+
+
+
+
+// -------------------------Logo---------------------------
+@mixin logo-pages {
     height: $logo-height;
     width: $logo-width;
     color: $text-color;
     background-color: $bg-color-cards-logo;
 }
 
-@mixin logo-home{
+@mixin logo-home {
     height: $logo-height-home;
     width: $logo-width-home;
     color: $text-color;
     background-color: $bg-color-cards-logo;
 }
 
-@mixin logo-footer{
+@mixin logo-footer {
     height: $logo-height-footer;
     width: $logo-width-footer;
     color: $text-color;
