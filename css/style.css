@@ -91,4 +91,31 @@
   font-family: "Roboto", sans-serif;
   align-self: flex-start;
   padding-bottom: 32px;
+}
+
+ol {
+  counter-reset: li;
+  list-style-type: none;
+  font-size: 16px;
+  width: 100%;
+}
+ol li {
+  position: relative;
+  height: 96px;
+  width: 100%;
+  border: 1px solid red;
+  padding: 16px 16px 16px 16px;
+}
+ol li:before {
+  content: counter(li);
+  counter-increment: li;
+  height: 32px;
+  width: 24px;
+  padding-right: 8px;
+  padding-left: 8px;
+  background-color: rgb(147, 86, 220);
+  border-radius: 50%;
+  color: #ffffff;
+  text-align: center;
+  left: 0;
 }/*# sourceMappingURL=style.css.map */
