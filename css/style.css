@@ -93,29 +93,48 @@
   padding-bottom: 32px;
 }
 
-ol {
+ul.howto-container__how {
   counter-reset: li;
   list-style-type: none;
   font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  height: auto;
 }
-ol li {
-  position: relative;
-  height: 96px;
-  width: 100%;
-  border: 1px solid red;
-  padding: 16px 16px 16px 16px;
+ul.howto-container__how li {
+  list-style-position: inside;
+  border: 1px solid black;
 }
-ol li:before {
+ul.howto-container__how li:before {
   content: counter(li);
   counter-increment: li;
-  height: 32px;
+  height: 24px;
   width: 24px;
-  padding-right: 8px;
-  padding-left: 8px;
+  border: 1px solid rgb(147, 86, 220);
   background-color: rgb(147, 86, 220);
   border-radius: 50%;
   color: #ffffff;
   text-align: center;
-  left: 0;
+  position: absolute;
+  left: 24px;
+}
+ul.howto-container__how .list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 56px;
+  width: 100%;
+  background-color: #F2F2F2;
+}
+
+.txt-list {
+  align-self: center;
+}
+
+i {
+  color: gray;
+  justify-self: center;
+  align-self: center;
 }/*# sourceMappingURL=style.css.map */
