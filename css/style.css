@@ -4,7 +4,7 @@
   margin: 0;
 }
 
-.wrapper {
+#wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,10 +17,15 @@
   align-items: center;
   width: 480px;
 }
-.nav-home__logo {
+.nav-home__img {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  box-shadow: 0px 4px 5px 0px rgba(98, 98, 98, 0.41);
+  z-index: 1;
+}
+.nav-home__logo {
   height: 56px;
   width: 192px;
   color: rgb(0, 0, 0);
@@ -32,12 +37,10 @@
   align-items: center;
   height: 52px;
   width: 100%;
-  background-color: #D9D9D9;
-  box-shadow: inset 0px 20px 24px -23px rgba(17, 17, 17, 0.55);
+  background-color: #eaeaea;
 }
 .nav-home__search input {
-  background-color: #D9D9D9;
-  box-shadow: inset 0px 20px 24px -23px rgba(17, 17, 17, 0.55);
+  background-color: #eaeaea;
   height: 52px;
   width: 112px;
   border-style: none;
@@ -53,7 +56,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #F2F2F2;
+  background-color: #f6f6f6;
   width: 100%;
 }
 .nav-home__styling .intro {
@@ -62,10 +65,12 @@
   color: rgb(1, 1, 1);
   padding: 24px 32px 16px 32px;
   align-self: center;
+  text-align: center;
 }
 .nav-home__styling .discover {
   font-family: "Roboto", sans-serif;
   padding: 8px 16px 24px 16px;
+  text-align: center;
 }
 .nav-home__styling .explore {
   height: 48px;
@@ -85,56 +90,122 @@
   align-items: center;
   width: 480px;
   margin: 0 24px 0 24px;
-  margin-top: 32px;
+  margin-top: 48px;
+  margin-bottom: 56px;
 }
 .howto-container__operation {
   font-family: "Roboto", sans-serif;
   align-self: flex-start;
-  padding-bottom: 32px;
+  padding-bottom: 24px;
 }
 
 ul.howto-container__how {
+  display: flex;
+  flex-direction: column;
   counter-reset: li;
   list-style-type: none;
   font-size: 16px;
-  line-height: 18px;
-  display: flex;
-  flex-direction: column;
   width: 100%;
   height: auto;
-}
-ul.howto-container__how li {
-  list-style-position: inside;
-  border: 1px solid black;
 }
 ul.howto-container__how li:before {
   content: counter(li);
   counter-increment: li;
   height: 24px;
   width: 24px;
-  border: 1px solid rgb(147, 86, 220);
   background-color: rgb(147, 86, 220);
   border-radius: 50%;
   color: #ffffff;
   text-align: center;
-  position: absolute;
-  left: 24px;
+  padding-top: 1%;
+  position: relative;
+  left: -8px;
 }
 ul.howto-container__how .list {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
-  height: 56px;
+  height: 72px;
   width: 100%;
-  background-color: #F2F2F2;
+  background-color: #f6f6f6;
 }
-
-.txt-list {
+ul.howto-container__how li.list {
+  margin-bottom: 16px;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: 6px 9px 15px -3px rgba(98, 98, 98, 0.38);
+}
+ul.howto-container__how .txt-list {
   align-self: center;
 }
-
-i {
-  color: gray;
-  justify-self: center;
+ul.howto-container__how i {
+  color: #7e7e7e;
+  justify-self: flex-start;
   align-self: center;
+  padding: 0 16px 0 16px;
+}
+ul.howto-container__how .txt-list {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  padding-left: 16px;
+}
+
+.home-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+  margin: 0 24px 0 24px;
+  background-color: #f6f6f6;
+}
+.home-cards__title {
+  font-family: "Roboto", sans-serif;
+  align-self: flex-start;
+  padding-top: 48px;
+  padding-bottom: 16px;
+}
+.home-cards__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid green;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.cards-img {
+  align-self: flex-start;
+  height: 100%;
+  width: 100%;
+  border: 1px solid red;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center bottom;
+     object-position: center bottom;
+  border-radius: 16px 16px 0 0;
+  z-index: 1;
+}
+
+.new {
+  z-index: 2;
+  height: 24px;
+  width: 80px;
+  background-color: #99E2D0;
+}
+
+.name-restaurant {
+  align-self: flex-start;
+  padding-top: 16px;
+}
+
+.restaurant-location {
+  align-self: flex-start;
+  padding-bottom: 16px;
 }/*# sourceMappingURL=style.css.map */

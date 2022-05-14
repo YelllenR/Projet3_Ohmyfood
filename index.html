@@ -17,9 +17,11 @@
 <body>
 
     <!--Header with logo, search, explore and operations-->
-    <header class="wrapper">
+    <header id="wrapper">
         <nav class="nav-home">
-            <img src="/Images/ohmyfood@2x.svg" alt="logo" class="nav-home__logo" />
+            <div class="nav-home__img">
+                <img src="/Images/ohmyfood@2x.svg" alt="logo" class="nav-home__logo" />
+            </div>
 
             <form class="nav-home__search">
                 <!--fa-solid fa-location-dot does not work - used **map-marker-alt instead-->
@@ -40,7 +42,7 @@
     </header>
 
     <!-- Section with how-to -->
-    <section class="wrapper">
+    <section id="wrapper">
         <div class="howto-container">
             <h2 class="howto-container__operation">
                 Fonctionnement
@@ -70,23 +72,30 @@
 
 
     <!--Section with restaurants cards and links-->
-    <section class="wrapper">
+    <section id="wrapper">
         <div class="home-cards">
-            <h2 class="title__home-cards">Restaurants</h2>
+            <h2 class="home-cards__title">Restaurants</h2>
 
-            <a class="container__home-cards" href="La-palette-du-goût.html">
-                <img src="" alt="card" class="cards">
-                <h3 class="name-restaurant"></h3>
-                <p class="restaurant-location"></p>
+            <a class="home-cards__container" href="La-palette-du-goût.html">
+
+                <div class="img-new"> 
+                    <img src="/Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                        alt="image of restaurant, la palette du goût" class="cards-img">
+                        <p class="new">Nouveau</p>
+               </div> 
+
+                <h3 class="name-restaurant">La palette du goût</h3>
+                <p class="restaurant-location">Ménilmontant</p>
+                <i class="far fa-heart"></i>
 
                 <span class="new-iheart">
-                    <p class="new">Nouveau</p>
-                    <i class="far fa-heart"></i>
+
+
                 </span>
             </a>
 
             <a class="container__home-cards" href="La-note-enchantée.html">
-                <img src="" alt="card" class="cards">
+                <img src="" alt="card" class="cards-img">
                 <h3 class="name-restaurant"></h3>
                 <p class="restaurant-location"></p>
 
@@ -97,7 +106,7 @@
             </a>
 
             <a class="container__home-cards" href="A-la-française.html">
-                <img src="" alt="card" class="cards">
+                <img src="" alt="card" class="cards-img">
                 <h3 class="name-restaurant"></h3>
                 <p class="restaurant-location"></p>
 
@@ -107,7 +116,7 @@
             </a>
 
             <a class="container__home-cards" href="Le-délice-des-sens.html">
-                <img src="" alt="card" class="cards">
+                <img src="" alt="card" class="cards-img">
                 <h3 class="name-restaurant"></h3>
                 <p class="restaurant-location"></p>
 
@@ -119,7 +128,7 @@
     </section>
 
     <!--Footer-->
-    <footer class="wrapper">
+    <footer id="wrapper">
         <div class="footercontainer">
             <img src="/Images/ohmyfood@2x.svg" alt="logo" class="footer__logo">
 
