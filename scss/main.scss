@@ -1,14 +1,11 @@
-@import '_variables.scss';
-@import '_mixins.scss';
-@import '_placeholder.scss';
+@import '/scss/partials/variables', '/scss/partials/mixins',
+'/scss/partials/placeholder', '/scss/partials/functions';
 
 
 
 // reinitializing values
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    @extend %reset-page;
 }
 
 #wrapper {
@@ -179,49 +176,10 @@ ul.howto-container__how {
         padding-top: 48px;
         padding-bottom: 16px;
     }
-
-    &__container {
-        @include flex-column;
-        border: 1px solid green;
-        width: $card-width-restaurant;
-        height: 100%;
-        // à changer si fonctionnement pas bon avec auto pour $card-height-restaurant
-        border-radius: $card-radius-restaurant;
-        padding: 0;
-        margin: 0;
-        text-decoration: none;
-        color: $text-color;
-        background-color: $bg-color-cards-logo;
-
-        .img-and-txt {
-            display: flex;
-
-            .new {
-                position: relative;
-                transform: translate(-96px, 32px);
-                z-index: 2;
-                background-color: $tertiary-color;
-                border: 1px solid $tertiary-color;
-                height: 32px;
-                width: auto;
-                padding: 8px;
-            }
-
-            .cards-img {
-                height: 100%;
-                width: 100%;
-                border: 1px solid red;
-                object-fit: cover;
-                object-position: center bottom;
-                border-radius: $img-radius-restaurant;
-                z-index: 1;
-            }
-        }
-    }
 }
 
 
-.clic-heart{
+.clic-heart {
     align-self: center;
     position: static;
     border-style: none;
