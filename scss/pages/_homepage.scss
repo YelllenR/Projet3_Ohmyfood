@@ -67,20 +67,22 @@ ul.howto-container__how {
     font-size: 16px;
     width: 100%;
     height: auto;
-}
 
-li:before {
-    content: counter(li);
-    counter-increment: li;
-    height: 24px;
-    width: 24px;
-    background-color: $color-num-box;
-    border-radius: 50%;
-    color: $txt-btn;
-    text-align: center;
-    padding-top: 1%;
-    position: relative;
-    left: -8px;
+
+    li:before {
+        content: counter(li);
+        counter-increment: li;
+        height: 24px;
+        width: 24px;
+        background-color: $color-num-box;
+        border-radius: 50%;
+        color: $txt-btn;
+        text-align: center;
+        padding-top: 1%;
+        position: relative;
+        left: -8px;
+    }
+
 }
 
 .list {
@@ -92,12 +94,7 @@ li:before {
     box-shadow: $shadow-cards-how-to;
 
 
-    .txt-list {
-        align-self: center;
-    }
-
-
-    .txt-list {
+    &--text {
         font-family: $font-texts-titles;
         font-weight: bold;
         padding-left: 16px;
@@ -108,10 +105,10 @@ li:before {
 
 .name-restaurant {
     align-self: flex-start;
-    padding-top: 16px;
+
 }
 
 .restaurant-location {
     align-self: flex-start;
-    padding-bottom: 16px;
+
 }

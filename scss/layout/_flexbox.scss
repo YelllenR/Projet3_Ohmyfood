@@ -3,6 +3,9 @@
 }
 
 
+
+
+// home-page flex
 .nav-home {
     @include flex-column;
     width: $breakpoints-mobile;
@@ -42,4 +45,21 @@ ul.howto-container__how {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+
+
+// footer flex
+
+#wrapper-footer{
+    @include flex-center;
+    background-color: $bg-clr-footer;
+}
+
+.footercontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: $breakpoints-mobile;
+    margin: $margin-page;
 }
