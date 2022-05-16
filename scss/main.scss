@@ -1,20 +1,21 @@
-@import '_variables.scss';
-@import '_mixins.scss';
-@import '_placeholder.scss';
+@import '/scss/partials/variables', '/scss/partials/mixins',
+'/scss/partials/placeholder', '/scss/partials/functions';
 
 
 
 // reinitializing values
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    @extend %reset-page;
 }
 
 #wrapper {
     @include flex-center;
 }
 
+#wrapper-section {
+    @include flex-center;
+    background-color: $bg-clr-grey-header;
+}
 
 // Header part with logo and search--------
 .nav-home {
@@ -167,7 +168,7 @@ ul.howto-container__how {
     width: $breakpoints-mobile;
     margin: $margin-page;
     background-color: $bg-clr-grey-header;
-
+    height: auto;
 
     &__title {
         font-family: $font-texts-titles;
@@ -175,47 +176,16 @@ ul.howto-container__how {
         padding-top: 48px;
         padding-bottom: 16px;
     }
-
-    &__container {
-        @include flex-column;
-        border: 1px solid green;
-        width: $card-width-restaurant;
-        height: auto;
-        // à changer si fonctionnement pas bon avec auto pour $card-height-restaurant
-        border-radius: $card-radius-restaurant;
-        padding: 0;
-        margin: 0;
-        text-decoration: none;
-        color: $text-color;
-
-
-    }
 }
 
-// .img-new{
-//     display: flex;
-//     width: 100%;
-    
-    .cards-img {
-        align-self: flex-start;
-        height: 100%;
-        width: 100%;
-        border: 1px solid red;
-        object-fit: cover;
-        object-position: center bottom;
-        border-radius: $img-radius-restaurant;
-        z-index: 1;
-    }
 
-    .new{
-        z-index: 2;
-        height: 24px;
-        width: 80px;
-        background-color: $tertiary-color;
-    }
-// }
-
-
+.clic-heart {
+    align-self: center;
+    position: static;
+    border-style: none;
+    background-color: $bg-color-cards-logo;
+    font-size: 24px;
+}
 
 .name-restaurant {
     align-self: flex-start;
@@ -226,16 +196,3 @@ ul.howto-container__how {
     align-self: flex-start;
     padding-bottom: 16px;
 }
-
-
-//icon part width new
-
-// .new{
-//     height: 24px;
-//     width: 80px;
-//     z-index: 2;
-//     padding: 8px;
-//     background-color: $tertiary-color;
-//     position: relative;
-
-// }

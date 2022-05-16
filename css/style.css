@@ -10,6 +10,13 @@
   align-items: center;
 }
 
+#wrapper-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+
 .nav-home {
   display: flex;
   flex-direction: column;
@@ -158,6 +165,7 @@ ul.howto-container__how .txt-list {
   width: 480px;
   margin: 0 24px 0 24px;
   background-color: #f6f6f6;
+  height: auto;
 }
 .home-cards__title {
   font-family: "Roboto", sans-serif;
@@ -171,17 +179,29 @@ ul.howto-container__how .txt-list {
   justify-content: center;
   align-items: center;
   border: 1px solid green;
-  width: 100%;
-  height: auto;
+  width: 70%;
+  height: 100%;
   border-radius: 16px;
   padding: 0;
   margin: 0;
   text-decoration: none;
   color: rgb(0, 0, 0);
+  background-color: #ffffff;
 }
-
-.cards-img {
-  align-self: flex-start;
+.home-cards__container .img-and-txt {
+  display: flex;
+}
+.home-cards__container .img-and-txt .new {
+  position: relative;
+  transform: translate(-96px, 32px);
+  z-index: 2;
+  background-color: #99E2D0;
+  border: 1px solid #99E2D0;
+  height: 32px;
+  width: auto;
+  padding: 8px;
+}
+.home-cards__container .img-and-txt .cards-img {
   height: 100%;
   width: 100%;
   border: 1px solid red;
@@ -193,11 +213,12 @@ ul.howto-container__how .txt-list {
   z-index: 1;
 }
 
-.new {
-  z-index: 2;
-  height: 24px;
-  width: 80px;
-  background-color: #99E2D0;
+.clic-heart {
+  align-self: center;
+  position: static;
+  border-style: none;
+  background-color: #ffffff;
+  font-size: 24px;
 }
 
 .name-restaurant {
