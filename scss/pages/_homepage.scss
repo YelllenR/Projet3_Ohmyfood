@@ -1,0 +1,117 @@
+.nav-home {
+    width: $breakpoints-mobile;
+
+    &__search {
+        @include flex-center;
+        height: 52px;
+        width: 100%;
+        background-color: $bg-clr-search;
+        // box-shadow: $shadow-search;
+
+        input {
+            background-color: $bg-clr-search;
+            height: 52px;
+            width: 112px;
+            border-style: none;
+            padding-left: 16px;
+            // &::placeholder{
+
+            // }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &__styling {
+        margin: $margin-page;
+        background-color: $bg-clr-grey-header;
+        width: 100%;
+    }
+
+    &__intro {
+        @include typography-title;
+        padding: 24px 32px 16px 32px;
+        align-self: center;
+        text-align: center;
+    }
+
+    &__discover {
+        font-family: $font-texts-titles;
+        padding: 8px 16px 24px 16px;
+        text-align: center;
+    }
+
+
+}
+
+//How to section-------------
+.howto-container {
+    width: $breakpoints-mobile;
+    margin: $margin-page;
+    margin-top: 48px;
+    margin-bottom: 56px;
+
+
+    &__operation {
+        font-family: $font-texts-titles;
+        align-self: flex-start;
+        padding-bottom: 24px;
+    }
+
+}
+
+ul.howto-container__how {
+    counter-reset: li;
+    list-style-type: none;
+    font-size: 16px;
+    width: 100%;
+    height: auto;
+}
+
+li:before {
+    content: counter(li);
+    counter-increment: li;
+    height: 24px;
+    width: 24px;
+    background-color: $color-num-box;
+    border-radius: 50%;
+    color: $txt-btn;
+    text-align: center;
+    padding-top: 1%;
+    position: relative;
+    left: -8px;
+}
+
+.list {
+    height: $box-height;
+    width: $box-width;
+    background-color: $bg-clr-grey-header;
+    border-radius: $box-radius;
+    margin-bottom: 16px;
+    box-shadow: $shadow-cards-how-to;
+
+
+    .txt-list {
+        align-self: center;
+    }
+
+
+    .txt-list {
+        font-family: $font-texts-titles;
+        font-weight: bold;
+        padding-left: 16px;
+    }
+}
+
+
+
+.name-restaurant {
+    align-self: flex-start;
+    padding-top: 16px;
+}
+
+.restaurant-location {
+    align-self: flex-start;
+    padding-bottom: 16px;
+}

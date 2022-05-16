@@ -1,0 +1,8 @@
+// homepage animations
+.list:hover{
+    background-color: lighten($color: $primary-color, $amount: 30%);
+
+    &:hover > i {
+        color: $primary-color;
+    }
+}

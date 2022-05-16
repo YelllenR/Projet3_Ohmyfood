@@ -1,241 +1,28 @@
-@import '_variables.scss';
-@import '_mixins.scss';
-@import '_placeholder.scss';
+// Abstracts files
+@import 'abstracts/mixins';
+@import 'abstracts/placeholder';
+@import 'abstracts/variables';
+
+// Base files
+@import 'base/animation'; 
+@import 'base/reset'; 
+@import 'base/typography'; 
+
+// Components files
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/icons';
+@import 'components/image';
+@import 'components/media';
+
+// Layout files
+@import 'layout/flexbox';
+@import 'layout/footer';
+@import 'layout/header';
+
+// Pages files
+@import 'pages/contact';
+@import 'pages/homepage';
+@import 'pages/menupages';
 
 
-
-// reinitializing values
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-#wrapper {
-    @include flex-center;
-}
-
-
-// Header part with logo and search--------
-.nav-home {
-    @include flex-column;
-    width: $breakpoints-mobile;
-
-    &__img {
-        @include flex-center;
-        width: 100%;
-        box-shadow: 0px 4px 5px 0px rgba(98, 98, 98, 0.41);
-        z-index: 1;
-    }
-
-    &__logo {
-        @include logo-home;
-    }
-
-    &__search {
-        @include flex-center;
-        height: 52px;
-        width: 100%;
-        background-color: $bg-clr-search;
-        // box-shadow: $shadow-search;
-
-        input {
-            background-color: $bg-clr-search;
-            // box-shadow: $shadow-search;
-            height: 52px;
-            width: 112px;
-            border-style: none;
-            padding-left: 16px;
-            // &::placeholder{
-
-            // }
-            &:focus {
-                outline: none;
-            }
-        }
-    }
-}
-
-// header with texts, button --------
-.nav-home__styling {
-    margin: $margin-page;
-    @include flex-column;
-    background-color: $bg-clr-grey-header;
-    width: 100%;
-
-    .intro {
-        @include typography-title;
-        padding: 24px 32px 16px 32px;
-        align-self: center;
-        text-align: center;
-    }
-
-    .discover {
-        font-family: $font-texts-titles;
-        padding: 8px 16px 24px 16px;
-        text-align: center;
-    }
-
-    .explore {
-        @include btn-styling;
-        margin-bottom: 48px;
-    }
-}
-
-// to light the color of the button order on hover, use exp: background: lighten (@mixin btn-gradient, an integer "for exemple")
-
-//How to section-------------
-.howto-container {
-    @include flex-column;
-    width: $breakpoints-mobile;
-    margin: $margin-page;
-    margin-top: 48px;
-    margin-bottom: 56px;
-
-
-    &__operation {
-        font-family: $font-texts-titles;
-        align-self: flex-start;
-        padding-bottom: 24px;
-    }
-
-}
-
-
-ul.howto-container__how {
-    display: flex;
-    flex-direction: column;
-    counter-reset: li;
-    list-style-type: none;
-    font-size: 16px;
-    width: 100%;
-    height: auto;
-
-    li:before {
-        content: counter(li);
-        counter-increment: li;
-        height: 24px;
-        width: 24px;
-        background-color: $color-num-box;
-        border-radius: 50%;
-        color: $txt-btn;
-        text-align: center;
-        padding-top: 1%;
-        position: relative;
-        left: -8px;
-    }
-
-    .list {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        height: $box-height;
-        width: $box-width;
-        background-color: $bg-clr-grey-header;
-    }
-
-    li.list {
-        margin-bottom: 16px;
-        border-radius: $box-radius;
-        border-style: none;
-        box-shadow: $shadow-cards-how-to;
-    }
-
-    .txt-list {
-        align-self: center;
-    }
-
-    i {
-        color: $bg-icon-header;
-        justify-self: flex-start;
-        align-self: center;
-        padding: 0 16px 0 16px;
-    }
-
-    .txt-list {
-        font-family: $font-texts-titles;
-        font-weight: bold;
-        padding-left: 16px;
-    }
-}
-
-
-
-// hoome page - Section cards restaurants ------------
-.home-cards {
-    @include flex-column;
-    width: $breakpoints-mobile;
-    margin: $margin-page;
-    background-color: $bg-clr-grey-header;
-
-
-    &__title {
-        font-family: $font-texts-titles;
-        align-self: flex-start;
-        padding-top: 48px;
-        padding-bottom: 16px;
-    }
-
-    &__container {
-        @include flex-column;
-        border: 1px solid green;
-        width: $card-width-restaurant;
-        height: auto;
-        // à changer si fonctionnement pas bon avec auto pour $card-height-restaurant
-        border-radius: $card-radius-restaurant;
-        padding: 0;
-        margin: 0;
-        text-decoration: none;
-        color: $text-color;
-
-
-    }
-}
-
-// .img-new{
-//     display: flex;
-//     width: 100%;
-    
-    .cards-img {
-        align-self: flex-start;
-        height: 100%;
-        width: 100%;
-        border: 1px solid red;
-        object-fit: cover;
-        object-position: center bottom;
-        border-radius: $img-radius-restaurant;
-        z-index: 1;
-    }
-
-    .new{
-        z-index: 2;
-        height: 24px;
-        width: 80px;
-        background-color: $tertiary-color;
-    }
-// }
-
-
-
-.name-restaurant {
-    align-self: flex-start;
-    padding-top: 16px;
-}
-
-.restaurant-location {
-    align-self: flex-start;
-    padding-bottom: 16px;
-}
-
-
-//icon part width new
-
-// .new{
-//     height: 24px;
-//     width: 80px;
-//     z-index: 2;
-//     padding: 8px;
-//     background-color: $tertiary-color;
-//     position: relative;
-
-// }

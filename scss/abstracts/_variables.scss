@@ -20,6 +20,36 @@ $tertiary-color:#99E2D0;
 $bg-color-cards-logo: #ffffff;
 $text-color: rgb(0, 0, 0); 
 $bg-grey: #F2F2F2;
+$bg-clr-grey-header: #f6f6f6; 
+$box-hover-header: #f5edff; 
+$bg-clr-search: #eaeaea; 
+$bg-icon-header: #7e7e7e; 
+$color-num-box: rgba(147, 86, 220, 1); 
+$txt-btn: #ffffff; 
+$bg-clr-footer: #353535; 
+
+
+$shadow-cards-how-to: 6px 9px 15px -3px rgba(98,98,98,0.38);
+$shadow-card-nav: 2px 15px 18px -3px rgba(0,0,0,0.68); 
+$btn-shadow: 1px 6px 20px -4px rgba(112,112,112,0.72);
+
+
+// Map colors------------
+$colors: (
+    "primary": $primary-color,
+    "secondary": $secondary-color,
+    "tertiary": $tertiary-color,
+    "light-grey": $bg-grey,
+    "text-clrr": $text-color,
+    "bg-cards": $bg-color-cards-logo,
+    "txt-btn" : $txt-btn, 
+    "li-color": $color-num-box,
+    "footer-clr": $bg-clr-footer,
+    "icon-clr": $bg-icon-header, 
+    "hover-home-card": $box-hover-header
+);
+
+
 
 
 // paddings/margins------------
@@ -32,11 +62,11 @@ $margin-page: 0 24px 0 24px;
 
 // buttons-------------------
 $radius-btn: 24px;
-$txt-btn: #ffffff; 
+
 $btn-color: $secondary-color; 
 $btn-height: 48px;
 $btn-width: 192px; 
-$btn-shadow: 1px 6px 20px -4px rgba(112,112,112,0.72);
+
 
 
 // logo------------------------
@@ -58,18 +88,15 @@ $i-ustensils-size: 16px, 16px;
 
 
 // How-to part in header--------------------
-$shadow-card-nav: 2px 15px 18px -3px rgba(0,0,0,0.68);; 
+
 // $hover-card-nav: ; 
 $box-height: 72px; 
 $box-width: 100%; 
 $box-border: 24px; 
-$color-num-box: rgba(147, 86, 220, 1); 
+
 $box-radius: 24px; 
-$bg-clr-grey-header: #f6f6f6; 
-$box-hover-header: #f5edff; 
-$bg-clr-search: #eaeaea; 
-$bg-icon-header: #7e7e7e; 
-$shadow-cards-how-to: 6px 9px 15px -3px rgba(98,98,98,0.38);
+
+
 
 // cards for restaurants-----------------
 $card-height-restaurant: 200px; 
@@ -87,4 +114,3 @@ $card-radius-restaurant: 16px;
 
 
 // ----------Footer----------------
-$bg-clr-footer: #353535; 

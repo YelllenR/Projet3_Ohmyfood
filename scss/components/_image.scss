@@ -1,0 +1,33 @@
+.nav-home {
+    &__img {
+        width: 100%;
+        box-shadow: 0px 4px 5px 0px rgba(98, 98, 98, 0.41);
+        z-index: 1;
+    }
+
+    &__logo {
+        @include logo-home;
+    }
+
+}
+
+
+.img {
+    &--cards {
+        align-self: flex-start;
+        height: 100%;
+        width: 100%;
+        border: 1px solid red;
+        object-fit: cover;
+        object-position: center bottom;
+        border-radius: $img-radius-restaurant;
+        z-index: 1;
+    }
+
+    &--text {
+        z-index: 2;
+        height: 24px;
+        width: 80px;
+        background-color: $tertiary-color;
+    }
+}
