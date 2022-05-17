@@ -1,0 +1,16 @@
+.footercontainer{
+    padding-top: 24px; 
+    padding-bottom: 32px;
+    a{
+        text-decoration: none;
+    }
+   &__icon{
+       padding-top: 8px;
+       color: $txt-btn;
+   }
+
+   &__legal, &__contact {
+       color: $txt-btn;
+       padding-top: 8px;
+   }
+}

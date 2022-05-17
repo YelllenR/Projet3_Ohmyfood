@@ -1,0 +1,52 @@
+.nav-home {
+
+    &__img {
+        width: 100%;
+        box-shadow: 0px 4px 5px 0px rgba(98, 98, 98, 0.41);
+        z-index: 1;
+    }
+
+    &__logo {
+        @include logo-home;
+    }
+
+}
+
+
+.img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &--cards {
+        height: 90%;
+        width: 100%;
+        border: 1px solid red;
+        object-fit: cover;
+        object-position: center bottom;
+        border-radius: $img-radius-restaurant;
+        z-index: 1;
+    }
+
+    &--new {
+        align-self: center;
+        z-index: 2;
+        height: 32px;
+        width: 80px;
+        background-color: $tertiary-color;
+        padding: 8px;
+        color: darken($color: $tertiary-color, $amount: 40%);
+    }
+
+}
+
+
+
+// footer
+.footercontainer__logo {
+    height: 32px;
+    width: 180px;
+    filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(176deg) brightness(106%) contrast(104%);
+    margin-bottom: 16px;
+}
