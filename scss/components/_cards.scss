@@ -1,0 +1,27 @@
+.home-cards {
+    width: $breakpoints-mobile;
+    margin: $margin-page;
+    background-color: $bg-clr-grey-header;
+
+
+    &__title {
+        font-family: $font-texts-titles;
+        align-self: flex-start;
+        padding-top: 48px;
+        padding-bottom: 16px;
+    }
+
+    &__container {
+        border: 1px solid green;
+        width: $card-width-restaurant;
+        height: auto;
+        // à changer si fonctionnement pas bon avec auto pour $card-height-restaurant
+        border-radius: $card-radius-restaurant;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        color: $text-color;
+
+    }
+}
+

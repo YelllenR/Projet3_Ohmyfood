@@ -1,0 +1,65 @@
+#wrapper {
+    @include flex-center;
+}
+
+
+
+
+// home-page flex
+.nav-home {
+    @include flex-column;
+    width: $breakpoints-mobile;
+
+    &__img {
+        @include flex-center;
+
+        &__search {
+            @include flex-center;
+
+        }
+    }
+}
+
+.nav-home__styling {
+    @include flex-column;
+}
+
+.howto-container {
+    @include flex-column;
+}
+
+ul.howto-container__how {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-cards {
+    @include flex-column;
+
+    &__container{
+        @include flex-column;
+    }
+}
+
+.list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+// footer flex
+
+#wrapper-footer{
+    @include flex-center;
+    background-color: $bg-clr-footer;
+}
+
+.footercontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: $breakpoints-mobile;
+    margin: $margin-page;
+}
