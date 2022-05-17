@@ -4,4 +4,8 @@
         align-self: center;
         padding: 0 16px 0 16px;
         color: $bg-icon-header;
+
+        @media screen and (min-width: 600px){
+            visibility: visible;
+        }
     }

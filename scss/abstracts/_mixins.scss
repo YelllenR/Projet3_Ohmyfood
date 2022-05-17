@@ -19,18 +19,30 @@
     font-family: $font-titles-pages;
     font-size: 24px;
     color: rgb(1, 1, 1);
+
+    @media screen and (min-width: 600px){
+        font-size: $fs-titles;
+    }
 }
 
 @mixin typography-title {
     font-family: $font-texts-titles;
     font-size: 24px;
     color: rgb(1, 1, 1);
+
+    @media screen and (min-width: 600px){
+        font-size: $fs-titles;
+    }
 }
 
 @mixin typography-txts {
     font-family: $font-texts-titles;
     font-size: 16px;
     color: rgb(1, 1, 1);
+
+    @media screen and (min-width: 600px){
+        font-size: $fs-texts;
+    }
 }
 
 @mixin typography-footer {
@@ -80,6 +92,12 @@
     width: $logo-width-home;
     color: $text-color;
     background-color: $bg-color-cards-logo;
+
+    @media screen and (min-width: 600px) {
+        height: 250px;
+        width: 300px;
+        background-color: transparent;
+    }
 }
 
 @mixin logo-footer {

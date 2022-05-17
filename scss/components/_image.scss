@@ -4,6 +4,11 @@
         width: 100%;
         box-shadow: 0px 4px 5px 0px rgba(98, 98, 98, 0.41);
         z-index: 1;
+        
+        @media screen and (min-width: 600px) {
+            box-shadow: none;
+            border-style: none;
+        }
     }
 
     &__logo {
@@ -13,6 +18,7 @@
 }
 
 
+// cards part in homepage
 .img {
     display: flex;
     flex-direction: column;
@@ -27,10 +33,17 @@
         object-position: center bottom;
         border-radius: $img-radius-restaurant;
         z-index: 1;
+
+        @media screen and (min-width: 600px){
+            height: 300px;
+            width: 350px;
+        }
     }
 
     &--new {
-        align-self: center;
+        position: relative;
+        top: -10%;
+        right: -20%;
         z-index: 2;
         height: 32px;
         width: 80px;

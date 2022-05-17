@@ -1,8 +1,12 @@
 .home-cards {
     width: $breakpoints-mobile;
     margin: $margin-page;
-    background-color: $bg-clr-grey-header;
+    height: 800px;
 
+        @media screen and (min-width: 600px){
+            width: $breakpoints-desktop;
+            height: auto;
+        }
 
     &__title {
         font-family: $font-texts-titles;
@@ -12,7 +16,6 @@
     }
 
     &__container {
-        border: 1px solid green;
         width: $card-width-restaurant;
         height: auto;
         // à changer si fonctionnement pas bon avec auto pour $card-height-restaurant
@@ -22,6 +25,11 @@
         text-decoration: none;
         color: $text-color;
 
+        // @media screen and (min-width: 600px){
+        //     width: 400px;
+        //     height: 400px;
+        // }
     }
+
 }
 

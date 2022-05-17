@@ -1,4 +1,8 @@
-#wrapper {
+#wrapper-header{
+    @include flex-center;
+}
+
+#wrapper-section-operation{
     @include flex-center;
 }
 
@@ -8,7 +12,7 @@
 // home-page flex
 .nav-home {
     @include flex-column;
-    width: $breakpoints-mobile;
+    width: $breakpoints-desktop;
 
     &__img {
         @include flex-center;
@@ -39,6 +43,11 @@ ul.howto-container__how {
     &__container{
         @include flex-column;
     }
+
+    @media screen and (min-width: 600px){
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .list{
@@ -47,7 +56,11 @@ ul.howto-container__how {
     align-items: center;
 }
 
-
+// restaurants cards
+#wrapper-section-cards{
+    @include flex-center;
+    background-color: $bg-clr-grey-header;
+}
 
 // footer flex
 
@@ -60,6 +73,6 @@ ul.howto-container__how {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: $breakpoints-mobile;
+    width: $breakpoints-desktop;
     margin: $margin-page;
 }

@@ -1,5 +1,10 @@
 .nav-home {
     width: $breakpoints-mobile;
+    font-family: $font-texts-titles;
+
+    @media screen and (min-width: 600px) {
+        width: $breakpoints-desktop;
+    }
 
     &__search {
         @include flex-center;
@@ -7,6 +12,18 @@
         width: 100%;
         background-color: $bg-clr-search;
         // box-shadow: $shadow-search;
+
+        @media screen and (min-width: 600px) {
+            width: 264px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            background-color: lighten($color: $primary-color, $amount: 20%);
+            border-radius: 24px;
+
+            i {
+                color: $txt-btn;
+            }
+        }
 
         input {
             background-color: $bg-clr-search;
@@ -20,6 +37,18 @@
             &:focus {
                 outline: none;
             }
+
+            @media screen and (min-width: 600px) {
+                width: 184px;
+                background-color: lighten($color: $primary-color, $amount: 20%);
+                font-size: $fs-card-texts;
+                color: $txt-btn;
+
+                &::placeholder {
+                    color: $txt-btn;
+                }
+
+            }
         }
     }
 
@@ -27,6 +56,10 @@
         margin: $margin-page;
         background-color: $bg-clr-grey-header;
         width: 100%;
+
+        // @media screen and (min-width: 600px){
+
+        // }
     }
 
     &__intro {
@@ -34,15 +67,23 @@
         padding: 24px 32px 16px 32px;
         align-self: center;
         text-align: center;
+
+        @media screen and (min-width: 600px) {
+            padding-bottom: 48px;
+            padding-top: 48px;
+        }
     }
 
     &__discover {
         font-family: $font-texts-titles;
         padding: 8px 16px 24px 16px;
         text-align: center;
+
+        @media screen and (min-width: 600px) {
+            padding-bottom: 48px;
+            font-size: $fs-texts;
+        }
     }
-
-
 }
 
 //How to section-------------
@@ -52,6 +93,10 @@
     margin-top: 48px;
     margin-bottom: 56px;
 
+    @media screen and (min-width: 600px) {
+        width: $breakpoints-desktop;
+    }
+
 
     &__operation {
         font-family: $font-texts-titles;
@@ -59,6 +104,16 @@
         padding-bottom: 24px;
     }
 
+
+        @media screen and (min-width: 600px) {
+            font-size: $fs-card-title;
+
+            &__operation{
+                align-self: center;
+                margin-top: 32px;
+                margin-bottom: 32px;
+            }
+        }
 }
 
 ul.howto-container__how {
@@ -78,14 +133,25 @@ ul.howto-container__how {
         border-radius: 50%;
         color: $txt-btn;
         text-align: center;
-        padding-top: 1%;
         position: relative;
         left: -8px;
     }
 
+    @media screen and (min-width: 600px){
+        font-size: $fs-card-texts;
+        width: 500px;
+        
+
+        li:before{
+            height: 40px; 
+            width: 40px;
+            font-size: 32px;
+        }
+    }
+
 }
 
-.list {
+.list{
     height: $box-height;
     width: $box-width;
     background-color: $bg-clr-grey-header;
@@ -93,11 +159,14 @@ ul.howto-container__how {
     margin-bottom: 16px;
     box-shadow: $shadow-cards-how-to;
 
-
     &--text {
         font-family: $font-texts-titles;
         font-weight: bold;
         padding-left: 16px;
+    }
+
+    @media screen and (min-width: 600px){
+        height: 100px;
     }
 }
 

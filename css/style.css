@@ -35,7 +35,13 @@
 .home-cards {
   width: 480px;
   margin: 0 24px 0 24px;
-  background-color: #f6f6f6;
+  height: 800px;
+}
+@media screen and (min-width: 600px) {
+  .home-cards {
+    width: 1200px;
+    height: auto;
+  }
 }
 .home-cards__title {
   font-family: "Roboto", sans-serif;
@@ -44,8 +50,7 @@
   padding-bottom: 16px;
 }
 .home-cards__container {
-  border: 1px solid green;
-  width: 100%;
+  width: 70%;
   height: auto;
   border-radius: 16px;
   padding: 0;
@@ -60,17 +65,35 @@
   padding: 0 16px 0 16px;
   color: #7e7e7e;
 }
+@media screen and (min-width: 600px) {
+  .list i {
+    visibility: visible;
+  }
+}
 
 .nav-home__img {
   width: 100%;
   box-shadow: 0px 4px 5px 0px rgba(98, 98, 98, 0.41);
   z-index: 1;
 }
+@media screen and (min-width: 600px) {
+  .nav-home__img {
+    box-shadow: none;
+    border-style: none;
+  }
+}
 .nav-home__logo {
   height: 56px;
   width: 192px;
   color: rgb(0, 0, 0);
   background-color: #ffffff;
+}
+@media screen and (min-width: 600px) {
+  .nav-home__logo {
+    height: 250px;
+    width: 300px;
+    background-color: transparent;
+  }
 }
 
 .img {
@@ -90,8 +113,16 @@
   border-radius: 16px 16px 0 0;
   z-index: 1;
 }
+@media screen and (min-width: 600px) {
+  .img--cards {
+    height: 300px;
+    width: 350px;
+  }
+}
 .img--new {
-  align-self: center;
+  position: relative;
+  top: -10%;
+  right: -20%;
   z-index: 2;
   height: 32px;
   width: 80px;
@@ -107,17 +138,16 @@
   margin-bottom: 16px;
 }
 
-#wrapper {
+#wrapper-header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#wrapper-section {
+#wrapper-section-operation {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f6f6f6;
 }
 
 .nav-home {
@@ -125,7 +155,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 480px;
+  width: 1200px;
 }
 .nav-home__img {
   display: flex;
@@ -169,11 +199,24 @@ ul.howto-container__how {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 600px) {
+  .home-cards {
+    display: flex;
+    flex-direction: row;
+  }
+}
 
 .list {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+#wrapper-section-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
 }
 
 #wrapper-footer {
@@ -187,7 +230,7 @@ ul.howto-container__how {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 480px;
+  width: 1200px;
   margin: 0 24px 0 24px;
 }
 
@@ -209,6 +252,12 @@ ul.howto-container__how {
 
 .nav-home {
   width: 480px;
+  font-family: "Roboto", sans-serif;
+}
+@media screen and (min-width: 600px) {
+  .nav-home {
+    width: 1200px;
+  }
 }
 .nav-home__search {
   display: flex;
@@ -217,6 +266,18 @@ ul.howto-container__how {
   height: 52px;
   width: 100%;
   background-color: #eaeaea;
+}
+@media screen and (min-width: 600px) {
+  .nav-home__search {
+    width: 264px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    background-color: #c9abee;
+    border-radius: 24px;
+  }
+  .nav-home__search i {
+    color: #ffffff;
+  }
 }
 .nav-home__search input {
   background-color: #eaeaea;
@@ -227,6 +288,23 @@ ul.howto-container__how {
 }
 .nav-home__search input:focus {
   outline: none;
+}
+@media screen and (min-width: 600px) {
+  .nav-home__search input {
+    width: 184px;
+    background-color: #c9abee;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  .nav-home__search input::-moz-placeholder {
+    color: #ffffff;
+  }
+  .nav-home__search input:-ms-input-placeholder {
+    color: #ffffff;
+  }
+  .nav-home__search input::placeholder {
+    color: #ffffff;
+  }
 }
 .nav-home__styling {
   margin: 0 24px 0 24px;
@@ -241,10 +319,27 @@ ul.howto-container__how {
   align-self: center;
   text-align: center;
 }
+@media screen and (min-width: 600px) {
+  .nav-home__intro {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .nav-home__intro {
+    padding-bottom: 48px;
+    padding-top: 48px;
+  }
+}
 .nav-home__discover {
   font-family: "Roboto", sans-serif;
   padding: 8px 16px 24px 16px;
   text-align: center;
+}
+@media screen and (min-width: 600px) {
+  .nav-home__discover {
+    padding-bottom: 48px;
+    font-size: 24px;
+  }
 }
 
 .howto-container {
@@ -253,10 +348,25 @@ ul.howto-container__how {
   margin-top: 48px;
   margin-bottom: 56px;
 }
+@media screen and (min-width: 600px) {
+  .howto-container {
+    width: 1200px;
+  }
+}
 .howto-container__operation {
   font-family: "Roboto", sans-serif;
   align-self: flex-start;
   padding-bottom: 24px;
+}
+@media screen and (min-width: 600px) {
+  .howto-container {
+    font-size: 24px;
+  }
+  .howto-container__operation {
+    align-self: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
 }
 
 ul.howto-container__how {
@@ -275,9 +385,19 @@ ul.howto-container__how li:before {
   border-radius: 50%;
   color: #ffffff;
   text-align: center;
-  padding-top: 1%;
   position: relative;
   left: -8px;
+}
+@media screen and (min-width: 600px) {
+  ul.howto-container__how {
+    font-size: 20px;
+    width: 500px;
+  }
+  ul.howto-container__how li:before {
+    height: 40px;
+    width: 40px;
+    font-size: 32px;
+  }
 }
 
 .list {
@@ -293,69 +413,10 @@ ul.howto-container__how li:before {
   font-weight: bold;
   padding-left: 16px;
 }
-
-.home-cards {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 480px;
-  margin: 0 24px 0 24px;
-  background-color: #f6f6f6;
-  height: auto;
-}
-.home-cards__title {
-  font-family: "Roboto", sans-serif;
-  align-self: flex-start;
-  padding-top: 48px;
-  padding-bottom: 16px;
-}
-.home-cards__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid green;
-  width: 70%;
-  height: 100%;
-  border-radius: 16px;
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  background-color: #ffffff;
-}
-.home-cards__container .img-and-txt {
-  display: flex;
-}
-.home-cards__container .img-and-txt .new {
-  position: relative;
-  transform: translate(-96px, 32px);
-  z-index: 2;
-  background-color: #99E2D0;
-  border: 1px solid #99E2D0;
-  height: 32px;
-  width: auto;
-  padding: 8px;
-}
-.home-cards__container .img-and-txt .cards-img {
-  height: 100%;
-  width: 100%;
-  border: 1px solid red;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center bottom;
-     object-position: center bottom;
-  border-radius: 16px 16px 0 0;
-  z-index: 1;
-}
-
-.clic-heart {
-  align-self: center;
-  position: static;
-  border-style: none;
-  background-color: #ffffff;
-  font-size: 24px;
+@media screen and (min-width: 600px) {
+  .list {
+    height: 100px;
+  }
 }
 
 .name-restaurant {
