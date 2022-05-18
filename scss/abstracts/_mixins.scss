@@ -1,3 +1,25 @@
+// ------------------Breakpoints-----------------------
+
+
+@mixin media-phone{
+    @media screen and (min-width: map-get($breakpoints,'phone')){
+        &{ @content; }
+    }
+}
+
+@mixin media-tablet{
+    @media screen and (min-width: map-get($breakpoints,'tablet')){
+        &{ @content; }
+    }
+}
+
+@mixin media-desktop{
+    @media screen and (min-width: map-get($breakpoints,'desktop')){
+        &{ @content; }
+    }
+}
+
+
 // ------------------Flex behavior---------------------
 @mixin flex-center {
     display: flex;
@@ -18,37 +40,37 @@
 @mixin typography-title-pages {
     font-family: $font-titles-pages;
     font-size: 24px;
-    color: rgb(1, 1, 1);
+    color: $text-color;
 
-    @media screen and (min-width: 600px){
-        font-size: $fs-titles;
+    @include media-desktop{
+        font-size: $fs-titles-desktop;
     }
 }
 
 @mixin typography-title {
     font-family: $font-texts-titles;
-    font-size: 24px;
-    color: rgb(1, 1, 1);
+    font-size: $fs-texts-desktop;
+    color: $text-color;
 
-    @media screen and (min-width: 600px){
-        font-size: $fs-titles;
+    @include media-desktop{
+        font-size: $fs-titles-desktop;
     }
 }
 
 @mixin typography-txts {
     font-family: $font-texts-titles;
     font-size: 16px;
-    color: rgb(1, 1, 1);
+    color: $text-color;
 
-    @media screen and (min-width: 600px){
-        font-size: $fs-texts;
+    @include media-desktop{
+        font-size: $fs-texts-desktop;
     }
 }
 
 @mixin typography-footer {
     font-family: $font-texts-titles;
     font-size: 8px;
-    color: rgb(255, 255, 255);
+    color: $txt-btn;
 }
 
 
@@ -72,6 +94,14 @@
     border-radius: $radius-btn;
     border-style: none; 
     box-shadow: $btn-shadow;
+
+
+    @include media-desktop(){
+        height:  $btn-height * 1.5 ;
+        width: $btn-width * 1.5;
+        border-radius: $radius-btn * 1.5;
+        font-size: $fs-card-texts-desktop;
+    }
 }
 
 
@@ -90,7 +120,7 @@
     color: $text-color;
     background-color: $bg-color-cards-logo;
 
-    @media screen and (min-width: 600px) {
+    @include media-desktop() {
         height: 250px;
         width: 300px;
         background-color: transparent;

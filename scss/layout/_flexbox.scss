@@ -1,13 +1,13 @@
-#wrapper-header{
+#wrapper-header {
     @include flex-center;
 }
 
-#wrapper-section-operation{
+#wrapper-section-operation {
     @include flex-center;
 }
 
 
-#wrapper-intro{
+#wrapper-intro {
     @include flex-center;
     background-color: map-get($map: $colors, $key: header-intro-grey);
 }
@@ -15,14 +15,16 @@
 // home-page flex
 .nav-home {
     @include flex-column;
-    width: $breakpoints-desktop;
 
-    &__img {
-        @include flex-center;
+    @include media-phone {
 
-        &__search {
+        &__img {
             @include flex-center;
 
+            &__search {
+                @include flex-center;
+
+            }
         }
     }
 }
@@ -43,39 +45,42 @@ ul.howto-container__how {
 .home-cards {
     @include flex-column;
 
-    &__container{
+    &__container {
         @include flex-column;
     }
 
-    @media screen and (min-width: 600px){
+    @include media-desktop {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
-.list{
+.list {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
 // restaurants cards
-#wrapper-section-cards{
+#wrapper-section-cards {
     @include flex-center;
     background-color: $bg-clr-grey-header;
 }
 
 // footer flex
 
-#wrapper-footer{
+#wrapper-footer {
     @include flex-center;
     background-color: $bg-clr-footer;
 }
 
-.footercontainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: $breakpoints-desktop;
-    margin: $margin-page;
+.footercontainer {
+    @include media-phone {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: $margin-page;
+    }
 }

@@ -1,9 +1,9 @@
 .nav-home {
-    width: $breakpoints-mobile;
+    width: $phone;
     font-family: $font-texts-titles;
 
-    @media screen and (min-width: 600px) {
-        width: $breakpoints-desktop;
+    @include media-desktop {
+        width: 100%;
     }
 
     &__search {
@@ -13,7 +13,7 @@
         background-color: $bg-clr-search;
         // box-shadow: $shadow-search;
 
-        @media screen and (min-width: 600px) {
+        @include media-desktop {
             width: 264px;
             margin-top: 32px;
             margin-bottom: 32px;
@@ -28,20 +28,24 @@
         input {
             background-color: $bg-clr-search;
             height: 52px;
-            width: 112px;
+            width: 152px;
             border-style: none;
             padding-left: 16px;
-            // &::placeholder{
 
-            // }
+            &::placeholder{
+                font-family: $font-texts-titles;
+                font-size: $fs-text-phone;
+                font-weight: bold;
+            }
+
             &:focus {
                 outline: none;
             }
 
-            @media screen and (min-width: 600px) {
+            @include media-desktop {
                 width: 184px;
                 background-color: lighten($color: $primary-color, $amount: 20%);
-                font-size: $fs-card-texts;
+                font-size: $fs-card-texts-desktop;
                 color: $txt-btn;
 
                 &::placeholder {
@@ -56,10 +60,6 @@
         margin: $margin-page;
         background-color: $bg-clr-grey-header;
         width: 100%;
-
-        // @media screen and (min-width: 600px){
-
-        // }
     }
 
     &__intro {
@@ -68,7 +68,7 @@
         align-self: center;
         text-align: center;
 
-        @media screen and (min-width: 600px) {
+        @include media-desktop {
             padding-bottom: 48px;
             padding-top: 48px;
         }
@@ -79,22 +79,26 @@
         padding: 8px 16px 24px 16px;
         text-align: center;
 
-        @media screen and (min-width: 600px) {
-            padding-bottom: 48px;
-            font-size: $fs-texts;
+        @include media-desktop {
+            padding-bottom: 56px;
+            font-size: $fs-texts-desktop;
         }
     }
 }
 
 //How to section-------------
 .howto-container {
-    width: $breakpoints-mobile;
+    width: $phone;
     margin: $margin-page;
     margin-top: 48px;
     margin-bottom: 56px;
 
-    @media screen and (min-width: 600px) {
-        width: $breakpoints-desktop;
+
+    @include media-desktop {
+        width: 100%;
+        margin: $margin-page;
+        margin-top: 48px;
+        margin-bottom: 48px;
     }
 
 
@@ -105,8 +109,8 @@
     }
 
 
-    @media screen and (min-width: 600px) {
-        font-size: $fs-card-title;
+    @include media-desktop {
+        font-size: $fs-card-title-desktop;
 
         &__operation {
             align-self: center;
@@ -117,9 +121,10 @@
 }
 
 ul.howto-container__how {
+    margin: $margin-page;
     counter-reset: li;
     list-style-type: none;
-    font-size: 16px;
+    font-size: 20px;
     width: 100%;
     height: auto;
 
@@ -137,9 +142,9 @@ ul.howto-container__how {
         left: -8px;
     }
 
-    @media screen and (min-width: 600px) {
-        font-size: $fs-card-texts;
-        width: 100%;
+    @include media-desktop {
+        font-size: $fs-card-texts-desktop;
+        width: 90%;
         display: flex;
         flex-direction: row;
 
@@ -166,23 +171,12 @@ ul.howto-container__how {
         padding-left: 16px;
     }
 
-    @media screen and (min-width: 600px) {
+    @include media-desktop {
         height: 100px;
 
-        &--1, &--2{
+        &--1,
+        &--2 {
             margin-right: 24px;
         }
     }
-}
-
-
-
-.name-restaurant {
-    align-self: flex-start;
-
-}
-
-.restaurant-location {
-    align-self: flex-start;
-
 }

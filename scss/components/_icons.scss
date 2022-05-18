@@ -1,11 +1,41 @@
+.list i {
+    justify-self: flex-start;
+    align-self: center;
+    padding: 0 16px 0 16px;
+    color: $bg-icon-header;
 
-    .list i {
-        justify-self: flex-start;
-        align-self: center;
-        padding: 0 16px 0 16px;
-        color: $bg-icon-header;
+    @include media-desktop {
+        visibility: visible;
+    }
+}
 
-        @media screen and (min-width: 600px){
-            visibility: visible;
+// icon heart on homepage cards
+.clic-heart {
+    border-style: none;
+    background-color: transparent;  
+    cursor: pointer;
+}
+
+
+// icons in homepage footer
+.footercontainer{
+    &__icon--fork{
+        padding-top: 8px;
+        color: $txt-btn;
+        font-family: $font-texts-titles;
+        
+        i{
+            padding-right: 16px;
         }
     }
+
+    &__icon--hands{
+        padding-top: 8px;
+        color: $txt-btn;
+        font-family: $font-texts-titles;
+
+        i{
+            padding-right: 8px;
+        }
+    }
+}

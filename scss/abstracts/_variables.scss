@@ -1,20 +1,17 @@
-// Breakpoints
-
-$breakpoints-mobile: 480px; 
-$breakpoints-desktop: 1200px; 
 
 // Font-types
 $font-titles-pages: ('Shrikhand', 'cursive');
 $font-texts-titles: ('Roboto', sans-serif);
+
 // Font sizes mobile
-$font-size-title: 20px; 
-$font-size-text: 18px; 
+$fs-title-phone: 20px; 
+$fs-text-phone: 18px; 
 
 // Font sizes desktop
-$fs-titles: 32px; 
-$fs-texts: 24px; 
-$fs-card-title: 24px; 
-$fs-card-texts: 20px; 
+$fs-titles-desktop: 32px; 
+$fs-texts-desktop: 24px; 
+$fs-card-title-desktop: 24px; 
+$fs-card-texts-desktop: 20px; 
 
 $shadow-search: inset 0px 20px 24px -23px rgba(17, 17, 17, 0.55); 
 
@@ -55,8 +52,14 @@ $colors: (
     "header-intro-grey":$bg-clr-grey-header
 );
 
+// Map breakpoints-------------
+$breakpoints: (
+    'phone': 250px,
+    'tablet': 768px, 
+    'desktop': 1200px,
+);
 
-
+$phone: 500px; 
 
 // paddings/margins------------
 $padding-txts: 16px 16px 16px 16px; 
@@ -105,11 +108,12 @@ $box-radius: 24px;
 
 
 // cards for restaurants-----------------
-$card-height-restaurant: 200px; 
-$card-width-restaurant: 70%; 
+$card-height-restaurant: 296px; 
+$card-width-restaurant: 100%; 
 // card-shadow-restaurant: ; 
 $img-radius-restaurant: 16px 16px 0 0; 
 $card-radius-restaurant: 16px; 
+
 
 
 
