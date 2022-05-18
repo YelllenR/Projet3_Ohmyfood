@@ -24,4 +24,9 @@
     width: 104px;
     filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(176deg);
     margin-bottom: 16px;
+
+    @include media-desktop{
+        height: auto;
+        width: 200px;
+    }
 }

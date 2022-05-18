@@ -1,16 +1,16 @@
 .list i {
     justify-self: flex-start;
     align-self: center;
-    padding: 0 16px 0 16px;
+    padding: 0 16px 0 8px;
     color: $bg-icon-header;
 
     @include media-desktop {
-        visibility: visible;
+        padding: 0 8px 0 8px;
     }
 }
 
 // icon heart on homepage cards
-.clic-heart {
+.clic-heart,  .clic-heart-1, .clic-heart-2{
     border-style: none;
     background-color: transparent;  
     cursor: pointer;

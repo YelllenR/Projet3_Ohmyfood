@@ -32,7 +32,7 @@
             border-style: none;
             padding-left: 16px;
 
-            &::placeholder{
+            &::placeholder {
                 font-family: $font-texts-titles;
                 font-size: $fs-text-phone;
                 font-weight: bold;
@@ -106,13 +106,9 @@
         font-family: $font-texts-titles;
         align-self: flex-start;
         padding-bottom: 24px;
-    }
 
-
-    @include media-desktop {
-        font-size: $fs-card-title-desktop;
-
-        &__operation {
+        @include media-desktop {
+            font-size: $fs-card-title-desktop;
             align-self: center;
             margin-top: 32px;
             margin-bottom: 32px;
@@ -121,11 +117,11 @@
 }
 
 ul.howto-container__how {
+    width: 100%;
     margin: $margin-page;
     counter-reset: li;
     list-style-type: none;
     font-size: 20px;
-    width: 100%;
     height: auto;
 
 
@@ -143,15 +139,16 @@ ul.howto-container__how {
     }
 
     @include media-desktop {
-        font-size: $fs-card-texts-desktop;
+        font-size: $fs-texts-desktop;
         width: 90%;
+        margin-bottom: 32px;
         display: flex;
         flex-direction: row;
 
         li:before {
-            height: 40px;
-            width: 40px;
-            font-size: 32px;
+            height: 32px;
+            width: 32px;
+            font-size: 24px;
         }
     }
 
@@ -167,16 +164,23 @@ ul.howto-container__how {
 
     &--text {
         font-family: $font-texts-titles;
+        font-size: $fs-text-xs-phone;
         font-weight: bold;
-        padding-left: 16px;
+
     }
 
     @include media-desktop {
-        height: 100px;
+        height: 96px;
 
         &--1,
         &--2 {
-            margin-right: 24px;
+            margin-right: 32px;
+        }
+
+        &--text{
+            padding-left: 8px;
+            padding-top: -8px;
+            font-size: $fs-card-texts-desktop
         }
     }
 }

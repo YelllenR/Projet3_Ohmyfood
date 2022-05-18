@@ -42,6 +42,13 @@ ul.howto-container__how {
     flex-direction: column;
 }
 
+
+// restaurants cards
+#wrapper-section-cards {
+    @include flex-center;
+    background-color: $bg-clr-grey-header;
+}
+
 .home-cards {
     @include flex-column;
 
@@ -49,11 +56,14 @@ ul.howto-container__how {
         @include flex-column;
     }
 
+    // grid for cards on desktops
+
     @include media-desktop {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        column-gap: 24px;
+        row-gap: 24px;
     }
 }
 
@@ -63,24 +73,11 @@ ul.howto-container__how {
     align-items: center;
 }
 
-// restaurants cards
-#wrapper-section-cards {
-    @include flex-center;
-    background-color: $bg-clr-grey-header;
-}
+
 
 // footer flex
-
 #wrapper-footer {
     @include flex-center;
     background-color: $bg-clr-footer;
 }
 
-.footercontainer {
-    @include media-phone {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        margin: $margin-page;
-    }
-}
