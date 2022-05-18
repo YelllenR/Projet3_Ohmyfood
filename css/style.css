@@ -35,7 +35,7 @@
 .home-cards {
   width: 480px;
   margin: 0 24px 0 24px;
-  height: 800px;
+  height: auto;
 }
 @media screen and (min-width: 600px) {
   .home-cards {
@@ -50,8 +50,8 @@
   padding-bottom: 16px;
 }
 .home-cards__container {
+  overflow: hidden;
   width: 70%;
-  height: auto;
   border-radius: 16px;
   padding: 0;
   margin: 0;
@@ -103,8 +103,8 @@
   align-items: center;
 }
 .img--cards {
-  height: 90%;
-  width: 100%;
+  height: 100px;
+  width: 100px;
   border: 1px solid red;
   -o-object-fit: cover;
      object-fit: cover;
@@ -121,8 +121,7 @@
 }
 .img--new {
   position: relative;
-  top: -10%;
-  right: -20%;
+  transform: translate(50%);
   z-index: 2;
   height: 32px;
   width: 80px;
@@ -148,6 +147,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#wrapper-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
 }
 
 .nav-home {
@@ -391,7 +397,9 @@ ul.howto-container__how li:before {
 @media screen and (min-width: 600px) {
   ul.howto-container__how {
     font-size: 20px;
-    width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
   }
   ul.howto-container__how li:before {
     height: 40px;
@@ -416,6 +424,9 @@ ul.howto-container__how li:before {
 @media screen and (min-width: 600px) {
   .list {
     height: 100px;
+  }
+  .list--1, .list--2 {
+    margin-right: 24px;
   }
 }
 

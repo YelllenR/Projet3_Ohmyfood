@@ -1,7 +1,7 @@
 .home-cards {
     width: $breakpoints-mobile;
     margin: $margin-page;
-    height: 800px;
+    height: auto;
 
         @media screen and (min-width: 600px){
             width: $breakpoints-desktop;
@@ -16,9 +16,8 @@
     }
 
     &__container {
+        overflow: hidden;
         width: $card-width-restaurant;
-        height: auto;
-        // à changer si fonctionnement pas bon avec auto pour $card-height-restaurant
         border-radius: $card-radius-restaurant;
         padding: 0;
         margin: 0;

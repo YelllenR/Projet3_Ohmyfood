@@ -7,7 +7,10 @@
 }
 
 
-
+#wrapper-intro{
+    @include flex-center;
+    background-color: map-get($map: $colors, $key: header-intro-grey);
+}
 
 // home-page flex
 .nav-home {
