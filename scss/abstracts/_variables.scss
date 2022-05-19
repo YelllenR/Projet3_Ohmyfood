@@ -1,40 +1,45 @@
-
 // Font-types
-$font-titles-pages: ('Shrikhand', 'cursive');
-$font-texts-titles: ('Roboto', sans-serif);
+$font-titles-pages: (
+    'Shrikhand',
+    'cursive'
+);
+$font-texts-titles: (
+    'Roboto',
+    sans-serif
+);
 
 // Font sizes mobile
-$fs-title-phone: 20px; 
-$fs-text-phone: 18px; 
+$fs-title-phone: 20px;
+$fs-text-phone: 18px;
 $fs-text-xs-phone: 16px;
 
 // Font sizes desktop
-$fs-titles-desktop: 32px; 
-$fs-texts-desktop: 24px; 
-$fs-card-title-desktop: 24px; 
-$fs-card-texts-desktop: 20px; 
+$fs-titles-desktop: 32px;
+$fs-texts-desktop: 24px;
+$fs-card-title-desktop: 24px;
+$fs-card-texts-desktop: 20px;
 
-$shadow-search: inset 0px 20px 24px -23px rgba(17, 17, 17, 0.55); 
+$shadow-search: inset 0px 20px 24px -23px rgba(17, 17, 17, 0.55);
 
 // Colors---------------
-$primary-color:rgba(147, 86, 220, 1); 
-$secondary-color:rgba(255, 121, 218, 1); 
-$tertiary-color:#99E2D0; 
+$primary-color: rgba(147, 86, 220, 1);
+$secondary-color: rgba(255, 121, 218, 1);
+$tertiary-color: #99E2D0;
 $bg-color-cards-logo: #ffffff;
-$text-color: rgb(0, 0, 0); 
+$text-color: rgb(0, 0, 0);
 $bg-grey: #F2F2F2;
-$bg-clr-grey-header: #f6f6f6; 
-$box-hover-header: #f5edff; 
-$bg-clr-search: #eaeaea; 
-$bg-icon-header: #7e7e7e; 
-$color-num-box: rgba(147, 86, 220, 1); 
-$txt-btn: #ffffff; 
-$bg-clr-footer: #353535; 
+$bg-clr-grey-header: #f6f6f6;
+$box-hover-header: #f5edff;
+$bg-clr-search: #eaeaea;
+$bg-icon-header: #7e7e7e;
+$color-num-box: rgba(147, 86, 220, 1);
+$txt-btn: #ffffff;
+$bg-clr-footer: #353535;
 
 
-$shadow-cards-how-to: 6px 9px 15px -3px rgba(98,98,98,0.38);
-$shadow-card-nav: 2px 15px 18px -3px rgba(0,0,0,0.68); 
-$btn-shadow: 1px 6px 20px -4px rgba(112,112,112,0.72);
+$shadow-cards-how-to: 6px 9px 15px -3px rgba(98, 98, 98, 0.38);
+$shadow-card-nav: 2px 15px 18px -3px rgba(0, 0, 0, 0.68);
+$btn-shadow: 1px 6px 20px -4px rgba(112, 112, 112, 0.72);
 
 
 // Map colors------------
@@ -45,76 +50,80 @@ $colors: (
     "light-grey": $bg-grey,
     "text-clrr": $text-color,
     "bg-cards": $bg-color-cards-logo,
-    "txt-btn" : $txt-btn, 
+    "txt-btn" : $txt-btn,
     "li-color": $color-num-box,
     "footer-clr": $bg-clr-footer,
-    "icon-clr": $bg-icon-header, 
-    "hover-home-card": $box-hover-header, 
+    "icon-clr": $bg-icon-header,
+    "hover-home-card": $box-hover-header,
     "header-intro-grey":$bg-clr-grey-header
 );
 
 // Map breakpoints-------------
-$breakpoints: (
-    'phone': 250px,
-    'tablet': 768px, 
-    'desktop': 1200px,
-);
 
-$phone: 500px; 
+
+$breakpoints: (
+    'mobile': 320px,
+    'fablet': 600px,
+    'tablet': 768px,
+    'desktop': 991px,
+    'wide': 1200px
+    );
+
+
 
 // paddings/margins------------
-$padding-txts: 16px 16px 16px 16px; 
-$padding-titles: 16px 16px 16px 16px; 
-$padding-titles-cards: 16px 16px 16px 16px; 
+$padding-txts: 16px 16px 16px 16px;
+$padding-titles: 16px 16px 16px 16px;
+$padding-titles-cards: 16px 16px 16px 16px;
 
-$margin-page: 0 24px 0 24px; 
+$margin-page: 0 24px 0 24px;
 
 
 // buttons-------------------
 $radius-btn: 24px;
 
-$btn-color: $secondary-color; 
+$btn-color: $secondary-color;
 $btn-height: 48px;
-$btn-width: 192px; 
+$btn-width: 192px;
 
 
 
 // logo------------------------
 $logo-height-home: 56px;
-$logo-height: 40px; 
-$logo-height-footer: 24px; 
+$logo-height: 40px;
+$logo-height-footer: 24px;
 
 $logo-width-home: 192px;
-$logo-width: 40px; 
-$logo-width-footer: 24px; 
+$logo-width: 40px;
+$logo-width-footer: 24px;
 
 
 
 // icons-----------------
 // $fill-i: ; 
-$i-heart-size: 16px, 16px; 
-$i-hand-size: 16px, 16px; 
-$i-ustensils-size: 16px, 16px; 
+$i-heart-size: 16px,16px;
+$i-hand-size: 16px, 16px;
+$i-ustensils-size: 16px, 16px;
 
 
-// How-to part in header--------------------
+// list size
+$height-list: 86px;
 
 // $hover-card-nav: ; 
-$box-height: 72px; 
-$box-width: 100%; 
-$box-border: 24px; 
+$box-height: 72px;
+$box-width: 100%;
+$box-border: 24px;
 
-$box-radius: 24px; 
+$box-radius: 24px;
 
 
 
 // cards for restaurants-----------------
-$card-height-restaurant: 296px; 
-$card-width-restaurant: 100%; 
+$card-height-restaurant: 296px;
+$card-width-restaurant: 100%;
 // card-shadow-restaurant: ; 
-$img-radius-restaurant: 16px 16px 0 0; 
-$card-radius-restaurant: 16px; 
-
+$img-radius-restaurant: 16px 16px 0 0;
+$card-radius-restaurant: 16px;
 
 
 

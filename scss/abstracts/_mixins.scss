@@ -1,23 +1,31 @@
 // ------------------Breakpoints-----------------------
 
-
-@mixin media-phone{
-    @media screen and (min-width: map-get($breakpoints,'phone')){
-        &{ @content; }
+@mixin media-phone {
+    @media screen and (min-width: map-get($breakpoints, 'mobile')) and (max-width: 599pxd) {
+        & {
+            @content;
+        }
     }
 }
 
-@mixin media-tablet{
-    @media screen and (min-width: map-get($breakpoints,'tablet')){
-        &{ @content; }
+@mixin media-tablet {
+    @media screen and (min-width: map-get($breakpoints, 'fablet')) and (max-width: map-get($breakpoints, 'tablet')) {
+        & {
+            @content;
+        }
+    }
+
+}
+
+
+@mixin media-desktop {
+    @media screen and (min-width: map-get($breakpoints, 'desktop')) {
+        & {
+            @content;
+        }
     }
 }
 
-@mixin media-desktop{
-    @media screen and (min-width: map-get($breakpoints,'desktop')){
-        &{ @content; }
-    }
-}
 
 
 // ------------------Flex behavior---------------------
@@ -42,7 +50,7 @@
     font-size: 24px;
     color: $text-color;
 
-    @include media-desktop{
+    @include media-desktop {
         font-size: $fs-titles-desktop;
     }
 }
@@ -52,7 +60,7 @@
     font-size: $fs-texts-desktop;
     color: $text-color;
 
-    @include media-desktop{
+    @include media-desktop {
         font-size: $fs-titles-desktop;
     }
 }
@@ -62,7 +70,7 @@
     font-size: 16px;
     color: $text-color;
 
-    @include media-desktop{
+    @include media-desktop {
         font-size: $fs-texts-desktop;
     }
 }
@@ -78,7 +86,7 @@
 
 // ----------------------Button----------------------------
 @mixin btn-gradient {
-    background: linear-gradient(174deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+    background: linear-gradient(174deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%);
     color: $txt-btn;
 }
 
@@ -92,12 +100,12 @@
     width: $btn-width;
     @include btn-gradient();
     border-radius: $radius-btn;
-    border-style: none; 
+    border-style: none;
     box-shadow: $btn-shadow;
 
 
-    @include media-desktop(){
-        height:  $btn-height * 1.5 ;
+    @include media-desktop() {
+        height: $btn-height * 1.5;
         width: $btn-width * 1.5;
         border-radius: $radius-btn * 1.5;
         font-size: $fs-card-texts-desktop;
@@ -120,12 +128,13 @@
     color: $text-color;
     background-color: $bg-color-cards-logo;
 
-    @include media-desktop() {
+    @include media-desktop {
         height: 250px;
         width: 300px;
         background-color: transparent;
     }
 }
+
 
 @mixin logo-footer {
     height: $logo-height-footer;

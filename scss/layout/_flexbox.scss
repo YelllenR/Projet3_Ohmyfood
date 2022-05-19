@@ -1,5 +1,6 @@
 #wrapper-header {
     @include flex-center;
+
 }
 
 #wrapper-section-operation {
@@ -62,7 +63,7 @@ ul.howto-container__how {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(5, 1fr);
-        column-gap: 24px;
+        column-gap: 16px;
         row-gap: 24px;
     }
 }

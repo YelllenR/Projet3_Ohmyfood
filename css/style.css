@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 48px;
   cursor: pointer;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .nav-home__explore {
     height: 72px;
     width: 288px;
@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6, p {
   border-style: none;
   box-shadow: 1px 6px 20px -4px rgba(112, 112, 112, 0.72);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .orderbtn {
     height: 72px;
     width: 288px;
@@ -64,15 +64,15 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .home-cards {
-  width: 500px;
+  width: "mobile";
   margin: 0 24px 0 24px;
   height: auto;
   margin-bottom: 48px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .home-cards {
     height: 550px;
-    margin: 0 24px 0 24px;
+    margin: 0 8px 0 24px;
     width: 100%;
   }
 }
@@ -82,9 +82,10 @@ h1, h2, h3, h4, h5, h6, p {
   padding-top: 48px;
   padding-bottom: 16px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .home-cards__title {
     grid-area: 1/1/2/6;
+    font-size: 24px;
   }
 }
 .home-cards__container,
@@ -99,6 +100,24 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 32px;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.44);
   overflow-y: hidden;
+}
+@media screen and (min-width: 991px) {
+  .home-cards__container--1,
+.home-cards a--1 {
+    grid-area: 2/1/3/2;
+  }
+  .home-cards__container--2,
+.home-cards a--2 {
+    grid-area: 2/2/3/3;
+  }
+  .home-cards__container--3,
+.home-cards a--3 {
+    grid-area: 2/3/3/4;
+  }
+  .home-cards__container--4,
+.home-cards a--4 {
+    grid-area: 2/4/3/5;
+  }
 }
 .home-cards__img--cards {
   position: relative;
@@ -173,7 +192,8 @@ h1, h2, h3, h4, h5, h6, p {
   top: -50px;
   right: -80%;
 }
-.home-cards .clic-heart-1, .home-cards .clic-heart-2 {
+.home-cards .clic-heart-1,
+.home-cards .clic-heart-2 {
   position: relative;
   top: -66px;
   right: -80%;
@@ -185,7 +205,7 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0 16px 0 8px;
   color: #7e7e7e;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .list i {
     padding: 0 8px 0 8px;
   }
@@ -205,6 +225,12 @@ h1, h2, h3, h4, h5, h6, p {
 .footercontainer__icon--fork i {
   padding-right: 16px;
 }
+@media screen and (min-width: 991px) {
+  .footercontainer__icon--fork {
+    padding-top: 0;
+    font-size: 20px;
+  }
+}
 .footercontainer__icon--hands {
   padding-top: 8px;
   color: #ffffff;
@@ -213,6 +239,12 @@ h1, h2, h3, h4, h5, h6, p {
 .footercontainer__icon--hands i {
   padding-right: 8px;
 }
+@media screen and (min-width: 991px) {
+  .footercontainer__icon--hands {
+    padding-top: 0;
+    font-size: 20px;
+  }
+}
 
 .nav-home__img {
   width: 100%;
@@ -220,10 +252,16 @@ h1, h2, h3, h4, h5, h6, p {
   box-shadow: 0px 4px 5px 0px rgba(98, 98, 98, 0.41);
   z-index: 1;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .nav-home__img {
     box-shadow: none;
     border-style: none;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 .nav-home__logo {
@@ -232,11 +270,18 @@ h1, h2, h3, h4, h5, h6, p {
   color: rgb(0, 0, 0);
   background-color: #ffffff;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .nav-home__logo {
     height: 250px;
     width: 300px;
     background-color: transparent;
+  }
+}
+@media screen and (min-width: 991px) {
+  .nav-home__logo {
+    padding-top: 32px;
+    width: 400px;
+    height: 200px;
   }
 }
 
@@ -246,10 +291,11 @@ h1, h2, h3, h4, h5, h6, p {
   filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(176deg);
   margin-bottom: 16px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .footercontainer__logo {
     height: auto;
     width: 200px;
+    margin-bottom: 0;
   }
 }
 
@@ -278,7 +324,7 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 250px) {
+@media screen and (min-width: 320px) and (max-width: 599pxd) {
   .nav-home__img {
     display: flex;
     justify-content: center;
@@ -329,13 +375,13 @@ ul.howto-container__how {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .home-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    -moz-column-gap: 24px;
-         column-gap: 24px;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
     row-gap: 24px;
   }
 }
@@ -356,7 +402,7 @@ ul.howto-container__how {
 .footercontainer {
   padding-top: 24px;
   padding-bottom: 32px;
-  width: 500px;
+  width: "mobile";
 }
 .footercontainer a {
   text-decoration: none;
@@ -366,10 +412,16 @@ ul.howto-container__how {
   padding-top: 8px;
   font-family: "Roboto", sans-serif;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
+  .footercontainer__legal, .footercontainer__contact {
+    padding-top: 0;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 991px) {
   .footercontainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
     height: 200px;
@@ -378,12 +430,13 @@ ul.howto-container__how {
 }
 
 .nav-home {
-  width: 500px;
+  width: "mobile";
   font-family: "Roboto", sans-serif;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .nav-home {
     width: 100%;
+    height: auto;
   }
 }
 .nav-home__search {
@@ -394,13 +447,14 @@ ul.howto-container__how {
   width: 100%;
   background-color: #eaeaea;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .nav-home__search {
-    width: 264px;
+    width: 280px;
+    height: 60px;
     margin-top: 32px;
     margin-bottom: 32px;
     background-color: #c9abee;
-    border-radius: 24px;
+    border-radius: 32px;
   }
   .nav-home__search i {
     color: #ffffff;
@@ -431,7 +485,7 @@ ul.howto-container__how {
 .nav-home__search input:focus {
   outline: none;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .nav-home__search input {
     width: 184px;
     background-color: #c9abee;
@@ -440,12 +494,15 @@ ul.howto-container__how {
   }
   .nav-home__search input::-moz-placeholder {
     color: #ffffff;
+    padding: 16px;
   }
   .nav-home__search input:-ms-input-placeholder {
     color: #ffffff;
+    padding: 16px;
   }
   .nav-home__search input::placeholder {
     color: #ffffff;
+    padding: 16px;
   }
 }
 .nav-home__styling {
@@ -461,12 +518,12 @@ ul.howto-container__how {
   align-self: center;
   text-align: center;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .nav-home__intro {
     font-size: 32px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .nav-home__intro {
     padding-bottom: 48px;
     padding-top: 48px;
@@ -477,7 +534,7 @@ ul.howto-container__how {
   padding: 8px 16px 24px 16px;
   text-align: center;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .nav-home__discover {
     padding-bottom: 56px;
     font-size: 24px;
@@ -485,12 +542,12 @@ ul.howto-container__how {
 }
 
 .howto-container {
-  width: 500px;
+  width: "mobile";
   margin: 0 24px 0 24px;
   margin-top: 48px;
   margin-bottom: 56px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .howto-container {
     width: 100%;
     margin: 0 24px 0 24px;
@@ -503,7 +560,7 @@ ul.howto-container__how {
   align-self: flex-start;
   padding-bottom: 24px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .howto-container__operation {
     font-size: 24px;
     align-self: center;
@@ -532,7 +589,7 @@ ul.howto-container__how li:before {
   position: relative;
   left: -8px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   ul.howto-container__how {
     font-size: 24px;
     width: 90%;
@@ -560,9 +617,9 @@ ul.howto-container__how li:before {
   font-size: 16px;
   font-weight: bold;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   .list {
-    height: 96px;
+    height: 86px;
   }
   .list--1, .list--2 {
     margin-right: 32px;

@@ -27,6 +27,11 @@
         i{
             padding-right: 16px;
         }
+
+        @include media-desktop{
+            padding-top: 0;
+            font-size: $fs-title-phone;
+        }
     }
 
     &__icon--hands{
@@ -36,6 +41,10 @@
 
         i{
             padding-right: 8px;
+        }
+        @include media-desktop{
+            padding-top: 0;
+            font-size: $fs-title-phone;
         }
     }
 }
