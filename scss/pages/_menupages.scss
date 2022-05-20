@@ -1,0 +1,82 @@
+
+// Menu page - La palette du goût
+body{
+    background-color: $bg-clr-grey-header;
+}
+
+.iconheart{
+    border-radius: 32px 32px 0 0;
+    z-index: 2;
+    padding: 24px;
+    background-color: $bg-clr-grey-header;
+    position: relative;
+    height: 50px;
+    top: -48px;
+
+    &__title{
+        padding-top: 32px;
+        font-family: $font-titles-pages;
+        // see if need to change fs
+        font-size: $font-titles-pages; 
+    }
+}
+
+.starters{
+    width: 100%;
+    margin: $margin-page;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: $bg-clr-grey-header;
+    height: auto;
+
+    &__title{
+        width: 50px;
+        font-family: $font-texts-titles;
+        font-weight: lighter;
+        font-size: $fs-text-xs-phone;
+        border-bottom: 3px solid $tertiary-color;
+        margin-bottom: 24px;
+    }   
+}
+
+.maincorse{
+    width: 100%;
+    margin: $margin-page;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: $bg-clr-grey-header;
+    height: auto;
+
+    &__title{
+        width: 50px;
+        font-family: $font-texts-titles;
+        font-weight: lighter;
+        font-size: $fs-text-xs-phone;
+        border-bottom: 3px solid $tertiary-color;
+        margin-bottom: 24px;
+    }
+}
+
+.desserts{
+    width: 100%;
+    margin: $margin-page;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: $bg-clr-grey-header;
+    height: auto;
+
+    &__title{
+        width: 50px;
+        font-family: $font-texts-titles;
+        font-weight: lighter;
+        font-size: $fs-text-xs-phone;
+        border-bottom: 3px solid $tertiary-color;
+        margin-bottom: 24px;
+    }
+}

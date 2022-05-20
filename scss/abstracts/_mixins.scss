@@ -1,7 +1,7 @@
 // ------------------Breakpoints-----------------------
 
 @mixin media-phone {
-    @media screen and (min-width: map-get($breakpoints, 'mobile')) and (max-width: 599pxd) {
+    @media screen and (min-width: map-get($breakpoints, 'mobile')) and (max-width: 599px) {
         & {
             @content;
         }
@@ -42,7 +42,12 @@
     align-items: center;
 }
 
-
+@mixin flex-column-space-between{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
 // ----------------------Typo----------------------------
 @mixin typography-title-pages {

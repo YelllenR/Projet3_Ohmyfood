@@ -1,6 +1,5 @@
 #wrapper-header {
     @include flex-center;
-
 }
 
 #wrapper-section-operation {
@@ -74,7 +73,50 @@ ul.howto-container__how {
     align-items: center;
 }
 
+// menu pages
 
+// Page - La palette du goût
+.nav-palette{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.iconheart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#wrapper-starters{
+    @include flex-center;
+    background-color: $bg-clr-grey-header;
+}
+#wrapper-dessert{
+    @extend #wrapper-starters;
+    background-color: $bg-clr-grey-header;
+}
+
+#wrapper-main{
+    @extend #wrapper-starters;
+    background-color: $bg-clr-grey-header;
+}
+
+#wrapper-dessert{
+    @extend #wrapper-starters;
+    background-color: $bg-clr-grey-header;
+}
+
+.starters-items{
+    display: flex;
+    height: 86px;
+    margin-bottom: 16px;
+}
+
+
+#btn-center{
+    @include flex-center;
+}
 
 // footer flex
 #wrapper-footer {

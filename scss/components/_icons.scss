@@ -10,41 +10,105 @@
 }
 
 // icon heart on homepage cards
-.clic-heart,  .clic-heart-1, .clic-heart-2{
+.clic-heart,
+.clic-heart-1,
+.clic-heart-2 {
     border-style: none;
-    background-color: transparent;  
+    background-color: transparent;
     cursor: pointer;
 }
 
 
 // icons in homepage footer
-.footercontainer{
-    &__icon--fork{
+.footercontainer {
+    &__icon--fork {
         padding-top: 8px;
         color: $txt-btn;
         font-family: $font-texts-titles;
-        
-        i{
+
+        i {
             padding-right: 16px;
         }
 
-        @include media-desktop{
+        @include media-desktop {
             padding-top: 0;
             font-size: $fs-title-phone;
         }
     }
 
-    &__icon--hands{
+    &__icon--hands {
         padding-top: 8px;
         color: $txt-btn;
         font-family: $font-texts-titles;
 
-        i{
+        i {
             padding-right: 8px;
         }
-        @include media-desktop{
+
+        @include media-desktop {
             padding-top: 0;
             font-size: $fs-title-phone;
         }
+    }
+}
+
+
+// icons in menu pages
+.nav-palette {
+
+    i,
+    a {
+        font-size: 18px;
+        color: $text-color;
+        margin-right: 16px;
+    }
+}
+
+.iconheart {
+    i {
+        font-size: 24px;
+        padding-top: 32px;
+    }
+}
+
+.starters__choice {
+    i {
+        border-radius: 0 16px 16px 0;
+        text-align: center;
+        padding-top: 32px;
+        font-size: 24px;
+        color: $txt-btn;
+        transform: scale(0);
+        background-color: $tertiary-color;
+        width: 60px;
+        height: 87px;
+    }
+}
+
+.maincorse__choice {
+    i {
+        border-radius: 0 16px 16px 0;
+        text-align: center;
+        padding-top: 32px;
+        font-size: 24px;
+        color: $txt-btn;
+        transform: scale(0);
+        background-color: $tertiary-color;
+        width: 60px;
+        height: 87px;
+    }
+}
+
+.desserts__infoprice{
+    i {
+        border-radius: 0 16px 16px 0;
+        text-align: center;
+        padding-top: 32px;
+        font-size: 24px;
+        color: $txt-btn;
+        transform: scale(0);
+        background-color: $tertiary-color;
+        width: 60px;
+        height: 87px;
     }
 }

@@ -1,0 +1,24 @@
+// Menu page - La palette du goût
+.nav-palette {
+    @include media-phone;
+    margin: $margin-page;
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 16px;
+
+    @include media-desktop {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 32px;
+        background-color: red;
+
+        a {
+            align-self: flex-start;
+            i {
+
+                font-size: 32px;
+            }
+        }
+    }
+}

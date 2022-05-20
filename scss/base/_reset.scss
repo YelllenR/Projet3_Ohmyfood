@@ -5,8 +5,9 @@
     margin: 0;
 }
 
-html, body{
+html, #reset{
     height: 100%;
+    box-sizing: border-box;
 }
 
 a{
