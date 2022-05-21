@@ -1,5 +1,10 @@
 #wrapper-header {
     @include flex-center;
+
+    
+    @include media-desktop{
+        background-color: $txt-btn;
+    }
 }
 
 #wrapper-section-operation {
@@ -31,6 +36,7 @@
 
 .nav-home__styling {
     @include flex-column;
+
 }
 
 .howto-container {
@@ -92,6 +98,7 @@ ul.howto-container__how {
     @include flex-center;
     background-color: $bg-clr-grey-header;
 }
+
 #wrapper-dessert{
     @extend #wrapper-starters;
     background-color: $bg-clr-grey-header;

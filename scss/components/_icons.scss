@@ -19,7 +19,7 @@
 }
 
 
-// icons in homepage footer
+// footer in homepage footer and menu pages
 .footercontainer {
     &__icon--fork {
         padding-top: 8px;
@@ -55,12 +55,22 @@
 
 // icons in menu pages
 .nav-palette {
+    // i = arrow left
+    @include media-desktop{
+        height: 76px;
+        margin: 24px 0 24px 0;
+    }
 
     i,
     a {
         font-size: 18px;
         color: $text-color;
         margin-right: 16px;
+
+        @include media-desktop{
+            font-size: 24px;
+            padding-top: 10px;
+        }
     }
 }
 

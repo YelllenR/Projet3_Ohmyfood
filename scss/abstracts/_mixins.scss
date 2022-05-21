@@ -147,3 +147,11 @@
     color: $text-color;
     background-color: $bg-color-cards-logo;
 }
+
+
+// background images on desktop and tablet
+
+@mixin menu-page-img{
+    background-image: url();
+    
+}

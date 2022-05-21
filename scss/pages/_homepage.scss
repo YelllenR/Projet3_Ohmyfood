@@ -1,5 +1,5 @@
 .nav-home {
-    width: 'mobile';
+    width: $mobile;
     font-family: $font-texts-titles;
 
     @include media-desktop{

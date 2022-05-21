@@ -11,12 +11,11 @@
         justify-content: center;
         align-items: center;
         margin-top: 32px;
-        background-color: red;
+        background-color: $txt-btn;
 
         a {
             align-self: flex-start;
             i {
-
                 font-size: 32px;
             }
         }

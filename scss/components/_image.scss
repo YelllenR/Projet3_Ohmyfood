@@ -29,23 +29,58 @@
 
 
 // logo on menu pages
+
 .nav__logo {
+
     // For palette du goût
     &--palette {
         flex-basis: 80%;
         height: 24px;
         margin-right: 24px;
+
+        @include media-desktop {
+            height: 48px;
+            z-index: 2;
+        }
     }
-
-
 }
 
 .imgfood {
-
-    &--palette{
+    &--palette {
         width: 100%;
-        object-fit: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-position: center;
+        min-height: 200px;
         z-index: 1;
+
+        @include media-desktop {
+            visibility: hidden;
+            height: 0;
+        }
+    }
+}
+
+.parallax {
+
+    width: 100%;
+    background-image:  url(/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-position: center;
+    
+    @include media-desktop {
+        &__palette {
+            width: 100%;
+            background-image:  url(/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-position: center;
+            min-height: 400px;
+        }
     }
 }
 

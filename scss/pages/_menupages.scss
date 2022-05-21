@@ -39,6 +39,10 @@ body{
         border-bottom: 3px solid $tertiary-color;
         margin-bottom: 24px;
     }   
+
+    @include media-desktop{
+        background-color: none ;
+    }
 }
 
 .maincorse{

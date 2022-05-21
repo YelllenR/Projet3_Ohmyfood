@@ -1,5 +1,5 @@
 .home-cards {
-    width: 'mobile';
+    width: $mobile;
     margin: $margin-page;
     height: auto;
     margin-bottom: 48px;
@@ -34,7 +34,7 @@
         text-decoration: none;
         color: $text-color;
         margin-bottom: 32px;
-        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.44);
+        box-shadow: $shadow-cards-restaurants;
         overflow-y: hidden;
 
         @include media-desktop {
@@ -83,15 +83,16 @@
     &__img--new2 {
         position: relative;
         top: 32px;
-        right: -60%;
+        right: -65%;
         z-index: 2;
         height: 32px;
         width: 80px;
         background-color: $tertiary-color;
         padding: 8px;
-        color: darken($color: $tertiary-color, $amount: 40%);
+        color: darken($color: $tertiary-color, $amount: 50%);
         font-size: 16px;
-
+        border-radius: 8px;
+        font-family: $font-texts-titles;
     }
 
     // images without new tag
