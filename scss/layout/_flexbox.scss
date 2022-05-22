@@ -1,8 +1,11 @@
 #wrapper-header {
     @include flex-center;
 
-
     @include media-desktop {
+        background-color: $txt-btn;
+    }
+
+    @include media-tablet{
         background-color: $txt-btn;
     }
 }
@@ -22,21 +25,31 @@
     @include flex-column;
 
     @include media-phone {
-
         &__img {
             @include flex-center;
+            
 
             &__search {
                 @include flex-center;
+            }
+        }
+    }
 
+    @include media-tablet{
+        &__img {
+            @include flex-center;
+            
+            &__search {
+                @include flex-center;
             }
         }
     }
 }
 
+
+
 .nav-home__styling {
     @include flex-column;
-
 }
 
 .howto-container {
@@ -62,8 +75,15 @@ ul.howto-container__how {
         @include flex-column;
     }
 
-    // grid for cards on desktops
 
+    @include media-tablet {
+        
+        &__container {
+            @include flex-column;
+        }
+    }
+
+    // grid for cards on desktops
     @include media-desktop {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -71,6 +91,7 @@ ul.howto-container__how {
         column-gap: 16px;
         row-gap: 24px;
     }
+
 }
 
 .list {
@@ -94,6 +115,11 @@ ul.howto-container__how {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-tablet{
+        justify-content: center;
+        align-items: center;
+    }
 
     @include media-desktop {
         justify-content: center;

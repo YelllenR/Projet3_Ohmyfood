@@ -2,17 +2,30 @@
     width: $mobile;
     font-family: $font-texts-titles;
 
+    @include media-tablet {
+        width: 100%;
+        height: auto;
+    }
+
     @include media-desktop{
         width: 100%;
         height: auto;
     }
+
 
     &__search {
         @include flex-center;
         height: 52px;
         width: 100%;
         background-color: $bg-clr-search;
-        // box-shadow: $shadow-search;
+
+        @include media-tablet{
+            height: 80px;
+
+            i{
+                font-size: $fs-card-texts-desktop;
+            }
+        }
 
         @include media-desktop {
             width: 280px;
@@ -42,6 +55,14 @@
 
             &:focus {
                 outline: none;
+            }
+
+            @include media-tablet{
+                height: 80px;
+
+                &::placeholder{
+                    font-size: $fs-card-texts-desktop;
+                }
             }
 
             @include media-desktop {
@@ -82,6 +103,11 @@
         padding: 8px 16px 24px 16px;
         text-align: center;
 
+        @include media-tablet{
+            font-size: $fs-texts-desktop;
+            padding-bottom: 56px;
+        }
+
         @include media-desktop {
             padding-bottom: 56px;
             font-size: $fs-texts-desktop;
@@ -91,11 +117,14 @@
 
 //How to section-------------
 .howto-container {
-    width: 'mobile';
+    @include media-phone;
     margin: $margin-page;
     margin-top: 48px;
     margin-bottom: 56px;
 
+    @include media-tablet{
+        width: 80%;
+    }
 
     @include media-desktop {
         width: 100%;
@@ -109,6 +138,10 @@
         font-family: $font-texts-titles;
         align-self: flex-start;
         padding-bottom: 24px;
+
+        @include media-tablet{
+            
+        }
 
         @include media-desktop {
             font-size: $fs-card-title-desktop;

@@ -23,7 +23,7 @@ html,
     box-sizing: border-box;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 768px) {
+@media screen and (min-width: 600px) and (max-width: 991px) {
   html,
 #reset {
     height: 100%;
@@ -63,6 +63,14 @@ p {
   margin-bottom: 48px;
   cursor: pointer;
 }
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .nav-home__explore {
+    height: 62.4px;
+    width: 249.6px;
+    border-radius: 31.2px;
+    font-size: 20px;
+  }
+}
 @media screen and (min-width: 991px) {
   .nav-home__explore {
     height: 72px;
@@ -83,6 +91,14 @@ p {
   box-shadow: 1px 6px 20px -4px rgba(112, 112, 112, 0.72);
   cursor: pointer;
   margin-bottom: 48px;
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .orderbtn {
+    height: 62.4px;
+    width: 249.6px;
+    border-radius: 31.2px;
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 991px) {
   .orderbtn {
@@ -606,11 +622,20 @@ p {
   }
 }
 
+.nav-home {
+  width: 100%;
+}
 .nav-home__img {
   width: 100%;
   height: 80px;
   box-shadow: 0px 4px 5px 0px rgba(98, 98, 98, 0.41);
   z-index: 1;
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .nav-home__img {
+    width: 100%;
+    height: auto;
+  }
 }
 @media screen and (min-width: 991px) {
   .nav-home__img {
@@ -630,18 +655,21 @@ p {
   color: rgb(0, 0, 0);
   background-color: #ffffff;
 }
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 600px) and (max-width: 991px) {
   .nav-home__logo {
-    height: 250px;
-    width: 300px;
-    background-color: transparent;
+    height: 84px;
+    width: 288px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    align-self: center;
   }
 }
 @media screen and (min-width: 991px) {
   .nav-home__logo {
     padding-top: 32px;
-    width: 400px;
     height: 200px;
+    width: 300px;
+    background-color: transparent;
   }
 }
 
@@ -667,6 +695,11 @@ p {
      object-position: center;
   min-height: 100px;
 }
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .imgfood--palette {
+    display: none;
+  }
+}
 @media screen and (min-width: 991px) {
   .imgfood--palette {
     display: none;
@@ -674,6 +707,19 @@ p {
 }
 
 @media screen and (min-width: 991px) {
+  .parallax__palette {
+    opacity: 0.8;
+    background-image: url(/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -o-object-position: center;
+       object-position: center;
+    border-radius: 100% 0 50% 0;
+    background-color: #f6f6f6;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
   .parallax__palette {
     opacity: 0.8;
     background-image: url(/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
@@ -700,6 +746,13 @@ p {
     margin-bottom: 0;
   }
 }
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .footercontainer__logo {
+    height: auto;
+    width: 200px;
+    margin-bottom: 0;
+  }
+}
 
 #wrapper-header {
   display: flex;
@@ -707,6 +760,11 @@ p {
   align-items: center;
 }
 @media screen and (min-width: 991px) {
+  #wrapper-header {
+    background-color: #ffffff;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
   #wrapper-header {
     background-color: #ffffff;
   }
@@ -732,6 +790,18 @@ p {
   align-items: center;
 }
 @media screen and (min-width: 320px) and (max-width: 599px) {
+  .nav-home__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-home__img__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
   .nav-home__img {
     display: flex;
     justify-content: center;
@@ -782,6 +852,14 @@ ul.howto-container__how {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .home-cards__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 @media screen and (min-width: 991px) {
   .home-cards {
     display: grid;
@@ -809,6 +887,12 @@ ul.howto-container__how {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .iconheart {
+    justify-content: center;
+    align-items: center;
+  }
 }
 @media screen and (min-width: 991px) {
   .iconheart {
@@ -962,10 +1046,41 @@ ul.howto-container__how {
     padding-top: 8px;
   }
 }
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .nav--palette {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 16px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 5px 0px rgba(98, 98, 98, 0.41);
+    z-index: 2;
+    position: fixed;
+    top: 0;
+  }
+  .nav--palette a {
+    align-self: flex-start;
+  }
+  .nav--palette a i {
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+    padding-top: 8px;
+  }
+}
 
 .nav-home {
   width: 320px;
   font-family: "Roboto", sans-serif;
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .nav-home {
+    width: 100%;
+    height: auto;
+  }
 }
 @media screen and (min-width: 991px) {
   .nav-home {
@@ -980,6 +1095,14 @@ ul.howto-container__how {
   height: 52px;
   width: 100%;
   background-color: #eaeaea;
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .nav-home__search {
+    height: 80px;
+  }
+  .nav-home__search i {
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 991px) {
   .nav-home__search {
@@ -1019,6 +1142,20 @@ ul.howto-container__how {
 .nav-home__search input:focus {
   outline: none;
 }
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .nav-home__search input {
+    height: 80px;
+  }
+  .nav-home__search input::-moz-placeholder {
+    font-size: 20px;
+  }
+  .nav-home__search input:-ms-input-placeholder {
+    font-size: 20px;
+  }
+  .nav-home__search input::placeholder {
+    font-size: 20px;
+  }
+}
 @media screen and (min-width: 991px) {
   .nav-home__search input {
     width: 184px;
@@ -1052,6 +1189,11 @@ ul.howto-container__how {
   align-self: center;
   text-align: center;
 }
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .nav-home__intro {
+    font-size: 30px;
+  }
+}
 @media screen and (min-width: 991px) {
   .nav-home__intro {
     font-size: 32px;
@@ -1068,6 +1210,12 @@ ul.howto-container__how {
   padding: 8px 16px 24px 16px;
   text-align: center;
 }
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .nav-home__discover {
+    font-size: 24px;
+    padding-bottom: 56px;
+  }
+}
 @media screen and (min-width: 991px) {
   .nav-home__discover {
     padding-bottom: 56px;
@@ -1076,10 +1224,15 @@ ul.howto-container__how {
 }
 
 .howto-container {
-  width: "mobile";
+  width: 320px;
   margin: 0 24px 0 24px;
   margin-top: 48px;
   margin-bottom: 56px;
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .howto-container {
+    width: 80%;
+  }
 }
 @media screen and (min-width: 991px) {
   .howto-container {
