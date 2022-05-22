@@ -29,7 +29,6 @@
 
 
 // logo on menu pages
-
 .nav__logo {
 
     // For palette du goût
@@ -40,7 +39,8 @@
 
         @include media-desktop {
             height: 48px;
-            z-index: 2;
+            align-self: center;
+            margin-right: 56px;
         }
     }
 }
@@ -52,34 +52,26 @@
         background-repeat: no-repeat;
         background-size: cover;
         object-position: center;
-        min-height: 200px;
-        z-index: 1;
+        min-height: 100px;
 
         @include media-desktop {
-            visibility: hidden;
-            height: 0;
+            display: none;
         }
     }
 }
 
 .parallax {
 
-    width: 100%;
-    background-image:  url(/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-position: center;
-    
     @include media-desktop {
         &__palette {
-            width: 100%;
+            opacity: 0.8;
             background-image:  url(/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
             object-position: center;
-            min-height: 400px;
+            border-radius: 100% 0 50% 0;
+            background-color: $bg-clr-grey-header;
         }
     }
 }

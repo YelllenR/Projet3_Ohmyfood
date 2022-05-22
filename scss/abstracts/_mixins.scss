@@ -149,9 +149,36 @@
 }
 
 
-// background images on desktop and tablet
+// Menu pages - icon on hover----------
 
-@mixin menu-page-img{
-    background-image: url();
-    
+@mixin icon-check-hover {
+    border-radius: 0 16px 16px 0;
+    text-align: center;
+    padding-top: 32px;
+    font-size: 24px;
+    color: $txt-btn;
+    transform: scale(0);
+    background-color: $tertiary-color;
+    width: 60px;
+    height: 87px;
+
+    @include media-desktop{
+        height: 95px;
+        width: 80px;
+        font-size: 32px;
+    }
+}
+
+@mixin card-title-desktop {
+    color: $txt-btn;
+    font-size: $fs-card-title-desktop;
+    width: 30%;
+    border-radius: 16px;
+    padding: 8px;
+    height: 48px;
+    background-color: $bg-clr-footer;
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: $tertiary-color;
+    border-bottom: none;
 }

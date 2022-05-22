@@ -1,8 +1,8 @@
 #wrapper-header {
     @include flex-center;
 
-    
-    @include media-desktop{
+
+    @include media-desktop {
         background-color: $txt-btn;
     }
 }
@@ -82,47 +82,77 @@ ul.howto-container__how {
 // menu pages
 
 // Page - La palette du goût
-.nav-palette{
-    display: flex;
-    justify-content: space-between;
-    align-items: center
+.nav {
+    &--palette {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
-.iconheart{
+.iconheart {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-desktop {
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-#wrapper-starters{
+#wrapper-starters {
     @include flex-center;
     background-color: $bg-clr-grey-header;
+
+    @include media-desktop{
+        background-color: transparent;
+        height: auto;
+    }
 }
 
-#wrapper-dessert{
+#wrapper-dessert {
     @extend #wrapper-starters;
     background-color: $bg-clr-grey-header;
+
+    @include media-desktop{
+        background-color: transparent;
+    }
 }
 
-#wrapper-main{
+#wrapper-main {
     @extend #wrapper-starters;
     background-color: $bg-clr-grey-header;
+
+    @include media-desktop{
+        background-color: transparent;
+    }
 }
 
-#wrapper-dessert{
+#wrapper-dessert {
     @extend #wrapper-starters;
     background-color: $bg-clr-grey-header;
+
+    @include media-desktop{
+        background-color: transparent;
+    }
 }
 
-.starters-items{
+.starters-items {
     display: flex;
     height: 86px;
     margin-bottom: 16px;
 }
 
 
-#btn-center{
+#btn-center {
     @include flex-center;
+    margin-top: 24px;
+
+
+    @include media-desktop{
+        height: 184px;
+    }
 }
 
 // footer flex
@@ -130,4 +160,3 @@ ul.howto-container__how {
     @include flex-center;
     background-color: $bg-clr-footer;
 }
-

@@ -1,22 +1,39 @@
 // Menu page - La palette du goût
-.nav-palette {
-    @include media-phone;
-    margin: $margin-page;
-    width: 100%;
-    margin-top: 24px;
-    margin-bottom: 16px;
+.nav {
 
-    @include media-desktop {
+    &--palette {
+        margin: $margin-page;
         width: 100%;
-        justify-content: center;
-        align-items: center;
-        margin-top: 32px;
-        background-color: $txt-btn;
+        margin-top: 24px;
+        margin-bottom: 16px;
 
-        a {
-            align-self: flex-start;
-            i {
-                font-size: 32px;
+        a, i{
+            color: $text-color;
+        }
+
+        @include media-desktop {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 16px;
+            background-color: $txt-btn;
+            box-shadow: 0px 4px 5px 0px rgba(98, 98, 98, 0.41);
+            z-index: 2;
+            position: fixed;
+            top: 0;
+
+            a {
+                align-self: flex-start;
+
+                i {
+                    font-size: 32px;
+                    color: $text-color;
+                    padding-top: 8px;
+                }
             }
         }
     }

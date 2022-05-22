@@ -1,27 +1,38 @@
+// // Menu page - La palette du goût
 
-// Menu page - La palette du goût
-body{
-    background-color: $bg-clr-grey-header;
-}
-
-.iconheart{
+.iconheart {
     border-radius: 32px 32px 0 0;
-    z-index: 2;
+    z-index: 1;
     padding: 24px;
     background-color: $bg-clr-grey-header;
     position: relative;
     height: 50px;
     top: -48px;
 
-    &__title{
+    @include media-desktop {
+        position: sticky;
+        top: 80px;
+        height: 80px;
+        border-radius: 0;
+        background-color: transparentize($bg-clr-search, 0.5);
+    }
+
+    &__title {
         padding-top: 32px;
         font-family: $font-titles-pages;
-        // see if need to change fs
-        font-size: $font-titles-pages; 
+        font-size: $font-titles-pages;
+
+        @include media-desktop {
+            padding-right: 24px;
+            padding-top: 0;
+            font-size: $fs-titles-desktop;
+        }
     }
+
+
 }
 
-.starters{
+.starters {
     width: 100%;
     margin: $margin-page;
     margin-bottom: 32px;
@@ -31,21 +42,30 @@ body{
     background-color: $bg-clr-grey-header;
     height: auto;
 
-    &__title{
+
+    &__title {
         width: 50px;
         font-family: $font-texts-titles;
         font-weight: lighter;
         font-size: $fs-text-xs-phone;
         border-bottom: 3px solid $tertiary-color;
         margin-bottom: 24px;
-    }   
 
-    @include media-desktop{
-        background-color: none ;
+        @include media-desktop {
+            @include card-title-desktop;
+            margin-top: 136px;
+        }
+    }
+
+    @include media-desktop {
+        background-color: transparent;
+        width: 50%;
+        height: auto;
+        margin-top: 50px;
     }
 }
 
-.maincorse{
+.maincorse {
     width: 100%;
     margin: $margin-page;
     margin-bottom: 32px;
@@ -55,17 +75,27 @@ body{
     background-color: $bg-clr-grey-header;
     height: auto;
 
-    &__title{
+    &__title {
         width: 50px;
         font-family: $font-texts-titles;
         font-weight: lighter;
         font-size: $fs-text-xs-phone;
         border-bottom: 3px solid $tertiary-color;
         margin-bottom: 24px;
+
+        @include media-desktop {
+            @include card-title-desktop;
+        }
+    }
+
+    @include media-desktop {
+        background-color: transparent;
+        width: 50%;
+        margin-top: 32px;
     }
 }
 
-.desserts{
+.desserts {
     width: 100%;
     margin: $margin-page;
     margin-bottom: 32px;
@@ -75,12 +105,22 @@ body{
     background-color: $bg-clr-grey-header;
     height: auto;
 
-    &__title{
+    &__title {
         width: 50px;
         font-family: $font-texts-titles;
         font-weight: lighter;
         font-size: $fs-text-xs-phone;
         border-bottom: 3px solid $tertiary-color;
         margin-bottom: 24px;
+
+        @include media-desktop {
+            @include card-title-desktop;
+        }
+    }
+
+    @include media-desktop {
+        background-color: transparent;
+        width: 50%;
+        margin-top: 32px;
     }
 }

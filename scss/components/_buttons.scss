@@ -10,6 +10,10 @@
 .orderbtn{
     width: 100%;
     @include btn-styling;
-    margin-bottom: 48px;
     cursor: pointer;
+    margin-bottom: 48px;
+
+    @include media-desktop{
+        margin-bottom: 48px;
+    }
 }

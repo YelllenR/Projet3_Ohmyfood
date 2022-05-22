@@ -150,7 +150,7 @@
 }
 
 
-// cards for menu pages
+//----------------------cards for menu pages-----------------------
 
 // starters
 .starters__choice {
@@ -161,6 +161,12 @@
     background-color: $txt-btn;
     border-radius: 16px;
     box-shadow: $shadow-cards-menu;
+
+    @include media-desktop {
+        box-shadow: $shadow-cards-menu-desktop;
+        height: auto;
+    }
+
 }
 
 .starters__name {
@@ -168,6 +174,12 @@
     width: 100px;
     font-family: $font-texts-titles;
     font-size: $fs-text-xs-phone;
+
+    @include media-desktop {
+        padding: 16px 16px 0 16px;
+        width: 50%;
+        font-size: $fs-card-title-desktop;
+    }
 }
 
 .starters__infoprice {
@@ -176,6 +188,10 @@
     justify-content: space-between;
     height: 50px;
 
+    @include media-desktop {
+        padding: 8px 0 8px 16px;
+    }
+
     &--info {
         // width: 80%;
         font-family: $font-texts-titles;
@@ -183,6 +199,10 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        @include media-desktop {
+            font-size: $fs-card-texts-desktop;
+        }
     }
 
     &--price {
@@ -190,14 +210,18 @@
         font-size: $fs-text-xs-phone;
         position: relative;
         left: 100px;
+
+        @include media-desktop {
+            font-size: $fs-card-texts-desktop;
+        }
     }
 
     &:hover {
         padding: 8px 0 8px 8px;
 
-        &--price{
-                position: relative;
-                left: -100px;
+        &--price {
+            position: relative;
+            left: -100px;
         }
 
         i {
@@ -205,12 +229,21 @@
             transform: translateX(0px) translateY(-44px);
         }
 
+        @include media-desktop {
+            padding-left: 16px;
+
+            i {
+                transform: scale(1);
+                transform: translateX(0px) translateY(-53px);
+            }
+        }
+
     }
 }
 
 
 // main corse
-.maincorse__choice{
+.maincorse__choice {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -219,105 +252,169 @@
     border-radius: 16px;
     box-shadow: $shadow-cards-menu;
 
+    @include media-desktop {
+        box-shadow: $shadow-cards-menu-desktop;
+        height: auto;
+    }
+
     .maincorse__name {
         padding: 8px;
         width: 100px;
         font-family: $font-texts-titles;
         font-size: $fs-text-xs-phone;
+
+        @include media-desktop {
+            padding: 16px 16px 0 16px;
+            width: 50%;
+            font-size: $fs-card-title-desktop;
+        }
     }
 }
-    .maincorse__infoprice {
-        padding: 8px 16px 8px 8px;
-        display: flex;
-        justify-content: space-between;
-        height: 50px;
-    
-        &--info {
-            // width: 80%;
-            font-family: $font-texts-titles;
-            font-size: $fs-text-xs-phone;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    
-        &--price {
-            font-family: $font-texts-titles;
-            font-size: $fs-text-xs-phone;
-            position: relative;
-            left: 100px;
-        }
-    
-        &:hover {
-            padding: 8px 0 8px 8px;
-    
-            &--price{
-                    position: relative;
-                    left: -100px;
-            }
-    
-            i {
-                transform: scale(1);
-                transform: translateX(10px) translateY(-44px);
-            }
-    
+
+.maincorse__infoprice {
+    padding: 8px 16px 8px 8px;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+
+    @include media-desktop {
+        padding: 8px 0 8px 16px;
+    }
+
+    &--info {
+        // width: 80%;
+        font-family: $font-texts-titles;
+        font-size: $fs-text-xs-phone;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include media-desktop {
+            font-size: $fs-card-texts-desktop;
         }
     }
 
-    
-    // Desserts
-    .desserts__choice{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-bottom: 16px;
-        background-color: $txt-btn;
-        border-radius: 16px;
-        box-shadow: $shadow-cards-menu;
-    
-    
+    &--price {
+        font-family: $font-texts-titles;
+        font-size: $fs-text-xs-phone;
+        position: relative;
+        left: 100px;
+
+        @include media-desktop {
+            font-size: $fs-card-texts-desktop;
+        }
+    }
+
+    &:hover {
+        padding: 8px 0 8px 8px;
+
+        &--price {
+            position: relative;
+            left: -100px;
+        }
+
+        i {
+            transform: scale(1);
+            transform: translateX(0px) translateY(-53px);
+
+            @include media-desktop {
+                padding-left: 16px;
+
+                i {
+                    transform: scale(1);
+                    transform: translateX(0px) translateY(-53px);
+                }
+            }
+
+        }
+    }
+}
+
+// Desserts
+.desserts__choice {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: $txt-btn;
+    border-radius: 16px;
+    box-shadow: $shadow-cards-menu;
+
+    @include media-desktop {
+        box-shadow: $shadow-cards-menu-desktop;
+        height: auto;
+    }
+
     .desserts__name {
         padding: 8px;
         width: 100px;
         font-family: $font-texts-titles;
         font-size: $fs-text-xs-phone;
+
+        @include media-desktop {
+            padding: 16px 16px 0 16px;
+            width: 50%;
+            font-size: $fs-card-title-desktop;
+        }
     }
 }
-    .desserts__infoprice {
-        padding: 8px 16px 8px 8px;
-        display: flex;
-        justify-content: space-between;
-        height: 50px;
-    
-        &--info {
-            // width: 80%;
-            font-family: $font-texts-titles;
-            font-size: $fs-text-xs-phone;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    
-        &--price {
-            font-family: $font-texts-titles;
-            font-size: $fs-text-xs-phone;
-            position: relative;
-            left: 100px;
-        }
-    
-        &:hover {
-            padding: 8px 0 8px 8px;
-    
-            &--price{
-                    position: relative;
-                    left: -100px;
-            }
-    
-            i {
-                transform: scale(1);
-                transform: translateX(0px) translateY(-44px);
-            }
-    
-        }
+
+.desserts__infoprice {
+    padding: 8px 16px 8px 8px;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+
+    @include media-desktop {
+        padding: 8px 0 8px 16px;
     }
     
+    &--info {
+        // width: 80%;
+        font-family: $font-texts-titles;
+        font-size: $fs-text-xs-phone;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include media-desktop {
+            font-size: $fs-card-texts-desktop;
+        }
+    }
+
+    &--price {
+        font-family: $font-texts-titles;
+        font-size: $fs-text-xs-phone;
+        position: relative;
+        left: 100px;
+
+
+        @include media-desktop {
+            font-size: $fs-card-texts-desktop;
+        }
+    }
+
+    &:hover {
+        padding: 8px 0 8px 8px;
+
+        &--price {
+            position: relative;
+            left: -100px;
+        }
+
+        i {
+            transform: scale(1);
+            transform: translateX(0px) translateY(-53px);
+
+            @include media-desktop {
+                padding-left: 16px;
+
+                i {
+                    transform: scale(1);
+                    transform: translateX(0px) translateY(-53px);
+                }
+            }
+
+        }
+    }
+}
