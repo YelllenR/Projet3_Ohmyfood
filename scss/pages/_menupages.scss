@@ -9,6 +9,14 @@
     height: 50px;
     top: -48px;
 
+    @include media-tablet {
+        position: sticky;
+        top: 70px;
+        height: 80px;
+        border-radius: 0;
+        background-color: transparentize($bg-clr-search, 0.5);
+    }
+
     @include media-desktop {
         position: sticky;
         top: 80px;
@@ -22,18 +30,21 @@
         font-family: $font-titles-pages;
         font-size: $font-titles-pages;
 
+        @include media-tablet{
+            padding-top: 0;
+            padding-right: 16px;
+        }
+
         @include media-desktop {
             padding-right: 24px;
             padding-top: 0;
             font-size: $fs-titles-desktop;
         }
     }
-
-
 }
 
 .starters {
-    width: 100%;
+    @include media-phone;
     margin: $margin-page;
     margin-bottom: 32px;
     display: flex;
@@ -51,10 +62,22 @@
         border-bottom: 3px solid $tertiary-color;
         margin-bottom: 24px;
 
+        @include media-tablet{
+            @include card-title-tablet;
+            margin-top: 86px;
+        }
+
         @include media-desktop {
             @include card-title-desktop;
             margin-top: 136px;
         }
+    }
+
+    @include media-tablet{
+        background-color: transparent;
+        width: 50%;
+        height: auto;
+        margin-top: 80px;
     }
 
     @include media-desktop {
@@ -83,15 +106,26 @@
         border-bottom: 3px solid $tertiary-color;
         margin-bottom: 24px;
 
+        @include media-tablet{
+            @include card-title-tablet;
+        }
+        
         @include media-desktop {
             @include card-title-desktop;
         }
     }
 
+    @include media-tablet{
+        background-color: transparent;
+        width: 50%;
+        height: auto;
+        margin-top: 80px;
+    }
+
     @include media-desktop {
         background-color: transparent;
         width: 50%;
-        margin-top: 32px;
+        margin-top: 80px;
     }
 }
 
@@ -113,14 +147,25 @@
         border-bottom: 3px solid $tertiary-color;
         margin-bottom: 24px;
 
+        @include media-tablet{
+            @include card-title-tablet;
+        }
+
         @include media-desktop {
             @include card-title-desktop;
         }
     }
 
+    @include media-tablet{
+        background-color: transparent;
+        width: 50%;
+        height: auto;
+        margin-top: 80px;
+    }
+
     @include media-desktop {
         background-color: transparent;
         width: 50%;
-        margin-top: 32px;
+        margin-top: 80px;
     }
 }

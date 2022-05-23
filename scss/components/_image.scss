@@ -34,9 +34,13 @@
 
     // For palette du goût
     &--palette {
-        flex-basis: 80%;
+        flex-basis: 100%;
+        align-self: center;
         height: 24px;
-        margin-right: 24px;
+
+        @include media-tablet{
+            height: 32px;
+        }
 
         @include media-desktop {
             height: 48px;

@@ -135,6 +135,11 @@ ul.howto-container__how {
     @include flex-center;
     background-color: $bg-clr-grey-header;
 
+    @include media-tablet{
+        background-color: transparent;
+        height: auto;
+    }
+
     @include media-desktop{
         background-color: transparent;
         height: auto;
@@ -145,6 +150,10 @@ ul.howto-container__how {
     @extend #wrapper-starters;
     background-color: $bg-clr-grey-header;
 
+    @include media-tablet{
+        background-color: transparent;
+    }
+
     @include media-desktop{
         background-color: transparent;
     }
@@ -154,6 +163,10 @@ ul.howto-container__how {
     @extend #wrapper-starters;
     background-color: $bg-clr-grey-header;
 
+    @include media-tablet{
+        background-color: transparent;
+    }
+
     @include media-desktop{
         background-color: transparent;
     }
@@ -162,6 +175,10 @@ ul.howto-container__how {
 #wrapper-dessert {
     @extend #wrapper-starters;
     background-color: $bg-clr-grey-header;
+
+    @include media-tablet{
+        background-color: transparent;
+    }
 
     @include media-desktop{
         background-color: transparent;
@@ -179,6 +196,9 @@ ul.howto-container__how {
     @include flex-center;
     margin-top: 24px;
 
+    @include media-tablet{
+        height: 120px;
+    }
 
     @include media-desktop{
         height: 184px;

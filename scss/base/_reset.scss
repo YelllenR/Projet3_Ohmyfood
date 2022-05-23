@@ -24,6 +24,11 @@ html,
     &--palette {
         background-color: $bg-clr-grey-header;
         height: 100%;
+
+        @include media-tablet{
+            background-color: $bg-clr-grey-header;
+            height: 100%;
+        }
     }
 }
 
