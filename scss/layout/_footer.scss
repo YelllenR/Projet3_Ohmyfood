@@ -38,6 +38,11 @@
             padding-top: 8px;
             font-family: $font-texts-titles;
 
+            @include media-tablet{
+                font-size: $fs-title-phone - 2px;
+                padding: 8px;
+            }
+
             @include media-desktop {
                 padding-top: 0;
                 font-size: $fs-title-phone;

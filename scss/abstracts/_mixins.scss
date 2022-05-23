@@ -3,6 +3,7 @@
 @mixin media-phone {
     @media screen and (min-width: map-get($breakpoints, 'mobile')) and (max-width: 599px) {
         & {
+            @content;
             width: 100%;
         }
     }

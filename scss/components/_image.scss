@@ -110,8 +110,10 @@
 
     @include media-tablet{
         height: auto;
-        width: 200px;
+        width: 152px;
         margin-bottom: 0;
+        padding-bottom: 16px;
+        padding-top: 16px;
     }
     
 }

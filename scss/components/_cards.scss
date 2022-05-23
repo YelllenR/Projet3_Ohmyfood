@@ -4,6 +4,11 @@
     height: auto;
     margin-bottom: 48px;
 
+  @include media-tablet{
+        height: auto;
+        margin: 0 24px 24px 24px;
+        width: 100%;
+    }
 
     @include media-desktop {
         height: 550px;
@@ -11,11 +16,6 @@
         width: 100%;
     }
 
-    // @include media-tablet{
-    //     height: 550px;
-    //     margin: 0 8px 0 24px;
-    //     width: 100%;
-    // }
 
 
     &__title {
@@ -70,7 +70,7 @@
         height: 70%;
         z-index: 1;
         object-fit: cover;
-
+        object-position: center;
     }
 
     &__img--cards2 {
@@ -99,6 +99,12 @@
         font-size: 16px;
         border-radius: 8px;
         font-family: $font-texts-titles;
+
+        @include media-tablet{
+            height: 40px;
+            width: 96px;
+            font-size: $fs-card-texts-desktop;
+        }
     }
 
     // images without new tag
@@ -106,6 +112,7 @@
         height: 70%;
         width: 100%;
         border-radius: $img-radius-restaurant;
+        object-fit: cover;
     }
 
     .name-restaurant {

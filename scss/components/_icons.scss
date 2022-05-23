@@ -4,6 +4,11 @@
     padding: 0 16px 0 8px;
     color: $bg-icon-header;
 
+    @include media-tablet{
+        padding-left: 32px;
+        font-size: 24px;
+    }
+
     @include media-desktop {
         padding: 0 8px 0 8px;
     }
@@ -30,6 +35,11 @@
             padding-right: 16px;
         }
 
+        @include media-tablet{
+            font-size: $fs-title-phone - 2px;
+            padding: 8px;
+        }
+
         @include media-desktop {
             padding-top: 0;
             font-size: $fs-title-phone;
@@ -43,6 +53,11 @@
 
         i {
             padding-right: 8px;
+        }
+
+        @include media-tablet{
+            font-size: $fs-title-phone - 2px;
+            padding: 8px;
         }
 
         @include media-desktop {

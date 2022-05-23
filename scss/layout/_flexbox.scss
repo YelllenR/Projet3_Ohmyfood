@@ -83,6 +83,10 @@ ul.howto-container__how {
         }
     }
 
+    @include media-tablet{
+        width: 80%;
+    }
+
     // grid for cards on desktops
     @include media-desktop {
         display: grid;
