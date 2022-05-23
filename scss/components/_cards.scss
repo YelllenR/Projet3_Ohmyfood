@@ -168,7 +168,7 @@
 // starters
 .starters__choice {
     @include cards-menu-pages;
-
+    
     @include media-tablet {
         box-shadow: $shadow-cards-menu-desktop;
         height: auto;

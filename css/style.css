@@ -306,14 +306,14 @@ p {
 
 .starters__name {
   padding: 8px;
-  width: 100px;
+  width: 100%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .starters__name {
     padding: 16px 16px 0 16px;
-    width: 50%;
+    width: 100%;
     font-size: 19.2px;
   }
 }
@@ -326,7 +326,7 @@ p {
 }
 
 .starters__infoprice {
-  padding: 8px 16px 8px 8px;
+  padding: 8px 8px 8px 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -393,14 +393,14 @@ p {
 }
 .maincorse__choice .maincorse__name {
   padding: 8px;
-  width: 100px;
+  width: 100%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .maincorse__choice .maincorse__name {
     padding: 16px 16px 0 16px;
-    width: 50%;
+    width: 100%;
     font-size: 19.2px;
   }
 }
@@ -413,7 +413,7 @@ p {
 }
 
 .maincorse__infoprice {
-  padding: 8px 16px 8px 8px;
+  padding: 8px 8px 8px 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -480,14 +480,14 @@ p {
 }
 .desserts__choice .desserts__name {
   padding: 8px;
-  width: 100px;
+  width: 100%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .desserts__choice .desserts__name {
     padding: 16px 16px 0 16px;
-    width: 50%;
+    width: 100%;
     font-size: 19.2px;
   }
 }
@@ -500,7 +500,7 @@ p {
 }
 
 .desserts__infoprice {
-  padding: 8px 16px 8px 8px;
+  padding: 8px 8px 8px 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -775,7 +775,6 @@ p {
 
 @media screen and (min-width: 991px) {
   .parallax__palette {
-    opacity: 0.8;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -788,7 +787,6 @@ p {
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .parallax__palette {
-    opacity: 0.8;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -802,7 +800,6 @@ p {
 
 @media screen and (min-width: 991px) {
   .parallax__enchantee {
-    opacity: 0.8;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -815,7 +812,6 @@ p {
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .parallax__enchantee {
-    opacity: 0.8;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -829,7 +825,6 @@ p {
 
 @media screen and (min-width: 991px) {
   .parallax__sens {
-    opacity: 0.8;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -842,7 +837,6 @@ p {
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .parallax__sens {
-    opacity: 0.8;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -856,7 +850,6 @@ p {
 
 @media screen and (min-width: 991px) {
   .parallax__france {
-    opacity: 0.8;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -869,7 +862,6 @@ p {
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .parallax__france {
-    opacity: 0.8;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
