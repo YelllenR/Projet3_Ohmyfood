@@ -3,6 +3,7 @@
 @mixin media-phone {
     @media screen and (min-width: map-get($breakpoints, 'mobile')) and (max-width: 599px) {
         & {
+            @content;
             width: 100%;
         }
     }
@@ -93,7 +94,7 @@
 
 @mixin typography-footer {
     font-family: $font-texts-titles;
-    font-size: 8px;
+    font-size: $fs-text-xs-phone;
     color: $txt-btn;
 }
 
@@ -172,7 +173,17 @@
 
 
 
-// Menu pages - icon on hover----------
+// Menu pages --------------------
+
+@mixin  parallax {
+    opacity: 0.8;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-position: center;
+    border-radius: 100% 0 50% 0;
+    background-color: $bg-clr-grey-header;
+}
 
 @mixin icon-check-hover {
     border-radius: 0 16px 16px 0;
@@ -204,4 +215,63 @@
     text-underline-offset: 5px;
     text-decoration-color: $tertiary-color;
     border-bottom: none;
+}
+
+@mixin card-title-tablet{
+    color: $txt-btn;
+    font-size: $fs-card-texts-desktop;
+    width: 130px;
+    border-radius: 12px;
+    padding: 8px;
+    height: 40px;
+    background-color: $bg-clr-footer;
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: $tertiary-color;
+    border-bottom: none;
+}
+
+@mixin cards-menu-pages{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: $txt-btn;
+    border-radius: 16px;
+    box-shadow: $shadow-cards-menu;
+}
+
+@mixin in-cards-titles-menu{
+    padding: 8px;
+    width: 100px;
+    font-family: $font-texts-titles;
+    font-size: $fs-text-xs-phone;
+}
+
+@mixin in-cards-titles-menu-tablet{
+    padding: 16px 16px 0 16px;
+    width: 50%;
+    font-size: $fs-text-xs-phone * 1.2;
+}
+
+@mixin cards-price-info{
+    font-family: $font-texts-titles;
+    font-size: $fs-text-xs-phone;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin container-price-info{
+    padding: 8px 16px 8px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+@mixin price-cards{
+        font-family: $font-texts-titles;
+        font-size: $fs-text-xs-phone;
+        padding-right: 16px;
 }

@@ -4,6 +4,11 @@
     height: auto;
     margin-bottom: 48px;
 
+    @include media-tablet {
+        height: auto;
+        margin: 0 24px 24px 24px;
+        width: 100%;
+    }
 
     @include media-desktop {
         height: 550px;
@@ -11,11 +16,6 @@
         width: 100%;
     }
 
-    // @include media-tablet{
-    //     height: 550px;
-    //     margin: 0 8px 0 24px;
-    //     width: 100%;
-    // }
 
 
     &__title {
@@ -70,7 +70,7 @@
         height: 70%;
         z-index: 1;
         object-fit: cover;
-
+        object-position: center;
     }
 
     &__img--cards2 {
@@ -99,6 +99,12 @@
         font-size: 16px;
         border-radius: 8px;
         font-family: $font-texts-titles;
+
+        @include media-tablet {
+            height: 40px;
+            width: 96px;
+            font-size: $fs-card-texts-desktop;
+        }
     }
 
     // images without new tag
@@ -106,6 +112,7 @@
         height: 70%;
         width: 100%;
         border-radius: $img-radius-restaurant;
+        object-fit: cover;
     }
 
     .name-restaurant {
@@ -160,13 +167,12 @@
 
 // starters
 .starters__choice {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 16px;
-    background-color: $txt-btn;
-    border-radius: 16px;
-    box-shadow: $shadow-cards-menu;
+    @include cards-menu-pages;
+
+    @include media-tablet {
+        box-shadow: $shadow-cards-menu-desktop;
+        height: auto;
+    }
 
     @include media-desktop {
         box-shadow: $shadow-cards-menu-desktop;
@@ -176,10 +182,11 @@
 }
 
 .starters__name {
-    padding: 8px;
-    width: 100px;
-    font-family: $font-texts-titles;
-    font-size: $fs-text-xs-phone;
+    @include in-cards-titles-menu;
+
+    @include media-tablet {
+        @include in-cards-titles-menu-tablet;
+    }
 
     @include media-desktop {
         padding: 16px 16px 0 16px;
@@ -189,22 +196,22 @@
 }
 
 .starters__infoprice {
-    padding: 8px 16px 8px 8px;
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
+    @include container-price-info;
+
+    @include media-tablet {
+        padding: 8px 0 8px 16px;
+    }
 
     @include media-desktop {
         padding: 8px 0 8px 16px;
     }
 
     &--info {
-        // width: 80%;
-        font-family: $font-texts-titles;
-        font-size: $fs-text-xs-phone;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        @include cards-price-info;
+
+        @include media-tablet {
+            font-size: $fs-text-xs-phone * 1.2;
+        }
 
         @include media-desktop {
             font-size: $fs-card-texts-desktop;
@@ -212,51 +219,23 @@
     }
 
     &--price {
-        font-family: $font-texts-titles;
-        font-size: $fs-text-xs-phone;
-        position: relative;
-        left: 100px;
+        @include price-cards;
 
         @include media-desktop {
             font-size: $fs-card-texts-desktop;
         }
-    }
-
-    &:hover {
-        padding: 8px 0 8px 8px;
-
-        &--price {
-            position: relative;
-            left: -100px;
-        }
-
-        i {
-            transform: scale(1);
-            transform: translateX(0px) translateY(-44px);
-        }
-
-        @include media-desktop {
-            padding-left: 16px;
-
-            i {
-                transform: scale(1);
-                transform: translateX(0px) translateY(-53px);
-            }
-        }
-
     }
 }
 
 
 // main corse
 .maincorse__choice {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 16px;
-    background-color: $txt-btn;
-    border-radius: 16px;
-    box-shadow: $shadow-cards-menu;
+    @include cards-menu-pages;
+
+    @include media-tablet {
+        box-shadow: $shadow-cards-menu-desktop;
+        height: auto;
+    }
 
     @include media-desktop {
         box-shadow: $shadow-cards-menu-desktop;
@@ -264,10 +243,11 @@
     }
 
     .maincorse__name {
-        padding: 8px;
-        width: 100px;
-        font-family: $font-texts-titles;
-        font-size: $fs-text-xs-phone;
+        @include in-cards-titles-menu;
+
+        @include media-tablet {
+            @include in-cards-titles-menu-tablet;
+        }
 
         @include media-desktop {
             padding: 16px 16px 0 16px;
@@ -278,22 +258,22 @@
 }
 
 .maincorse__infoprice {
-    padding: 8px 16px 8px 8px;
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
+    @include container-price-info;
+
+    @include media-tablet {
+        padding: 8px 0 8px 16px;
+    }
 
     @include media-desktop {
         padding: 8px 0 8px 16px;
     }
 
     &--info {
-        // width: 80%;
-        font-family: $font-texts-titles;
-        font-size: $fs-text-xs-phone;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        @include cards-price-info;
+
+        @include media-tablet {
+            font-size: $fs-text-xs-phone * 1.2;
+        }
 
         @include media-desktop {
             font-size: $fs-card-texts-desktop;
@@ -301,50 +281,23 @@
     }
 
     &--price {
-        font-family: $font-texts-titles;
-        font-size: $fs-text-xs-phone;
-        position: relative;
-        left: 100px;
+        @include price-cards;
 
         @include media-desktop {
             font-size: $fs-card-texts-desktop;
         }
     }
 
-    &:hover {
-        padding: 8px 0 8px 8px;
-
-        &--price {
-            position: relative;
-            left: -100px;
-        }
-
-        i {
-            transform: scale(1);
-            transform: translateX(0px) translateY(-53px);
-
-            @include media-desktop {
-                padding-left: 16px;
-
-                i {
-                    transform: scale(1);
-                    transform: translateX(0px) translateY(-53px);
-                }
-            }
-
-        }
-    }
 }
 
 // Desserts
 .desserts__choice {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 16px;
-    background-color: $txt-btn;
-    border-radius: 16px;
-    box-shadow: $shadow-cards-menu;
+    @include cards-menu-pages;
+
+    @include media-tablet {
+        box-shadow: $shadow-cards-menu-desktop;
+        height: auto;
+    }
 
     @include media-desktop {
         box-shadow: $shadow-cards-menu-desktop;
@@ -352,10 +305,11 @@
     }
 
     .desserts__name {
-        padding: 8px;
-        width: 100px;
-        font-family: $font-texts-titles;
-        font-size: $fs-text-xs-phone;
+        @include in-cards-titles-menu;
+
+        @include media-tablet {
+            @include in-cards-titles-menu-tablet
+        }
 
         @include media-desktop {
             padding: 16px 16px 0 16px;
@@ -366,22 +320,22 @@
 }
 
 .desserts__infoprice {
-    padding: 8px 16px 8px 8px;
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
+    @include container-price-info;
+
+    @include media-tablet {
+        padding: 8px 0 8px 16px;
+    }
 
     @include media-desktop {
         padding: 8px 0 8px 16px;
     }
-    
+
     &--info {
-        // width: 80%;
-        font-family: $font-texts-titles;
-        font-size: $fs-text-xs-phone;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        @include cards-price-info;
+
+        @include media-tablet {
+            font-size: $fs-text-xs-phone * 1.2;
+        }
 
         @include media-desktop {
             font-size: $fs-card-texts-desktop;
@@ -389,38 +343,11 @@
     }
 
     &--price {
-        font-family: $font-texts-titles;
-        font-size: $fs-text-xs-phone;
-        position: relative;
-        left: 100px;
-
+        @include price-cards;
 
         @include media-desktop {
             font-size: $fs-card-texts-desktop;
         }
     }
 
-    &:hover {
-        padding: 8px 0 8px 8px;
-
-        &--price {
-            position: relative;
-            left: -100px;
-        }
-
-        i {
-            transform: scale(1);
-            transform: translateX(0px) translateY(-53px);
-
-            @include media-desktop {
-                padding-left: 16px;
-
-                i {
-                    transform: scale(1);
-                    transform: translateX(0px) translateY(-53px);
-                }
-            }
-
-        }
-    }
 }

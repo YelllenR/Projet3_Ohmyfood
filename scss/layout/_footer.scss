@@ -1,17 +1,18 @@
 .footercontainer {
+    @include media-phone;
+    width: 100%;
     margin: $margin-page;
     display: flex;
     flex-direction: column;
     padding-top: 24px;
     padding-bottom: 32px;
-    width: 100%;
 
+    @include media-tablet{
+        width: 100%;
+    }
 
     @include media-desktop {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex-column;
         width: 100%;
         height: 200px;
         margin: 0 32px 0 32px;
@@ -34,9 +35,13 @@
 
         &--legal,
         &--contact {
-            color: $txt-btn;
+            @include typography-footer;
             padding-top: 8px;
-            font-family: $font-texts-titles;
+
+            @include media-tablet{
+                font-size: $fs-text-xs-phone + 2;
+                padding: 8px;
+            }
 
             @include media-desktop {
                 padding-top: 0;

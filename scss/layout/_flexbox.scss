@@ -5,7 +5,7 @@
         background-color: $txt-btn;
     }
 
-    @include media-tablet{
+    @include media-tablet {
         background-color: $txt-btn;
     }
 }
@@ -27,7 +27,7 @@
     @include media-phone {
         &__img {
             @include flex-center;
-            
+
 
             &__search {
                 @include flex-center;
@@ -35,10 +35,10 @@
         }
     }
 
-    @include media-tablet{
+    @include media-tablet {
         &__img {
             @include flex-center;
-            
+
             &__search {
                 @include flex-center;
             }
@@ -77,10 +77,14 @@ ul.howto-container__how {
 
 
     @include media-tablet {
-        
+
         &__container {
             @include flex-column;
         }
+    }
+
+    @include media-tablet {
+        width: 80%;
     }
 
     // grid for cards on desktops
@@ -104,7 +108,11 @@ ul.howto-container__how {
 
 // Page - La palette du goût
 .nav {
-    &--palette {
+
+    &--palette,
+    &--enchantee, 
+    &--sens, 
+    &--france {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -116,7 +124,7 @@ ul.howto-container__how {
     justify-content: space-between;
     align-items: center;
 
-    @include media-tablet{
+    @include media-tablet {
         justify-content: center;
         align-items: center;
     }
@@ -131,43 +139,43 @@ ul.howto-container__how {
     @include flex-center;
     background-color: $bg-clr-grey-header;
 
-    @include media-desktop{
+    @include media-tablet {
+        background-color: transparent;
+        height: auto;
+    }
+
+    @include media-desktop {
         background-color: transparent;
         height: auto;
     }
 }
 
-#wrapper-dessert {
-    @extend #wrapper-starters;
-    background-color: $bg-clr-grey-header;
-
-    @include media-desktop{
-        background-color: transparent;
-    }
-}
 
 #wrapper-main {
     @extend #wrapper-starters;
     background-color: $bg-clr-grey-header;
 
-    @include media-desktop{
+    @include media-tablet {
         background-color: transparent;
     }
+
+    @include media-desktop {
+        background-color: transparent;
+    }
+
 }
 
 #wrapper-dessert {
     @extend #wrapper-starters;
     background-color: $bg-clr-grey-header;
 
-    @include media-desktop{
+    @include media-tablet {
         background-color: transparent;
     }
-}
 
-.starters-items {
-    display: flex;
-    height: 86px;
-    margin-bottom: 16px;
+    @include media-desktop {
+        background-color: transparent;
+    }
 }
 
 
@@ -175,8 +183,11 @@ ul.howto-container__how {
     @include flex-center;
     margin-top: 24px;
 
+    @include media-tablet {
+        height: 120px;
+    }
 
-    @include media-desktop{
+    @include media-desktop {
         height: 184px;
     }
 }
