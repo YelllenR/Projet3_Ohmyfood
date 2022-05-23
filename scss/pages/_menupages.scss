@@ -53,7 +53,6 @@
     background-color: $bg-clr-grey-header;
     height: auto;
 
-
     &__title {
         width: 50px;
         font-family: $font-texts-titles;
@@ -61,7 +60,7 @@
         font-size: $fs-text-xs-phone;
         border-bottom: 3px solid $tertiary-color;
         margin-bottom: 24px;
-
+        
         @include media-tablet{
             @include card-title-tablet;
             margin-top: 86px;
@@ -75,21 +74,21 @@
 
     @include media-tablet{
         background-color: transparent;
-        width: 50%;
+        min-width: 50%;
         height: auto;
         margin-top: 80px;
     }
 
     @include media-desktop {
         background-color: transparent;
-        width: 50%;
+        min-width: 40%;
         height: auto;
         margin-top: 50px;
     }
 }
 
 .maincorse {
-    width: 100%;
+    @include media-phone;
     margin: $margin-page;
     margin-bottom: 32px;
     display: flex;
@@ -117,20 +116,20 @@
 
     @include media-tablet{
         background-color: transparent;
-        width: 50%;
+        min-width: 50%;
         height: auto;
         margin-top: 80px;
     }
 
     @include media-desktop {
         background-color: transparent;
-        width: 50%;
+        min-width: 40%;
         margin-top: 80px;
     }
 }
 
 .desserts {
-    width: 100%;
+    @include media-phone;
     margin: $margin-page;
     margin-bottom: 32px;
     display: flex;
@@ -158,14 +157,14 @@
 
     @include media-tablet{
         background-color: transparent;
-        width: 50%;
+        min-width: 50%;
         height: auto;
         margin-top: 80px;
     }
 
     @include media-desktop {
         background-color: transparent;
-        width: 50%;
+        min-width: 40%;
         margin-top: 80px;
     }
 }

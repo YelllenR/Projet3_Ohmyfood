@@ -21,15 +21,25 @@ html,
 }
 
 #reset {
-    &--palette {
+
+    &--palette,
+    &--enchantee,
+    &--sens,
+    &--france {
         background-color: $bg-clr-grey-header;
         height: 100%;
 
-        @include media-tablet{
+        @include media-tablet {
+            background-color: $bg-clr-grey-header;
+            height: 100%;
+        }
+
+        @include media-desktop {
             background-color: $bg-clr-grey-header;
             height: 100%;
         }
     }
+
 }
 
 

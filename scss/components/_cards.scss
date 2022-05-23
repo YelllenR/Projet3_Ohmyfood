@@ -209,7 +209,7 @@
     &--info {
         @include cards-price-info;
 
-        @include media-tablet{
+        @include media-tablet {
             font-size: $fs-text-xs-phone * 1.2;
         }
 
@@ -271,7 +271,7 @@
     &--info {
         @include cards-price-info;
 
-        @include media-tablet{
+        @include media-tablet {
             font-size: $fs-text-xs-phone * 1.2;
         }
 
@@ -325,7 +325,7 @@
     @include media-tablet {
         padding: 8px 0 8px 16px;
     }
-    
+
     @include media-desktop {
         padding: 8px 0 8px 16px;
     }
@@ -333,7 +333,7 @@
     &--info {
         @include cards-price-info;
 
-        @include media-tablet{
+        @include media-tablet {
             font-size: $fs-text-xs-phone * 1.2;
         }
 

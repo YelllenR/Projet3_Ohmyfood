@@ -173,7 +173,17 @@
 
 
 
-// Menu pages - icon on hover----------
+// Menu pages --------------------
+
+@mixin  parallax {
+    opacity: 0.8;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-position: center;
+    border-radius: 100% 0 50% 0;
+    background-color: $bg-clr-grey-header;
+}
 
 @mixin icon-check-hover {
     border-radius: 0 16px 16px 0;
@@ -263,5 +273,5 @@
 @mixin price-cards{
         font-family: $font-texts-titles;
         font-size: $fs-text-xs-phone;
-        padding-right: 24px;
+        padding-right: 16px;
 }
