@@ -1,52 +1,117 @@
 .nav-home {
-
+    width: 100%;
+    
     &__img {
         width: 100%;
+        height: 80px;
         box-shadow: 0px 4px 5px 0px rgba(98, 98, 98, 0.41);
         z-index: 1;
+
+        @include media-tablet{
+            width: 100%;
+            height: auto;
+        }
+
+        @include media-desktop {
+            box-shadow: none;
+            border-style: none;
+            width: 100%;
+            height: 180px;
+            @include flex-column;
+        }
     }
 
     &__logo {
         @include logo-home;
+
     }
 
 }
 
 
-.img {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+// logo on menu pages
+.nav__logo {
 
-    &--cards {
-        height: 90%;
+    // For palette du goût
+    &--palette {
+        flex-basis: 80%;
+        height: 24px;
+        margin-right: 24px;
+
+        @include media-desktop {
+            height: 48px;
+            align-self: center;
+            margin-right: 56px;
+        }
+    }
+}
+
+.imgfood {
+    &--palette {
         width: 100%;
-        border: 1px solid red;
-        object-fit: cover;
-        object-position: center bottom;
-        border-radius: $img-radius-restaurant;
-        z-index: 1;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-position: center;
+        min-height: 100px;
+
+        @include media-tablet{
+            display: none;
+        }
+        
+        @include media-desktop {
+            display: none;
+        }
+    }
+}
+
+.parallax {
+
+    @include media-desktop {
+        &__palette {
+            opacity: 0.8;
+            background-image: url(/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-position: center;
+            border-radius: 100% 0 50% 0;
+            background-color: $bg-clr-grey-header;
+        }
     }
 
-    &--new {
-        align-self: center;
-        z-index: 2;
-        height: 32px;
-        width: 80px;
-        background-color: $tertiary-color;
-        padding: 8px;
-        color: darken($color: $tertiary-color, $amount: 40%);
+    @include media-tablet {
+        &__palette {
+            opacity: 0.8;
+            background-image: url(/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-position: center;
+            border-radius: 100% 0 50% 0;
+            background-color: $bg-clr-grey-header;
+        }
     }
 
 }
 
-
-
-// footer
+// footer logo
 .footercontainer__logo {
-    height: 32px;
-    width: 180px;
-    filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(176deg) brightness(106%) contrast(104%);
+    height: 24px;
+    width: 104px;
+    filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(176deg);
     margin-bottom: 16px;
+
+    @include media-desktop  {
+        height: auto;
+        width: 200px;
+        margin-bottom: 0;
+    }
+
+    @include media-tablet{
+        height: auto;
+        width: 200px;
+        margin-bottom: 0;
+    }
+    
 }

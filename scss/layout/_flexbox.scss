@@ -1,24 +1,52 @@
-#wrapper {
+#wrapper-header {
+    @include flex-center;
+
+    @include media-desktop {
+        background-color: $txt-btn;
+    }
+
+    @include media-tablet{
+        background-color: $txt-btn;
+    }
+}
+
+#wrapper-section-operation {
     @include flex-center;
 }
 
 
-
+#wrapper-intro {
+    @include flex-center;
+    background-color: map-get($map: $colors, $key: header-intro-grey);
+}
 
 // home-page flex
 .nav-home {
     @include flex-column;
-    width: $breakpoints-mobile;
 
-    &__img {
-        @include flex-center;
-
-        &__search {
+    @include media-phone {
+        &__img {
             @include flex-center;
+            
 
+            &__search {
+                @include flex-center;
+            }
+        }
+    }
+
+    @include media-tablet{
+        &__img {
+            @include flex-center;
+            
+            &__search {
+                @include flex-center;
+            }
         }
     }
 }
+
+
 
 .nav-home__styling {
     @include flex-column;
@@ -33,33 +61,128 @@ ul.howto-container__how {
     flex-direction: column;
 }
 
+
+// restaurants cards
+#wrapper-section-cards {
+    @include flex-center;
+    background-color: $bg-clr-grey-header;
+}
+
 .home-cards {
     @include flex-column;
 
-    &__container{
+    &__container {
         @include flex-column;
     }
+
+
+    @include media-tablet {
+        
+        &__container {
+            @include flex-column;
+        }
+    }
+
+    // grid for cards on desktops
+    @include media-desktop {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        column-gap: 16px;
+        row-gap: 24px;
+    }
+
 }
 
-.list{
+.list {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
+// menu pages
 
-
-// footer flex
-
-#wrapper-footer{
-    @include flex-center;
-    background-color: $bg-clr-footer;
+// Page - La palette du goût
+.nav {
+    &--palette {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
-.footercontainer{
+.iconheart {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: $breakpoints-mobile;
-    margin: $margin-page;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-tablet{
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include media-desktop {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#wrapper-starters {
+    @include flex-center;
+    background-color: $bg-clr-grey-header;
+
+    @include media-desktop{
+        background-color: transparent;
+        height: auto;
+    }
+}
+
+#wrapper-dessert {
+    @extend #wrapper-starters;
+    background-color: $bg-clr-grey-header;
+
+    @include media-desktop{
+        background-color: transparent;
+    }
+}
+
+#wrapper-main {
+    @extend #wrapper-starters;
+    background-color: $bg-clr-grey-header;
+
+    @include media-desktop{
+        background-color: transparent;
+    }
+}
+
+#wrapper-dessert {
+    @extend #wrapper-starters;
+    background-color: $bg-clr-grey-header;
+
+    @include media-desktop{
+        background-color: transparent;
+    }
+}
+
+.starters-items {
+    display: flex;
+    height: 86px;
+    margin-bottom: 16px;
+}
+
+
+#btn-center {
+    @include flex-center;
+    margin-top: 24px;
+
+
+    @include media-desktop{
+        height: 184px;
+    }
+}
+
+// footer flex
+#wrapper-footer {
+    @include flex-center;
+    background-color: $bg-clr-footer;
 }

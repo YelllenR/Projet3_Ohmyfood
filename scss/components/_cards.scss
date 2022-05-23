@@ -1,7 +1,21 @@
 .home-cards {
-    width: $breakpoints-mobile;
+    width: $mobile;
     margin: $margin-page;
-    background-color: $bg-clr-grey-header;
+    height: auto;
+    margin-bottom: 48px;
+
+
+    @include media-desktop {
+        height: 550px;
+        margin: 0 8px 0 24px;
+        width: 100%;
+    }
+
+    // @include media-tablet{
+    //     height: 550px;
+    //     margin: 0 8px 0 24px;
+    //     width: 100%;
+    // }
 
 
     &__title {
@@ -9,19 +23,404 @@
         align-self: flex-start;
         padding-top: 48px;
         padding-bottom: 16px;
+
+        @include media-desktop {
+            grid-area: 1 / 1 / 2 /6;
+            font-size: $fs-texts-desktop;
+        }
     }
 
-    &__container {
-        border: 1px solid green;
+    &__container,
+    a {
         width: $card-width-restaurant;
-        height: auto;
-        // à changer si fonctionnement pas bon avec auto pour $card-height-restaurant
+        height: $card-height-restaurant;
         border-radius: $card-radius-restaurant;
         padding: 0;
         margin: 0;
         text-decoration: none;
         color: $text-color;
+        margin-bottom: 32px;
+        box-shadow: $shadow-cards-restaurants;
+        overflow-y: hidden;
+
+        @include media-desktop {
+            &--1 {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+
+            &--2 {
+                grid-area: 2 / 2 / 3 / 3;
+            }
+
+            &--3 {
+                grid-area: 2 / 3 / 3 / 4;
+            }
+
+            &--4 {
+                grid-area: 2 / 4 / 3 / 5;
+            }
+        }
+    }
+
+    &__img--cards {
+        position: relative;
+        top: -32px;
+        border-radius: $img-radius-restaurant;
+        width: 100%;
+        height: 70%;
+        z-index: 1;
+        object-fit: cover;
+
+    }
+
+    &__img--cards2 {
+        position: relative;
+        top: -32px;
+        border-radius: $img-radius-restaurant;
+        width: 100%;
+        height: 70%;
+        z-index: 1;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    // images with new tag
+    &__img--new,
+    &__img--new2 {
+        position: relative;
+        top: 32px;
+        right: -65%;
+        z-index: 2;
+        height: 32px;
+        width: 80px;
+        background-color: $tertiary-color;
+        padding: 8px;
+        color: darken($color: $tertiary-color, $amount: 50%);
+        font-size: 16px;
+        border-radius: 8px;
+        font-family: $font-texts-titles;
+    }
+
+    // images without new tag
+    &__cards-img {
+        height: 70%;
+        width: 100%;
+        border-radius: $img-radius-restaurant;
+    }
+
+    .name-restaurant {
+        align-self: flex-start;
+        font-family: $font-texts-titles;
+        padding-bottom: 8px;
+        padding-left: 16px;
+        position: relative;
+        top: -16px;
+
+        &--top {
+            align-self: flex-start;
+            font-family: $font-texts-titles;
+            padding-bottom: 8px;
+            padding-left: 16px;
+            padding-top: 16px;
+        }
+    }
+
+    .restaurant-location {
+        align-self: flex-start;
+        padding-bottom: 8px;
+        padding-left: 16px;
+        font-family: $font-texts-titles;
+        position: relative;
+        top: -16px;
+
+        &--top {
+            align-self: flex-start;
+            padding-bottom: 8px;
+            padding-left: 16px;
+            font-family: $font-texts-titles;
+        }
+    }
+
+    .clic-heart {
+        position: relative;
+        top: -50px;
+        right: -80%;
+    }
+
+    .clic-heart-1,
+    .clic-heart-2 {
+        position: relative;
+        top: -66px;
+        right: -80%;
+    }
+}
+
+
+//----------------------cards for menu pages-----------------------
+
+// starters
+.starters__choice {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: $txt-btn;
+    border-radius: 16px;
+    box-shadow: $shadow-cards-menu;
+
+    @include media-desktop {
+        box-shadow: $shadow-cards-menu-desktop;
+        height: auto;
+    }
+
+}
+
+.starters__name {
+    padding: 8px;
+    width: 100px;
+    font-family: $font-texts-titles;
+    font-size: $fs-text-xs-phone;
+
+    @include media-desktop {
+        padding: 16px 16px 0 16px;
+        width: 50%;
+        font-size: $fs-card-title-desktop;
+    }
+}
+
+.starters__infoprice {
+    padding: 8px 16px 8px 8px;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+
+    @include media-desktop {
+        padding: 8px 0 8px 16px;
+    }
+
+    &--info {
+        // width: 80%;
+        font-family: $font-texts-titles;
+        font-size: $fs-text-xs-phone;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include media-desktop {
+            font-size: $fs-card-texts-desktop;
+        }
+    }
+
+    &--price {
+        font-family: $font-texts-titles;
+        font-size: $fs-text-xs-phone;
+        position: relative;
+        left: 100px;
+
+        @include media-desktop {
+            font-size: $fs-card-texts-desktop;
+        }
+    }
+
+    &:hover {
+        padding: 8px 0 8px 8px;
+
+        &--price {
+            position: relative;
+            left: -100px;
+        }
+
+        i {
+            transform: scale(1);
+            transform: translateX(0px) translateY(-44px);
+        }
+
+        @include media-desktop {
+            padding-left: 16px;
+
+            i {
+                transform: scale(1);
+                transform: translateX(0px) translateY(-53px);
+            }
+        }
 
     }
 }
 
+
+// main corse
+.maincorse__choice {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: $txt-btn;
+    border-radius: 16px;
+    box-shadow: $shadow-cards-menu;
+
+    @include media-desktop {
+        box-shadow: $shadow-cards-menu-desktop;
+        height: auto;
+    }
+
+    .maincorse__name {
+        padding: 8px;
+        width: 100px;
+        font-family: $font-texts-titles;
+        font-size: $fs-text-xs-phone;
+
+        @include media-desktop {
+            padding: 16px 16px 0 16px;
+            width: 50%;
+            font-size: $fs-card-title-desktop;
+        }
+    }
+}
+
+.maincorse__infoprice {
+    padding: 8px 16px 8px 8px;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+
+    @include media-desktop {
+        padding: 8px 0 8px 16px;
+    }
+
+    &--info {
+        // width: 80%;
+        font-family: $font-texts-titles;
+        font-size: $fs-text-xs-phone;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include media-desktop {
+            font-size: $fs-card-texts-desktop;
+        }
+    }
+
+    &--price {
+        font-family: $font-texts-titles;
+        font-size: $fs-text-xs-phone;
+        position: relative;
+        left: 100px;
+
+        @include media-desktop {
+            font-size: $fs-card-texts-desktop;
+        }
+    }
+
+    &:hover {
+        padding: 8px 0 8px 8px;
+
+        &--price {
+            position: relative;
+            left: -100px;
+        }
+
+        i {
+            transform: scale(1);
+            transform: translateX(0px) translateY(-53px);
+
+            @include media-desktop {
+                padding-left: 16px;
+
+                i {
+                    transform: scale(1);
+                    transform: translateX(0px) translateY(-53px);
+                }
+            }
+
+        }
+    }
+}
+
+// Desserts
+.desserts__choice {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: $txt-btn;
+    border-radius: 16px;
+    box-shadow: $shadow-cards-menu;
+
+    @include media-desktop {
+        box-shadow: $shadow-cards-menu-desktop;
+        height: auto;
+    }
+
+    .desserts__name {
+        padding: 8px;
+        width: 100px;
+        font-family: $font-texts-titles;
+        font-size: $fs-text-xs-phone;
+
+        @include media-desktop {
+            padding: 16px 16px 0 16px;
+            width: 50%;
+            font-size: $fs-card-title-desktop;
+        }
+    }
+}
+
+.desserts__infoprice {
+    padding: 8px 16px 8px 8px;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+
+    @include media-desktop {
+        padding: 8px 0 8px 16px;
+    }
+    
+    &--info {
+        // width: 80%;
+        font-family: $font-texts-titles;
+        font-size: $fs-text-xs-phone;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include media-desktop {
+            font-size: $fs-card-texts-desktop;
+        }
+    }
+
+    &--price {
+        font-family: $font-texts-titles;
+        font-size: $fs-text-xs-phone;
+        position: relative;
+        left: 100px;
+
+
+        @include media-desktop {
+            font-size: $fs-card-texts-desktop;
+        }
+    }
+
+    &:hover {
+        padding: 8px 0 8px 8px;
+
+        &--price {
+            position: relative;
+            left: -100px;
+        }
+
+        i {
+            transform: scale(1);
+            transform: translateX(0px) translateY(-53px);
+
+            @include media-desktop {
+                padding-left: 16px;
+
+                i {
+                    transform: scale(1);
+                    transform: translateX(0px) translateY(-53px);
+                }
+            }
+
+        }
+    }
+}

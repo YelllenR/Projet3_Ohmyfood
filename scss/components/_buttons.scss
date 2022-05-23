@@ -2,10 +2,19 @@
 .nav-home__explore {
     @include btn-styling;
     margin-bottom: 48px;
+    cursor: pointer;
+
 }
 
 
 //  ------Button menu pages-------
 .orderbtn{
+    width: 100%;
     @include btn-styling;
+    cursor: pointer;
+    margin-bottom: 48px;
+
+    @include media-desktop{
+        margin-bottom: 48px;
+    }
 }

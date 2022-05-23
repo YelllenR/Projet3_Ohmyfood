@@ -1,24 +1,81 @@
 .nav-home {
-    width: $breakpoints-mobile;
+    width: $mobile;
+    font-family: $font-texts-titles;
+
+    @include media-tablet {
+        width: 100%;
+        height: auto;
+    }
+
+    @include media-desktop{
+        width: 100%;
+        height: auto;
+    }
+
 
     &__search {
         @include flex-center;
         height: 52px;
         width: 100%;
         background-color: $bg-clr-search;
-        // box-shadow: $shadow-search;
+
+        @include media-tablet{
+            height: 80px;
+
+            i{
+                font-size: $fs-card-texts-desktop;
+            }
+        }
+
+        @include media-desktop {
+            width: 280px;
+            height: 60px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            background-color: lighten($color: $primary-color, $amount: 20%);
+            border-radius: 32px;
+
+            i {
+                color: $txt-btn;
+            }
+        }
 
         input {
             background-color: $bg-clr-search;
             height: 52px;
-            width: 112px;
+            width: 152px;
             border-style: none;
             padding-left: 16px;
-            // &::placeholder{
 
-            // }
+            &::placeholder {
+                font-family: $font-texts-titles;
+                font-size: $fs-text-phone;
+                font-weight: bold;
+            }
+
             &:focus {
                 outline: none;
+            }
+
+            @include media-tablet{
+                height: 80px;
+
+                &::placeholder{
+                    font-size: $fs-card-texts-desktop;
+                }
+            }
+
+            @include media-desktop {
+                width: 184px;
+                background-color: lighten($color: $primary-color, $amount: 20%);
+                font-size: $fs-card-texts-desktop;
+                color: $txt-btn;
+
+                &::placeholder {
+                    color: $txt-btn;
+                    padding: 16px;
+                }
+
             }
         }
     }
@@ -34,38 +91,73 @@
         padding: 24px 32px 16px 32px;
         align-self: center;
         text-align: center;
+
+        @include media-desktop {
+            padding-bottom: 48px;
+            padding-top: 48px;
+        }
     }
 
     &__discover {
         font-family: $font-texts-titles;
         padding: 8px 16px 24px 16px;
         text-align: center;
+
+        @include media-tablet{
+            font-size: $fs-texts-desktop;
+            padding-bottom: 56px;
+        }
+
+        @include media-desktop {
+            padding-bottom: 56px;
+            font-size: $fs-texts-desktop;
+        }
     }
-
-
 }
 
 //How to section-------------
 .howto-container {
-    width: $breakpoints-mobile;
+    @include media-phone;
     margin: $margin-page;
     margin-top: 48px;
     margin-bottom: 56px;
+
+    @include media-tablet{
+        width: 80%;
+    }
+
+    @include media-desktop {
+        width: 100%;
+        margin: $margin-page;
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
 
 
     &__operation {
         font-family: $font-texts-titles;
         align-self: flex-start;
         padding-bottom: 24px;
-    }
 
+        @include media-tablet{
+            
+        }
+
+        @include media-desktop {
+            font-size: $fs-card-title-desktop;
+            align-self: center;
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+    }
 }
 
 ul.howto-container__how {
+    width: 100%;
+    margin: $margin-page;
     counter-reset: li;
     list-style-type: none;
-    font-size: 16px;
-    width: 100%;
+    font-size: 20px;
     height: auto;
 
 
@@ -78,9 +170,22 @@ ul.howto-container__how {
         border-radius: 50%;
         color: $txt-btn;
         text-align: center;
-        padding-top: 1%;
         position: relative;
         left: -8px;
+    }
+
+    @include media-desktop {
+        font-size: $fs-texts-desktop;
+        width: 90%;
+        margin-bottom: 32px;
+        display: flex;
+        flex-direction: row;
+
+        li:before {
+            height: 32px;
+            width: 32px;
+            font-size: 24px;
+        }
     }
 
 }
@@ -93,22 +198,25 @@ ul.howto-container__how {
     margin-bottom: 16px;
     box-shadow: $shadow-cards-how-to;
 
-
     &--text {
         font-family: $font-texts-titles;
+        font-size: $fs-text-xs-phone;
         font-weight: bold;
-        padding-left: 16px;
+
     }
-}
 
+    @include media-desktop {
+        height: $height-list;
 
+        &--1,
+        &--2 {
+            margin-right: 32px;
+        }
 
-.name-restaurant {
-    align-self: flex-start;
-
-}
-
-.restaurant-location {
-    align-self: flex-start;
-
+        &--text{
+            padding-left: 8px;
+            padding-top: -8px;
+            font-size: $fs-card-texts-desktop
+        }
+    }
 }

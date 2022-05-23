@@ -1,7 +1,108 @@
+.list i {
+    justify-self: flex-start;
+    align-self: center;
+    padding: 0 16px 0 8px;
+    color: $bg-icon-header;
 
-    .list i {
-        justify-self: flex-start;
-        align-self: center;
-        padding: 0 16px 0 16px;
-        color: $bg-icon-header;
+    @include media-desktop {
+        padding: 0 8px 0 8px;
     }
+}
+
+// icon heart on homepage cards
+.clic-heart,
+.clic-heart-1,
+.clic-heart-2 {
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+// footer in homepage footer and menu pages
+.footercontainer__box {
+    &--icon-fork {
+        padding-top: 8px;
+        color: $txt-btn;
+        font-family: $font-texts-titles;
+
+        i {
+            padding-right: 16px;
+        }
+
+        @include media-desktop {
+            padding-top: 0;
+            font-size: $fs-title-phone;
+        }
+    }
+
+    &--icon-hands {
+        padding-top: 8px;
+        color: $txt-btn;
+        font-family: $font-texts-titles;
+
+        i {
+            padding-right: 8px;
+        }
+
+        @include media-desktop {
+            padding-top: 0;
+            font-size: $fs-title-phone;
+        }
+    }
+}
+
+
+// icons in menu pages
+// .nav {
+//     // i = arrow left
+//     &--palette {
+//         @include media-desktop {
+//             height: 76px;
+//             margin: 24px 0 24px 0;
+//         }
+
+//         i,
+//         a {
+//             font-size: 18px;
+//             color: $text-color;
+//             margin-right: 16px;
+
+//             @include media-desktop {
+//                 font-size: 24px;
+//                 padding-top: 10px;
+//             }
+//         }
+//     }
+// }
+
+.iconheart {
+
+    i {
+        font-size: 24px;
+        padding-top: 32px;
+
+        @include media-desktop {
+            padding-left: 56px;
+            padding-top: 0;
+        }
+    }
+}
+
+.starters__choice {
+    i {
+        @include icon-check-hover;
+    }
+}
+
+.maincorse__choice {
+    i {
+        @include icon-check-hover;
+    }
+}
+
+.desserts__infoprice {
+    i {
+        @include icon-check-hover;
+    }
+}
