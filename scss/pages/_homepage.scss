@@ -10,6 +10,7 @@
     @include media-desktop {
         width: 100%;
         height: auto;
+        margin-bottom: 40px
     }
 
 
@@ -33,11 +34,12 @@
             height: 60px;
             margin-top: 32px;
             margin-bottom: 32px;
-            background-color: lighten($color: $primary-color, $amount: 20%);
             border-radius: 32px;
+            box-shadow: 4px 8px 8px -8px rgba(147, 86, 220, 0.47);
 
             i {
-                color: $txt-btn;
+                padding-left: 16px;
+                color: $primary-color;
             }
         }
 
@@ -68,15 +70,12 @@
 
             @include media-desktop {
                 width: 184px;
-                background-color: lighten($color: $primary-color, $amount: 20%);
                 font-size: $fs-card-texts-desktop;
-                color: $txt-btn;
+                color: $primary-color;
 
                 &::placeholder {
-                    color: $txt-btn;
-                    padding: 16px;
+                    color: $primary-color;
                 }
-
             }
         }
     }
@@ -85,6 +84,10 @@
         @include media-phone;
         margin: $margin-page;
         background-color: $bg-clr-grey-header;
+
+        @include media-desktop {
+            background-color: transparent;
+        }
     }
 
     &__intro {
@@ -93,8 +96,11 @@
         align-self: center;
         text-align: center;
 
+        @include media-tablet {
+            padding-top: 48px;
+        }
+
         @include media-desktop {
-            padding-bottom: 48px;
             padding-top: 48px;
         }
     }
@@ -119,12 +125,13 @@
 //How to section-------------
 .howto-container {
     @include media-phone;
+    width: 80%;
     margin: $margin-page;
-    margin-top: 48px;
+    margin-top: 56px;
     margin-bottom: 56px;
 
     @include media-tablet {
-        width: 80%;
+        width: 80%; 
     }
 
     @include media-desktop {
@@ -143,6 +150,7 @@
         @include media-tablet {
             font-size: $fs-card-title-desktop;
             padding-bottom: 32px;
+            align-self: center;
         }
 
         @include media-desktop {
@@ -155,7 +163,7 @@
 }
 
 ul.howto-container__how {
-    @include media-phone;
+    width: 100%;
     margin: $margin-page;
     counter-reset: li;
     list-style-type: none;
@@ -178,7 +186,8 @@ ul.howto-container__how {
 
     @include media-tablet {
         font-size: 24px;
-        width: 100%;
+        width: 80%;
+        margin-bottom: 24px;
 
         li:before {
             height: 32px;
@@ -188,10 +197,11 @@ ul.howto-container__how {
 
     @include media-desktop {
         font-size: $fs-texts-desktop;
-        width: 90%;
+        width: 95%;
         margin-bottom: 32px;
         display: flex;
         flex-direction: row;
+        align-items: center;
 
         li:before {
             height: 32px;
@@ -209,6 +219,7 @@ ul.howto-container__how {
     border-radius: $box-radius;
     margin-bottom: 16px;
     box-shadow: $shadow-cards-how-to;
+    text-align: center;
 
     &--text {
 
@@ -224,6 +235,7 @@ ul.howto-container__how {
 
     @include media-tablet {
         height: $box-height * 1.2;
+        margin-bottom: 16px;
 
         &--text {
 
@@ -242,20 +254,21 @@ ul.howto-container__how {
 
     @include media-desktop {
         height: $box-height * 1.2;
+
         // for list class 
         &--1,
-        &--2,
-        &--3 {
-            margin-right: 32px;
-        }
+        &--2{
+            margin-right: 24px;
+         }
 
         &--text {
+
             &--1,
             &--2,
             &--3 {
                 padding-left: 8px;
                 padding-top: -8px;
-                font-size: $fs-card-texts-desktop
+                font-size: $fs-card-texts-desktop - 2;
             }
         }
     }

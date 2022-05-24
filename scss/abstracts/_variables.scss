@@ -37,12 +37,12 @@ $txt-btn: #ffffff;
 $bg-clr-footer: #353535;
 
 
-$shadow-cards-how-to: 6px 9px 15px -3px rgba(98, 98, 98, 0.38);
-$shadow-card-nav: 2px 15px 18px -3px rgba(0, 0, 0, 0.68);
-$btn-shadow: 1px 6px 20px -4px rgba(112, 112, 112, 0.72);
-$shadow-cards-menu: 0px 4px 15px -4px rgba(0,0,0,0.36);
-$shadow-cards-menu-desktop: 0px 5px 10px 1px rgba(0,0,0,0.66);
-$shadow-cards-restaurants: 0px 8px 9px -1px rgba(0,0,0,0.33); 
+$shadow-cards-how-to:  2px 8px 8px -6px rgba(49,47,47,0.30);
+$shadow-card-nav: 2px 8px 8px -6px rgba(49,47,47,0.30);
+$btn-shadow:2px 9px 8px -7px rgba(112,112,112,0.75);
+$shadow-cards-menu: 2px 8px 8px -6px rgba(49,47,47,0.30);
+$shadow-cards-menu-desktop: 2px 8px 8px -6px rgba(49,47,47,0.30);
+$shadow-cards-restaurants: 5px 8px 10px -6px rgba(49,47,47,0.30);
 
 // Map colors------------
 $colors: (
@@ -116,7 +116,7 @@ $box-radius: 24px;
 
 
 // cards for restaurants-----------------
-$card-height-restaurant: 296px;
+$card-height-restaurant: 288px;
 $card-width-restaurant: 100%;
 // card-shadow-restaurant: ; 
 $img-radius-restaurant: 16px 16px 0 0;

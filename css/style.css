@@ -71,7 +71,9 @@ p {
   color: #ffffff;
   border-radius: 24px;
   border-style: none;
-  box-shadow: 1px 6px 20px -4px rgba(112, 112, 112, 0.72);
+  box-shadow: 2px 9px 8px -7px rgba(112, 112, 112, 0.75);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   margin-bottom: 48px;
   cursor: pointer;
 }
@@ -88,7 +90,7 @@ p {
     height: 72px;
     width: 288px;
     border-radius: 36px;
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -100,7 +102,9 @@ p {
   color: #ffffff;
   border-radius: 24px;
   border-style: none;
-  box-shadow: 1px 6px 20px -4px rgba(112, 112, 112, 0.72);
+  box-shadow: 2px 9px 8px -7px rgba(112, 112, 112, 0.75);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   cursor: pointer;
   margin-bottom: 48px;
 }
@@ -117,7 +121,7 @@ p {
     height: 72px;
     width: 288px;
     border-radius: 36px;
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 @media screen and (min-width: 991px) {
@@ -127,16 +131,17 @@ p {
 }
 
 .home-cards {
-  width: 320px;
+  width: 80%;
   margin: 0 24px 0 24px;
   height: auto;
   margin-bottom: 48px;
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .home-cards {
-    height: auto;
+    height: 752px;
     margin: 0 24px 24px 24px;
     width: 100%;
+    margin-bottom: 48px;
   }
 }
 @media screen and (min-width: 991px) {
@@ -152,6 +157,13 @@ p {
   padding-top: 48px;
   padding-bottom: 16px;
 }
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .home-cards__title {
+    grid-area: 1/1/2/3;
+    padding-bottom: 32;
+    text-align: center;
+  }
+}
 @media screen and (min-width: 991px) {
   .home-cards__title {
     grid-area: 1/1/2/4;
@@ -164,21 +176,44 @@ p {
 .home-cards__container,
 .home-cards a {
   width: 100%;
-  height: 296px;
+  height: 288px;
   border-radius: 16px;
   padding: 0;
   margin: 0;
   text-decoration: none;
   color: rgb(0, 0, 0);
   margin-bottom: 32px;
-  box-shadow: 0px 8px 9px -1px rgba(0, 0, 0, 0.33);
+  box-shadow: 5px 8px 10px -6px rgba(49, 47, 47, 0.3);
   overflow-y: hidden;
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .home-cards__container,
+.home-cards a {
+    overflow: hidden;
+  }
+  .home-cards__container--1,
+.home-cards a--1 {
+    grid-area: 2/1/3/2;
+  }
+  .home-cards__container--2,
+.home-cards a--2 {
+    grid-area: 2/2/3/3;
+  }
+  .home-cards__container--3,
+.home-cards a--3 {
+    grid-area: 3/1/4/2;
+  }
+  .home-cards__container--4,
+.home-cards a--4 {
+    grid-area: 3/2/4/3;
+  }
 }
 @media screen and (min-width: 991px) {
   .home-cards__container,
 .home-cards a {
     margin: 0;
     height: 300px;
+    margin-bottom: 40px;
   }
   .home-cards__container--1,
 .home-cards a--1 {
@@ -224,12 +259,13 @@ p {
 .home-cards__img--new, .home-cards__img--new2 {
   position: relative;
   top: 32px;
-  right: -65%;
+  right: -60%;
   z-index: 2;
   height: 32px;
   width: 80px;
   background-color: #99E2D0;
   padding: 8px;
+  text-align: center;
   color: #1b6150;
   font-size: 16px;
   border-radius: 8px;
@@ -237,9 +273,10 @@ p {
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .home-cards__img--new, .home-cards__img--new2 {
+    right: -55%;
     height: 40px;
-    width: 96px;
-    font-size: 20px;
+    width: 88px;
+    text-align: center;
   }
 }
 .home-cards__cards-img {
@@ -282,12 +319,14 @@ p {
   position: relative;
   top: -50px;
   right: -80%;
+  text-decoration: none;
 }
 .home-cards .clic-heart-1,
 .home-cards .clic-heart-2 {
   position: relative;
   top: -66px;
   right: -80%;
+  text-decoration: none;
 }
 
 .starters__choice {
@@ -297,17 +336,17 @@ p {
   margin-bottom: 16px;
   background-color: #ffffff;
   border-radius: 16px;
-  box-shadow: 0px 4px 15px -4px rgba(0, 0, 0, 0.36);
+  box-shadow: 2px 8px 8px -6px rgba(49, 47, 47, 0.3);
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .starters__choice {
-    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.66);
+    box-shadow: 2px 8px 8px -6px rgba(49, 47, 47, 0.3);
     height: auto;
   }
 }
 @media screen and (min-width: 991px) {
   .starters__choice {
-    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.66);
+    box-shadow: 2px 8px 8px -6px rgba(49, 47, 47, 0.3);
     height: auto;
   }
 }
@@ -385,17 +424,17 @@ p {
   margin-bottom: 16px;
   background-color: #ffffff;
   border-radius: 16px;
-  box-shadow: 0px 4px 15px -4px rgba(0, 0, 0, 0.36);
+  box-shadow: 2px 8px 8px -6px rgba(49, 47, 47, 0.3);
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .maincorse__choice {
-    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.66);
+    box-shadow: 2px 8px 8px -6px rgba(49, 47, 47, 0.3);
     height: auto;
   }
 }
 @media screen and (min-width: 991px) {
   .maincorse__choice {
-    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.66);
+    box-shadow: 2px 8px 8px -6px rgba(49, 47, 47, 0.3);
     height: auto;
   }
 }
@@ -472,17 +511,17 @@ p {
   margin-bottom: 16px;
   background-color: #ffffff;
   border-radius: 16px;
-  box-shadow: 0px 4px 15px -4px rgba(0, 0, 0, 0.36);
+  box-shadow: 2px 8px 8px -6px rgba(49, 47, 47, 0.3);
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .desserts__choice {
-    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.66);
+    box-shadow: 2px 8px 8px -6px rgba(49, 47, 47, 0.3);
     height: auto;
   }
 }
 @media screen and (min-width: 991px) {
   .desserts__choice {
-    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.66);
+    box-shadow: 2px 8px 8px -6px rgba(49, 47, 47, 0.3);
     height: auto;
   }
 }
@@ -724,6 +763,7 @@ p {
   width: 192px;
   color: rgb(0, 0, 0);
   background-color: #ffffff;
+  align-self: center;
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .nav-home__logo {
@@ -932,6 +972,11 @@ p {
   align-items: center;
   background-color: #f6f6f6;
 }
+@media screen and (min-width: 991px) {
+  #wrapper-intro {
+    background-color: transparent;
+  }
+}
 
 .nav-home {
   display: flex;
@@ -939,20 +984,15 @@ p {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 200px) and (max-width: 599px) {
-  .nav-home {
-    width: 100%;
-  }
-  .nav-home__img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .nav-home__img__search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.nav-home__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-home__img__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .nav-home__img {
@@ -1015,16 +1055,21 @@ ul.howto-container__how {
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .home-cards {
-    width: 80%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
   }
 }
 @media screen and (min-width: 991px) {
   .home-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+    grid-template-rows: 100px repeat(2, 1fr);
     grid-column-gap: 24px;
-    grid-row-gap: 24px;
+    grid-row-gap: 32px;
     height: 80%;
   }
 }
@@ -1138,7 +1183,7 @@ ul.howto-container__how {
   padding-top: 24px;
   padding-bottom: 32px;
 }
-@media screen and (min-width: 200px) and (max-width: 599px) {
+@media screen and (min-width: 200px) and (max-width: fablet) {
   .footercontainer {
     width: 100%;
   }
@@ -1146,6 +1191,7 @@ ul.howto-container__how {
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .footercontainer {
     width: 100%;
+    align-items: center;
   }
 }
 @media screen and (min-width: 991px) {
@@ -1162,6 +1208,11 @@ ul.howto-container__how {
 .footercontainer__box {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .footercontainer__box {
+    text-align: center;
+  }
 }
 @media screen and (min-width: 991px) {
   .footercontainer__box {
@@ -1198,7 +1249,7 @@ ul.howto-container__how {
   margin-top: 24px;
   margin-bottom: 16px;
 }
-@media screen and (min-width: 200px) and (max-width: 599px) {
+@media screen and (min-width: 200px) and (max-width: fablet) {
   .nav--palette, .nav--enchantee, .nav--sens, .nav--france {
     width: 100%;
   }
@@ -1263,7 +1314,7 @@ ul.howto-container__how {
 .nav-home {
   font-family: "Roboto", sans-serif;
 }
-@media screen and (min-width: 200px) and (max-width: 599px) {
+@media screen and (min-width: 200px) and (max-width: fablet) {
   .nav-home {
     width: 100%;
   }
@@ -1278,6 +1329,7 @@ ul.howto-container__how {
   .nav-home {
     width: 100%;
     height: auto;
+    margin-bottom: 40px;
   }
 }
 .nav-home__search {
@@ -1288,7 +1340,7 @@ ul.howto-container__how {
   width: 100%;
   background-color: #eaeaea;
 }
-@media screen and (min-width: 200px) and (max-width: 599px) {
+@media screen and (min-width: 200px) and (max-width: fablet) {
   .nav-home__search {
     width: 100%;
   }
@@ -1307,11 +1359,12 @@ ul.howto-container__how {
     height: 60px;
     margin-top: 32px;
     margin-bottom: 32px;
-    background-color: #c9abee;
     border-radius: 32px;
+    box-shadow: 4px 8px 8px -8px rgba(147, 86, 220, 0.47);
   }
   .nav-home__search i {
-    color: #ffffff;
+    padding-left: 16px;
+    color: rgb(147, 86, 220);
   }
 }
 .nav-home__search input {
@@ -1356,30 +1409,31 @@ ul.howto-container__how {
 @media screen and (min-width: 991px) {
   .nav-home__search input {
     width: 184px;
-    background-color: #c9abee;
     font-size: 20px;
-    color: #ffffff;
+    color: rgb(147, 86, 220);
   }
   .nav-home__search input::-moz-placeholder {
-    color: #ffffff;
-    padding: 16px;
+    color: rgb(147, 86, 220);
   }
   .nav-home__search input:-ms-input-placeholder {
-    color: #ffffff;
-    padding: 16px;
+    color: rgb(147, 86, 220);
   }
   .nav-home__search input::placeholder {
-    color: #ffffff;
-    padding: 16px;
+    color: rgb(147, 86, 220);
   }
 }
 .nav-home__styling {
   margin: 0 24px 0 24px;
   background-color: #f6f6f6;
 }
-@media screen and (min-width: 200px) and (max-width: 599px) {
+@media screen and (min-width: 200px) and (max-width: fablet) {
   .nav-home__styling {
     width: 100%;
+  }
+}
+@media screen and (min-width: 991px) {
+  .nav-home__styling {
+    background-color: transparent;
   }
 }
 .nav-home__intro {
@@ -1400,9 +1454,13 @@ ul.howto-container__how {
     font-size: 32px;
   }
 }
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .nav-home__intro {
+    padding-top: 48px;
+  }
+}
 @media screen and (min-width: 991px) {
   .nav-home__intro {
-    padding-bottom: 48px;
     padding-top: 48px;
   }
 }
@@ -1425,11 +1483,12 @@ ul.howto-container__how {
 }
 
 .howto-container {
+  width: 80%;
   margin: 0 24px 0 24px;
-  margin-top: 48px;
+  margin-top: 56px;
   margin-bottom: 56px;
 }
-@media screen and (min-width: 200px) and (max-width: 599px) {
+@media screen and (min-width: 200px) and (max-width: fablet) {
   .howto-container {
     width: 100%;
   }
@@ -1456,6 +1515,7 @@ ul.howto-container__how {
   .howto-container__operation {
     font-size: 24px;
     padding-bottom: 32px;
+    align-self: center;
   }
 }
 @media screen and (min-width: 991px) {
@@ -1468,16 +1528,12 @@ ul.howto-container__how {
 }
 
 ul.howto-container__how {
+  width: 100%;
   margin: 0 24px 0 24px;
   counter-reset: li;
   list-style-type: none;
   font-size: 20px;
   height: auto;
-}
-@media screen and (min-width: 200px) and (max-width: 599px) {
-  ul.howto-container__how {
-    width: 100%;
-  }
 }
 ul.howto-container__how li:before {
   content: counter(li);
@@ -1494,7 +1550,8 @@ ul.howto-container__how li:before {
 @media screen and (min-width: 600px) and (max-width: 991px) {
   ul.howto-container__how {
     font-size: 24px;
-    width: 100%;
+    width: 80%;
+    margin-bottom: 24px;
   }
   ul.howto-container__how li:before {
     height: 32px;
@@ -1504,10 +1561,11 @@ ul.howto-container__how li:before {
 @media screen and (min-width: 991px) {
   ul.howto-container__how {
     font-size: 24px;
-    width: 90%;
+    width: 95%;
     margin-bottom: 32px;
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
   ul.howto-container__how li:before {
     height: 32px;
@@ -1522,7 +1580,8 @@ ul.howto-container__how li:before {
   background-color: #f6f6f6;
   border-radius: 24px;
   margin-bottom: 16px;
-  box-shadow: 6px 9px 15px -3px rgba(98, 98, 98, 0.38);
+  box-shadow: 2px 8px 8px -6px rgba(49, 47, 47, 0.3);
+  text-align: center;
 }
 .list--text--1, .list--text--2, .list--text--3 {
   font-family: "Roboto", sans-serif;
@@ -1533,6 +1592,7 @@ ul.howto-container__how li:before {
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .list {
     height: 86.4px;
+    margin-bottom: 16px;
   }
   .list--text--1 {
     padding-left: 40px;
@@ -1547,13 +1607,13 @@ ul.howto-container__how li:before {
   .list {
     height: 86.4px;
   }
-  .list--1, .list--2, .list--3 {
-    margin-right: 32px;
+  .list--1, .list--2 {
+    margin-right: 24px;
   }
   .list--text--1, .list--text--2, .list--text--3 {
     padding-left: 8px;
     padding-top: -8px;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -1614,7 +1674,7 @@ ul.howto-container__how li:before {
   background-color: #f6f6f6;
   height: auto;
 }
-@media screen and (min-width: 200px) and (max-width: 599px) {
+@media screen and (min-width: 200px) and (max-width: fablet) {
   .starters {
     width: 100%;
   }
@@ -1689,7 +1749,7 @@ ul.howto-container__how li:before {
   background-color: #f6f6f6;
   height: auto;
 }
-@media screen and (min-width: 200px) and (max-width: 599px) {
+@media screen and (min-width: 200px) and (max-width: fablet) {
   .maincorse {
     width: 100%;
   }
@@ -1761,7 +1821,7 @@ ul.howto-container__how li:before {
   background-color: #f6f6f6;
   height: auto;
 }
-@media screen and (min-width: 200px) and (max-width: 599px) {
+@media screen and (min-width: 200px) and (max-width: fablet) {
   .desserts {
     width: 100%;
   }

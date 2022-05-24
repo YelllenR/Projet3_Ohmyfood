@@ -18,32 +18,35 @@
 #wrapper-intro {
     @include flex-center;
     background-color: map-get($map: $colors, $key: header-intro-grey);
+
+    @include media-desktop {
+        background-color: transparent;
+    }
 }
 
 // home-page flex
 .nav-home {
     @include flex-column;
 
-    @include media-phone {
-        &__img {
+    &__img {
+        @include flex-center;
+
+
+        &__search {
             @include flex-center;
-
-
-            &__search {
-                @include flex-center;
-            }
         }
     }
 
-    @include media-tablet {
-        &__img {
-            @include flex-center;
 
-            &__search {
-                @include flex-center;
-            }
+@include media-tablet {
+    &__img {
+        @include flex-center;
+
+        &__search {
+            @include flex-center;
         }
     }
+}
 }
 
 
@@ -84,20 +87,25 @@ ul.howto-container__how {
     }
 
     @include media-tablet {
-        width: 80%;
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
     }
 
     // grid for cards on desktops
     @include media-desktop {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+        grid-template-rows: 100px repeat(2, 1fr);
         grid-column-gap: 24px;
-        grid-row-gap: 24px;
+        grid-row-gap: 32px;
         height: 80%;
     }
 
-    
+
 }
 
 .list {
