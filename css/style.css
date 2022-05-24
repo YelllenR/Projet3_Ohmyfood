@@ -141,9 +141,9 @@ p {
 }
 @media screen and (min-width: 991px) {
   .home-cards {
-    height: 550px;
-    margin: 0 8px 0 24px;
-    width: 100%;
+    margin: 48px 24px 48px 24px;
+    width: 90%;
+    height: 800px;
   }
 }
 .home-cards__title {
@@ -154,8 +154,11 @@ p {
 }
 @media screen and (min-width: 991px) {
   .home-cards__title {
-    grid-area: 1/1/2/6;
+    grid-area: 1/1/2/4;
     font-size: 24px;
+    padding-top: 0;
+    padding-bottom: 24px;
+    text-align: center;
   }
 }
 .home-cards__container,
@@ -172,6 +175,11 @@ p {
   overflow-y: hidden;
 }
 @media screen and (min-width: 991px) {
+  .home-cards__container,
+.home-cards a {
+    margin: 0;
+    height: 300px;
+  }
   .home-cards__container--1,
 .home-cards a--1 {
     grid-area: 2/1/3/2;
@@ -186,7 +194,7 @@ p {
   }
   .home-cards__container--4,
 .home-cards a--4 {
-    grid-area: 2/4/3/5;
+    grid-area: 3/2/4/3;
   }
 }
 .home-cards__img--cards {
@@ -782,7 +790,7 @@ p {
        object-position: center;
     border-radius: 100% 0 50% 0;
     background-color: #f6f6f6;
-    background-image: url(../../image/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-image: url(..//..//image/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   }
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
@@ -794,7 +802,7 @@ p {
        object-position: center;
     border-radius: 100% 0 50% 0;
     background-color: #f6f6f6;
-    background-image: url(../../image/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-image: url(..//..//image/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   }
 }
 
@@ -807,7 +815,7 @@ p {
        object-position: center;
     border-radius: 100% 0 50% 0;
     background-color: #f6f6f6;
-    background-image: url(../../image/stil-u2Lp8tXIcjw-unsplash.jpg);
+    background-image: url(..//..//image/stil-u2Lp8tXIcjw-unsplash.jpg);
   }
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
@@ -819,7 +827,7 @@ p {
        object-position: center;
     border-radius: 100% 0 50% 0;
     background-color: #f6f6f6;
-    background-image: url(../../image/stil-u2Lp8tXIcjw-unsplash.jpg);
+    background-image: url(..//..//image/stil-u2Lp8tXIcjw-unsplash.jpg);
   }
 }
 
@@ -832,7 +840,7 @@ p {
        object-position: center;
     border-radius: 100% 0 50% 0;
     background-color: #f6f6f6;
-    background-image: url(../../image/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    background-image: url(..//..//image/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   }
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
@@ -844,7 +852,7 @@ p {
        object-position: center;
     border-radius: 100% 0 50% 0;
     background-color: #f6f6f6;
-    background-image: url(../../image/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    background-image: url(..//..//image/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   }
 }
 
@@ -857,7 +865,7 @@ p {
        object-position: center;
     border-radius: 100% 0 50% 0;
     background-color: #f6f6f6;
-    background-image: url(../../image/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-image: url(..//..//image/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   }
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
@@ -869,7 +877,7 @@ p {
        object-position: center;
     border-radius: 100% 0 50% 0;
     background-color: #f6f6f6;
-    background-image: url(../../image/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-image: url(..//..//image/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   }
 }
 
@@ -1013,11 +1021,11 @@ ul.howto-container__how {
 @media screen and (min-width: 991px) {
   .home-cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    -moz-column-gap: 16px;
-         column-gap: 16px;
-    row-gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    height: 80%;
   }
 }
 

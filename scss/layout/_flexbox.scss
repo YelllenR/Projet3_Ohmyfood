@@ -90,12 +90,14 @@ ul.howto-container__how {
     // grid for cards on desktops
     @include media-desktop {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        column-gap: 16px;
-        row-gap: 24px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+        grid-column-gap: 24px;
+        grid-row-gap: 24px;
+        height: 80%;
     }
 
+    
 }
 
 .list {
@@ -110,8 +112,8 @@ ul.howto-container__how {
 .nav {
 
     &--palette,
-    &--enchantee, 
-    &--sens, 
+    &--enchantee,
+    &--sens,
     &--france {
         display: flex;
         justify-content: space-between;
