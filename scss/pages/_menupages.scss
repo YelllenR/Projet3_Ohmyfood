@@ -10,6 +10,7 @@
     top: -48px;
 
     @include media-tablet {
+        width: 100%;
         position: sticky;
         top: 70px;
         height: 80px;
@@ -18,6 +19,7 @@
     }
 
     @include media-desktop {
+        width: 100%;
         position: sticky;
         top: 80px;
         height: 80px;
@@ -26,25 +28,46 @@
     }
 
     &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
         padding-top: 32px;
         font-family: $font-titles-pages;
-        font-size: $font-titles-pages;
+        font-size: $fs-title-phone + 2;
+        
+
+        i{
+            padding: 0;
+        }
 
         @include media-tablet{
             padding-top: 0;
             padding-right: 16px;
+            font-size: $fs-card-title-desktop;
+            justify-content:center;
+
+           i{
+                padding-left: 15%;
+            }
         }
 
         @include media-desktop {
+            justify-content:center;
             padding-right: 24px;
             padding-top: 0;
             font-size: $fs-titles-desktop;
+
+            i{
+                padding-left: 20%;
+            }
         }
     }
 }
 
 .starters {
     @include media-phone;
+    width: 90%;
     margin: $margin-page;
     margin-bottom: 32px;
     display: flex;
@@ -74,14 +97,14 @@
 
     @include media-tablet{
         background-color: transparent;
-        min-width: 50%;
+        width: 50%;
         height: auto;
         margin-top: 80px;
     }
 
     @include media-desktop {
         background-color: transparent;
-        min-width: 40%;
+        width: 50%;
         height: auto;
         margin-top: 50px;
     }
@@ -89,6 +112,7 @@
 
 .maincorse {
     @include media-phone;
+    width: 90%;
     margin: $margin-page;
     margin-bottom: 32px;
     display: flex;
@@ -116,20 +140,21 @@
 
     @include media-tablet{
         background-color: transparent;
-        min-width: 50%;
+        width: 50%;
         height: auto;
         margin-top: 80px;
     }
 
     @include media-desktop {
         background-color: transparent;
-        min-width: 40%;
+        width: 50%;
         margin-top: 80px;
     }
 }
 
 .desserts {
     @include media-phone;
+    width: 90%;
     margin: $margin-page;
     margin-bottom: 32px;
     display: flex;
@@ -157,14 +182,14 @@
 
     @include media-tablet{
         background-color: transparent;
-        min-width: 50%;
+        width: 50%;
         height: auto;
         margin-top: 80px;
     }
 
     @include media-desktop {
         background-color: transparent;
-        min-width: 40%;
+        width: 50%;
         margin-top: 80px;
     }
 }

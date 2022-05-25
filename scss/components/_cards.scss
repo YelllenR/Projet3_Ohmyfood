@@ -230,8 +230,8 @@
 
     @include media-desktop {
         padding: 16px 16px 0 16px;
-        width: 50%;
-        font-size: $fs-card-title-desktop;
+
+        font-size: $fs-card-title-desktop - 4;
     }
 }
 
@@ -291,8 +291,7 @@
 
         @include media-desktop {
             padding: 16px 16px 0 16px;
-            width: 50%;
-            font-size: $fs-card-title-desktop;
+            font-size: $fs-card-title-desktop - 4;
         }
     }
 }
@@ -340,7 +339,7 @@
     }
 
     @include media-desktop {
-        box-shadow: $shadow-cards-menu-desktop;
+        box-shadow: $shadow-cards-menu-desktop - 4;
         height: auto;
     }
 
@@ -353,8 +352,7 @@
 
         @include media-desktop {
             padding: 16px 16px 0 16px;
-            width: 50%;
-            font-size: $fs-card-title-desktop;
+            font-size: $fs-card-title-desktop - 4;
         }
     }
 }
@@ -384,7 +382,7 @@
 
     &--price {
         @include price-cards;
-
+        
         @include media-desktop {
             font-size: $fs-card-texts-desktop;
         }

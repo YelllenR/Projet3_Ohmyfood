@@ -1,18 +1,22 @@
 // Menu page - La palette du goût
 .nav {
+
     &--palette,
     &--enchantee,
     &--sens,
     &--france {
         @include media-phone;
+        width: 100%;
         margin: $margin-page;
         margin-top: 24px;
         margin-bottom: 16px;
 
-        a,
-        i {
-            color: $text-color;
-            font-size: 18px;
+        a {
+            align-self: flex-start;
+            i {
+                color: $text-color;
+                font-size: 20px;
+            }
         }
 
         @include media-tablet {

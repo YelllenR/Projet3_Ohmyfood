@@ -367,8 +367,7 @@ p {
 @media screen and (min-width: 991px) {
   .starters__name {
     padding: 16px 16px 0 16px;
-    width: 50%;
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
@@ -410,6 +409,7 @@ p {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   padding-right: 16px;
+  padding-left: 16px;
 }
 @media screen and (min-width: 991px) {
   .starters__infoprice--price {
@@ -454,8 +454,7 @@ p {
 @media screen and (min-width: 991px) {
   .maincorse__choice .maincorse__name {
     padding: 16px 16px 0 16px;
-    width: 50%;
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
@@ -497,6 +496,7 @@ p {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   padding-right: 16px;
+  padding-left: 16px;
 }
 @media screen and (min-width: 991px) {
   .maincorse__infoprice--price {
@@ -521,7 +521,7 @@ p {
 }
 @media screen and (min-width: 991px) {
   .desserts__choice {
-    box-shadow: 2px 8px 8px -6px rgba(49, 47, 47, 0.3);
+    box-shadow: 2px 8px 8px -6px rgba(49, 47, 47, 0.3)-4;
     height: auto;
   }
 }
@@ -541,8 +541,7 @@ p {
 @media screen and (min-width: 991px) {
   .desserts__choice .desserts__name {
     padding: 16px 16px 0 16px;
-    width: 50%;
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
@@ -584,6 +583,7 @@ p {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   padding-right: 16px;
+  padding-left: 16px;
 }
 @media screen and (min-width: 991px) {
   .desserts__infoprice--price {
@@ -613,6 +613,7 @@ p {
 .clic-heart-1,
 .clic-heart-2 {
   border-style: none;
+  color: rgb(0, 0, 0);
   background-color: transparent;
   cursor: pointer;
 }
@@ -1093,37 +1094,40 @@ ul.howto-container__how {
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .iconheart {
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
 }
 @media screen and (min-width: 991px) {
   .iconheart {
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
 }
 
-#wrapper-starters, #wrapper-dessert, #wrapper-main {
+#wrapper-starters {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f6f6f6;
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
-  #wrapper-starters, #wrapper-dessert, #wrapper-main {
+  #wrapper-starters {
     background-color: transparent;
     height: auto;
   }
 }
 @media screen and (min-width: 991px) {
-  #wrapper-starters, #wrapper-dessert, #wrapper-main {
+  #wrapper-starters {
     background-color: transparent;
     height: auto;
   }
 }
 
 #wrapper-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #f6f6f6;
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
@@ -1138,6 +1142,9 @@ ul.howto-container__how {
 }
 
 #wrapper-dessert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #f6f6f6;
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
@@ -1245,6 +1252,7 @@ ul.howto-container__how {
 }
 
 .nav--palette, .nav--enchantee, .nav--sens, .nav--france {
+  width: 100%;
   margin: 0 24px 0 24px;
   margin-top: 24px;
   margin-bottom: 16px;
@@ -1254,13 +1262,12 @@ ul.howto-container__how {
     width: 100%;
   }
 }
-.nav--palette a,
-.nav--palette i, .nav--enchantee a,
-.nav--enchantee i, .nav--sens a,
-.nav--sens i, .nav--france a,
-.nav--france i {
+.nav--palette a, .nav--enchantee a, .nav--sens a, .nav--france a {
+  align-self: flex-start;
+}
+.nav--palette a i, .nav--enchantee a i, .nav--sens a i, .nav--france a i {
   color: rgb(0, 0, 0);
-  font-size: 18px;
+  font-size: 20px;
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .nav--palette, .nav--enchantee, .nav--sens, .nav--france {
@@ -1628,6 +1635,7 @@ ul.howto-container__how li:before {
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .iconheart {
+    width: 100%;
     position: -webkit-sticky;
     position: sticky;
     top: 70px;
@@ -1638,6 +1646,7 @@ ul.howto-container__how li:before {
 }
 @media screen and (min-width: 991px) {
   .iconheart {
+    width: 100%;
     position: -webkit-sticky;
     position: sticky;
     top: 80px;
@@ -1647,25 +1656,42 @@ ul.howto-container__how li:before {
   }
 }
 .iconheart__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   padding-top: 32px;
   font-family: "Shrikhand", "cursive";
-  font-size: "Shrikhand", "cursive";
+  font-size: 22px;
+}
+.iconheart__title i {
+  padding: 0;
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .iconheart__title {
     padding-top: 0;
     padding-right: 16px;
+    font-size: 24px;
+    justify-content: center;
+  }
+  .iconheart__title i {
+    padding-left: 15%;
   }
 }
 @media screen and (min-width: 991px) {
   .iconheart__title {
+    justify-content: center;
     padding-right: 24px;
     padding-top: 0;
     font-size: 32px;
   }
+  .iconheart__title i {
+    padding-left: 20%;
+  }
 }
 
 .starters {
+  width: 90%;
   margin: 0 24px 0 24px;
   margin-bottom: 32px;
   display: flex;
@@ -1726,7 +1752,7 @@ ul.howto-container__how li:before {
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .starters {
     background-color: transparent;
-    min-width: 50%;
+    width: 50%;
     height: auto;
     margin-top: 80px;
   }
@@ -1734,13 +1760,14 @@ ul.howto-container__how li:before {
 @media screen and (min-width: 991px) {
   .starters {
     background-color: transparent;
-    min-width: 40%;
+    width: 50%;
     height: auto;
     margin-top: 50px;
   }
 }
 
 .maincorse {
+  width: 90%;
   margin: 0 24px 0 24px;
   margin-bottom: 32px;
   display: flex;
@@ -1799,7 +1826,7 @@ ul.howto-container__how li:before {
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .maincorse {
     background-color: transparent;
-    min-width: 50%;
+    width: 50%;
     height: auto;
     margin-top: 80px;
   }
@@ -1807,12 +1834,13 @@ ul.howto-container__how li:before {
 @media screen and (min-width: 991px) {
   .maincorse {
     background-color: transparent;
-    min-width: 40%;
+    width: 50%;
     margin-top: 80px;
   }
 }
 
 .desserts {
+  width: 90%;
   margin: 0 24px 0 24px;
   margin-bottom: 32px;
   display: flex;
@@ -1871,7 +1899,7 @@ ul.howto-container__how li:before {
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .desserts {
     background-color: transparent;
-    min-width: 50%;
+    width: 50%;
     height: auto;
     margin-top: 80px;
   }
@@ -1879,7 +1907,7 @@ ul.howto-container__how li:before {
 @media screen and (min-width: 991px) {
   .desserts {
     background-color: transparent;
-    min-width: 40%;
+    width: 50%;
     margin-top: 80px;
   }
 }/*# sourceMappingURL=style.css.map */
