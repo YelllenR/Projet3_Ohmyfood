@@ -179,31 +179,36 @@
 // Menu pages --------------------
 
 @mixin  parallax {
-
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     object-position: center;
     border-radius: 100% 0 50% 0;
     background-color: $bg-clr-grey-header;
+
+    @include media-tablet{
+        border-radius: 100% 0 0 50%;
+        object-position: center;
+    }
 }
 
 @mixin icon-check-hover {
+    height: 100%;
+    left: 100%;
     border-radius: 0 16px 16px 0;
     text-align: center;
     padding-top: 32px;
     font-size: 24px;
-    color: $txt-btn;
-    transform: scale(0);
     background-color: $tertiary-color;
-    width: 60px;
-    height: 87px;
+    color: $txt-btn;
+    width: 0;
+    
 
-    @include media-desktop {
-        height: 95px;
-        width: 80px;
-        font-size: 32px;
-    }
+    // @include media-desktop {
+    //     height: 95px;
+    //     width: 80px;
+    //     font-size: 32px;
+    // }
 }
 
 @mixin card-title-desktop {
@@ -213,7 +218,7 @@
     border-radius: 16px;
     padding: 8px;
     height: 48px;
-    background-color: $bg-clr-footer;
+    background-color: rgba($color: $bg-clr-footer, $alpha: 0.6);
     text-decoration-line: underline;
     text-underline-offset: 5px;
     text-decoration-color: $tertiary-color;
@@ -227,7 +232,7 @@
     border-radius: 12px;
     padding: 8px;
     height: 40px;
-    background-color: $bg-clr-footer;
+    background-color: rgba($color: $bg-clr-footer, $alpha: 0.6);
     text-decoration-line: underline;
     text-underline-offset: 5px;
     text-decoration-color: $tertiary-color;
@@ -245,7 +250,7 @@
 }
 
 @mixin in-cards-titles-menu{
-    padding: 8px;
+    padding: 16px 0 0 16px;
     width: 100%;
     font-family: $font-texts-titles;
     font-size: $fs-text-xs-phone;
@@ -266,7 +271,7 @@
 }
 
 @mixin container-price-info{
-    padding: 8px 8px 8px 8px;
+    padding: 0 8px 8px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -278,4 +283,5 @@
         font-size: $fs-text-xs-phone;
         padding-right: 16px;
         padding-left: 16px;
+        font-weight: bold;
 }

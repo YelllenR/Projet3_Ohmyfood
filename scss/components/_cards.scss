@@ -208,6 +208,7 @@
 // starters
 .starters__choice {
     @include cards-menu-pages;
+    
 
     @include media-tablet {
         box-shadow: $shadow-cards-menu-desktop;
@@ -218,6 +219,7 @@
         box-shadow: $shadow-cards-menu-desktop;
         height: auto;
     }
+
 
 }
 
@@ -237,14 +239,7 @@
 
 .starters__infoprice {
     @include container-price-info;
-
-    @include media-tablet {
-        padding: 8px 0 8px 16px;
-    }
-
-    @include media-desktop {
-        padding: 8px 0 8px 16px;
-    }
+    text-align: justify;
 
     &--info {
         @include cards-price-info;
@@ -256,15 +251,16 @@
         @include media-desktop {
             font-size: $fs-card-texts-desktop;
         }
+
     }
 
-    &--price {
+    &--price{
         @include price-cards;
-
         @include media-desktop {
             font-size: $fs-card-texts-desktop;
         }
     }
+
 }
 
 
@@ -298,14 +294,6 @@
 
 .maincorse__infoprice {
     @include container-price-info;
-
-    @include media-tablet {
-        padding: 8px 0 8px 16px;
-    }
-
-    @include media-desktop {
-        padding: 8px 0 8px 16px;
-    }
 
     &--info {
         @include cards-price-info;
@@ -360,13 +348,6 @@
 .desserts__infoprice {
     @include container-price-info;
 
-    @include media-tablet {
-        padding: 8px 0 8px 16px;
-    }
-
-    @include media-desktop {
-        padding: 8px 0 8px 16px;
-    }
 
     &--info {
         @include cards-price-info;
@@ -382,7 +363,7 @@
 
     &--price {
         @include price-cards;
-        
+
         @include media-desktop {
             font-size: $fs-card-texts-desktop;
         }
