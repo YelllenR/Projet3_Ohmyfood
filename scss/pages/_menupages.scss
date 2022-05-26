@@ -97,7 +97,7 @@
 
     @include media-tablet{
         background-color: transparent;
-        width: 50%;
+        max-width: 60%;
         height: auto;
         margin-top: 80px;
     }
@@ -140,7 +140,7 @@
 
     @include media-tablet{
         background-color: transparent;
-        width: 50%;
+        max-width: 60%;
         height: auto;
         margin-top: 80px;
     }
@@ -182,7 +182,7 @@
 
     @include media-tablet{
         background-color: transparent;
-        width: 50%;
+        max-width: 60%;
         height: auto;
         margin-top: 80px;
     }
