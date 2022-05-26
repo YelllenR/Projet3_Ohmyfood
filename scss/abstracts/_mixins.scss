@@ -192,23 +192,23 @@
     }
 }
 
-@mixin icon-check-hover {
-    height: 100%;
-    left: 100%;
-    border-radius: 0 16px 16px 0;
-    text-align: center;
-    padding-top: 32px;
+@mixin icon-check-after {
+    content: '\f058';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-family: 'Font Awesome 5 Free';
+    top: 0;
+    left: 85%;
+    font-weight: 900;
     font-size: 24px;
-    background-color: $tertiary-color;
     color: $txt-btn;
-    width: 0;
-    
-
-    // @include media-desktop {
-    //     height: 95px;
-    //     width: 80px;
-    //     font-size: 32px;
-    // }
+    background-color: $tertiary-color;
+    border-radius: 0 16px 16px 0;
+    height: 100%;
+    width: 15%;
 }
 
 @mixin card-title-desktop {

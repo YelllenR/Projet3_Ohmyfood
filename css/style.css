@@ -5,6 +5,44 @@
   color: rgb(147, 86, 220);
 }
 
+.starters__choice,
+.maincorse__choice,
+.desserts__choice {
+  position: relative;
+}
+.starters__choice:hover,
+.maincorse__choice:hover,
+.desserts__choice:hover {
+  padding-right: 15%;
+  transition: 300ms;
+}
+.starters__choice:hover .icon-check::before,
+.maincorse__choice:hover .icon-check::before,
+.desserts__choice:hover .icon-check::before {
+  content: "";
+  width: 0;
+}
+.starters__choice:hover .icon-check::after,
+.maincorse__choice:hover .icon-check::after,
+.desserts__choice:hover .icon-check::after {
+  content: "\f058";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  top: 0;
+  left: 85%;
+  font-weight: 900;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #99E2D0;
+  border-radius: 0 16px 16px 0;
+  height: 100%;
+  width: 15%;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -647,38 +685,6 @@ p {
     padding-left: 56px;
     padding-top: 0;
   }
-}
-
-.starters__choice {
-  position: relative;
-}
-.starters__choice i::before {
-  position: absolute;
-  height: 100%;
-  left: 100%;
-  border-radius: 0 16px 16px 0;
-  text-align: center;
-  padding-top: 32px;
-  font-size: 24px;
-  background-color: #99E2D0;
-  color: #ffffff;
-  width: 0;
-}
-.starters__choice:hover {
-  padding-right: 15%;
-}
-.starters__choice:hover i::after {
-  content: icon;
-  height: 100%;
-  left: 100%;
-  border-radius: 0 16px 16px 0;
-  text-align: center;
-  padding-top: 32px;
-  font-size: 24px;
-  background-color: #99E2D0;
-  color: #ffffff;
-  width: 0;
-  width: 15%;
 }
 
 .nav-home {

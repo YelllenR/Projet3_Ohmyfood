@@ -87,30 +87,6 @@
     }
 }
 
-.starters__choice {
-    position: relative;
-
-    i::before{
-        position: absolute;
-
-        @include icon-check-hover;
-    // i::before {
-    //     content: "";
-    //     position: absolute;
-    //     width: 0;
-        
-    // }
-}
-    &:hover {
-        i::after {
-            content: icon;
-            @include icon-check-hover;
-            width: 15%;
-        }
-
-        padding-right: 15%;
-    }
-}
 
 
 // .maincorse__choice {

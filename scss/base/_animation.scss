@@ -8,8 +8,24 @@
 }
 
 
-
-
-
 // animations on menu pages
 
+.starters__choice,
+.maincorse__choice,
+ .desserts__choice
+ {
+    position: relative;
+    
+    &:hover {
+        padding-right: 15%;
+        transition: 300ms;
+        .icon-check::before {
+            content: '';
+            width: 0;
+        }
+
+        .icon-check::after {
+            @include icon-check-after;
+        }
+    }
+}
