@@ -40,19 +40,28 @@
         }
     }
 
-    &__container,
     a {
-        width: $card-width-restaurant;
-        height: $card-height-restaurant;
-        border-radius: $card-radius-restaurant;
-        padding: 0;
-        margin: 0;
-        text-decoration: none;
         color: $text-color;
-        margin-bottom: 32px;
-        box-shadow: $shadow-cards-restaurants;
-        overflow-y: hidden;
+    }
 
+    &__container {
+        
+        &--1,
+        &--2,
+        &--3,
+        &--4 {
+            text-decoration: none;
+            position: relative;
+            width: $card-width-restaurant;
+            height: $card-height-restaurant;
+            box-shadow: $shadow-cards-restaurants;
+            border-radius: $card-radius-restaurant;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            color: $text-color;
+            margin-bottom: 32px;
+        }
 
         @include media-tablet {
             &--1 {
@@ -71,7 +80,7 @@
                 grid-area: 3 / 2 / 4 / 3;
             }
 
-            overflow: hidden;
+
         }
 
         @include media-desktop {
@@ -159,7 +168,7 @@
         padding-bottom: 8px;
         padding-left: 16px;
         position: relative;
-        top: -16px;
+        top: -20px;
 
         &--top {
             align-self: flex-start;
@@ -176,7 +185,7 @@
         padding-left: 16px;
         font-family: $font-texts-titles;
         position: relative;
-        top: -16px;
+        top: -20px;
 
         &--top {
             align-self: flex-start;
@@ -184,21 +193,6 @@
             padding-left: 16px;
             font-family: $font-texts-titles;
         }
-    }
-
-    .clic-heart {
-        position: relative;
-        top: -50px;
-        right: -80%;
-        text-decoration: none;
-    }
-
-    .clic-heart-1,
-    .clic-heart-2 {
-        position: relative;
-        top: -66px;
-        right: -80%;
-        text-decoration: none;
     }
 }
 
@@ -208,7 +202,7 @@
 // starters
 .starters__choice {
     @include cards-menu-pages;
-    
+
 
     @include media-tablet {
         box-shadow: $shadow-cards-menu-desktop;
@@ -254,8 +248,9 @@
 
     }
 
-    &--price{
+    &--price {
         @include price-cards;
+
         @include media-desktop {
             font-size: $fs-card-texts-desktop;
         }

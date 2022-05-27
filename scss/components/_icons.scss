@@ -15,14 +15,16 @@
 }
 
 // icon heart on homepage cards
-.clic-heart,
-.clic-heart-1,
-.clic-heart-2 {
-    border-style: none;
-    color: $text-color;
-    background-color: transparent;
-    cursor: pointer;
-}
+
+    .clic-heart{
+        position:absolute;
+        left: 80%;
+        top: 80%;
+        z-index: 2;
+        border-style: none;
+        color: $text-color;
+        cursor: pointer;
+    }
 
 
 // footer in homepage footer and menu pages
