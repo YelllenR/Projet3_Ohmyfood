@@ -1,24 +1,84 @@
 // homepage animations
-.list:hover{
+.list:hover {
     background-color: lighten($color: $primary-color, $amount: 30%);
 
-    &:hover > i {
+    &:hover>i {
         color: $primary-color;
     }
 }
 
 
-// animations on menu pages
 
+// Using before and after to use and style the icon heart without putting it on html
+// font-weight 900 to specify that it is a filled (solid) icon. f-weight 400 = regular.
+
+.click-heart:active, .click-heart:hover{
+
+    &::before {
+        content:'\f004';
+        font-size: 24px;
+        font-weight: 900;
+        background-image: linear-gradient( $gradient-heart);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        font-weight: 900;
+        height: 100%;
+        width: 100%;
+        background: darken($color: $txt-btn, $amount: 3%);
+        text-shadow: $shadow-cards-menu;
+        left: 0;
+        border-radius: 45%;
+        -webkit-animation: fill-up 1.5s cubic-bezier(.11,.22,.42,.34) forwards;
+                animation: fill-up 1.5s cubic-bezier(.11,.22,.42,.34) forwards;
+        
+    // For cubic bezier, i've used the online generator.
+    }
+
+    @-webkit-keyframes fill-up{
+        0% {
+            transform: translateY(-1) rotate(0);
+            background-image: none;
+        }
+
+        100%{
+            transform: translateY(-95%);
+            background-image:linear-gradient( $gradient-heart);
+        
+        }
+    }
+
+    @keyframes fill-up{
+        0% {
+            transform: translateY(0) rotate(0);
+        }
+
+        100%{
+            transform: translateY(-95%) ;
+        }
+    }
+
+}
+
+
+
+
+
+// animations on menu pages
 .starters__choice,
 .maincorse__choice,
- .desserts__choice
- {
+.desserts__choice {
     position: relative;
-    
+
     &:hover {
         padding-right: 15%;
-        transition: 300ms;
+        transition: 700ms;
+
         .icon-check::before {
             content: '';
             width: 0;
@@ -29,9 +89,3 @@
         }
     }
 }
-
-// .clic-heart-1:active{
-
-// @include active-heart;
-    
-// }

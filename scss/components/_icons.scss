@@ -16,15 +16,34 @@
 
 // icon heart on homepage cards
 
-    .clic-heart{
-        position:absolute;
-        left: 80%;
-        top: 80%;
-        z-index: 2;
-        border-style: none;
-        color: $text-color;
-        cursor: pointer;
+// .click-heart {
+//     position: absolute;
+//     left: 80%;
+//     top: 80%;
+//     z-index: 2;
+//     border-style: none;
+//     color: $text-color;
+//     cursor: pointer;
+//     background-color: transparent;
+// }
+
+.click-heart{
+    @include heart-home-cards;
+    position: absolute;
+    font-weight:400;
+    font-size: 24px;
+
+    &::before{
+        content: '';
     }
+
+    &::after{
+        position: relative;
+        content:'\f004';
+        font-size: 24px;
+        font-weight: 400;
+    }
+}
 
 
 // footer in homepage footer and menu pages
@@ -88,17 +107,3 @@
         }
     }
 }
-
-
-
-// .maincorse__choice {
-//     i {
-//         @include icon-check-hover;
-//     }
-// }
-
-// .desserts__infoprice {
-//     i {
-//         @include icon-check-hover;
-//     }
-// }

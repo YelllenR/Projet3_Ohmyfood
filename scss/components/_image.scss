@@ -62,7 +62,8 @@
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
-        object-position: center;
+        -o-object-position: center;
+           object-position: center;
         height: 280px;
 
         @include media-tablet {
@@ -143,7 +144,8 @@
 .footercontainer__logo {
     height: 24px;
     width: 104px;
-    filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(176deg);
+    -webkit-filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(176deg);
+            filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(176deg);
     margin-bottom: 16px;
 
     @include media-desktop {
