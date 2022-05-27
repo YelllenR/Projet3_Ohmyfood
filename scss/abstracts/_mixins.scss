@@ -184,11 +184,12 @@
     background-size: cover;
     object-position: center;
     border-radius: 100% 0 50% 0;
+    background-position: center;
     background-color: $bg-clr-grey-header;
 
     @include media-tablet{
-        border-radius: 100% 0 0 50%;
-        object-position: center;
+        border-radius: 100% 0 0 0;
+        
     }
 }
 
@@ -201,14 +202,14 @@
     position: absolute;
     font-family: 'Font Awesome 5 Free';
     top: 0;
-    left: 85%;
+    left: 86%;
     font-weight: 900;
     font-size: 24px;
     color: $txt-btn;
     background-color: $tertiary-color;
     border-radius: 0 16px 16px 0;
     height: 100%;
-    width: 15%;
+    min-width: 15%;
 }
 
 @mixin card-title-desktop {
@@ -254,6 +255,9 @@
     width: 100%;
     font-family: $font-texts-titles;
     font-size: $fs-text-xs-phone;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 @mixin in-cards-titles-menu-tablet{
@@ -285,3 +289,8 @@
         padding-left: 16px;
         font-weight: bold;
 }
+
+// @mixin active-heart{
+//     background-color: green;
+//     animation-duration: 15s;
+// }
