@@ -35,6 +35,7 @@ $bg-icon-header: #7e7e7e;
 $color-num-box: rgba(147, 86, 220, 1);
 $txt-btn: #ffffff;
 $bg-clr-footer: #353535;
+$gradient-heart: 10deg, rgba(255,121,218,1) 9%, rgba(147,86,220,1) 73%;
 
 
 $shadow-cards-how-to:  3px 8px 5px -8px rgba(49,47,47,0.40);
@@ -118,7 +119,7 @@ $box-radius: 24px;
 // cards for restaurants-----------------
 $card-height-restaurant: 288px;
 $card-width-restaurant: 100%;
-// card-shadow-restaurant: ; 
+
 $img-radius-restaurant: 16px 16px 0 0;
 $card-radius-restaurant: 16px;
 
@@ -128,6 +129,5 @@ $card-radius-restaurant: 16px;
 //  img-height-restaurant: ; 
 //  img-width-restaurant: ; 
 
-$active-heart: green;
 
 // ----------Footer----------------

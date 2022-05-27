@@ -3,19 +3,3 @@
     @return light($color, $hue($color) - 50);
 }
 
-
-// @function list-height($height-list, $breakpoints){
-//     @if ($breakpoints >= 1200px){
-//         @return list-height($height-list + 15px);
-//     }
-//     @if ($breakpoints < 1200px){
-//         @return list-height($height-list - 15px);
-//     }
-
-//     @else{
-//         @return $height-list;
-//     }
-
-// }
-
-// @debug list-height($height-list);

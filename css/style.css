@@ -5,6 +5,47 @@
   color: rgb(147, 86, 220);
 }
 
+.click-heart:active::before, .click-heart:hover::before {
+  content: "\f004";
+  font-size: 24px;
+  font-weight: 900;
+  background-image: linear-gradient(10deg, rgb(255, 121, 218) 9%, rgb(147, 86, 220) 73%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.click-heart:active::after, .click-heart:hover::after {
+  position: absolute;
+  content: "";
+  font-weight: 900;
+  height: 100%;
+  width: 100%;
+  background: #f7f7f7;
+  text-shadow: 3px 8px 5px -8px rgba(49, 47, 47, 0.4);
+  left: 0;
+  border-radius: 45%;
+  -webkit-animation: fill-up 1.5s cubic-bezier(0.11, 0.22, 0.42, 0.34) forwards;
+  animation: fill-up 1.5s cubic-bezier(0.11, 0.22, 0.42, 0.34) forwards;
+}
+@-webkit-keyframes fill-up {
+  0% {
+    transform: translateY(-1) rotate(0);
+    background-image: none;
+  }
+  100% {
+    transform: translateY(-95%);
+    background-image: linear-gradient(10deg, rgb(255, 121, 218) 9%, rgb(147, 86, 220) 73%);
+  }
+}
+@keyframes fill-up {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(-95%);
+  }
+}
+
 .starters__choice,
 .maincorse__choice,
 .desserts__choice {
@@ -14,7 +55,7 @@
 .maincorse__choice:hover,
 .desserts__choice:hover {
   padding-right: 15%;
-  transition: 300ms;
+  transition: 700ms;
 }
 .starters__choice:hover .icon-check::before,
 .maincorse__choice:hover .icon-check::before,
@@ -269,9 +310,9 @@ p {
   height: 70%;
   z-index: 1;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: center;
-     object-position: center;
+  object-position: center;
 }
 .home-cards__img--cards2 {
   position: relative;
@@ -281,9 +322,9 @@ p {
   height: 70%;
   z-index: 1;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: center;
-     object-position: center;
+  object-position: center;
 }
 .home-cards__img--new, .home-cards__img--new2 {
   position: relative;
@@ -313,7 +354,7 @@ p {
   width: 100%;
   border-radius: 16px 16px 0 0;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .home-cards .name-restaurant {
   align-self: flex-start;
@@ -608,14 +649,30 @@ p {
   }
 }
 
-.clic-heart {
-  position: absolute;
+.click-heart {
   left: 80%;
   top: 80%;
   z-index: 2;
   border-style: none;
   color: rgb(0, 0, 0);
   cursor: pointer;
+  background-color: transparent;
+  font-family: "Font Awesome 5 Free";
+  width: 30px;
+  height: 25px;
+  overflow: hidden;
+  position: absolute;
+  font-weight: 400;
+  font-size: 24px;
+}
+.click-heart::before {
+  content: "";
+}
+.click-heart::after {
+  position: relative;
+  content: "\f004";
+  font-size: 24px;
+  font-weight: 400;
 }
 
 .footercontainer__box--icon-fork {
@@ -751,7 +808,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   -o-object-position: center;
-     object-position: center;
+  object-position: center;
   height: 280px;
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
@@ -771,7 +828,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
     border-radius: 100% 0 50% 0;
     background-position: center;
     background-color: #f6f6f6;
@@ -789,7 +846,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
     border-radius: 100% 0 50% 0;
     background-position: center;
     background-color: #f6f6f6;
@@ -808,7 +865,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
     border-radius: 100% 0 50% 0;
     background-position: center;
     background-color: #f6f6f6;
@@ -826,7 +883,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
     border-radius: 100% 0 50% 0;
     background-position: center;
     background-color: #f6f6f6;
@@ -845,7 +902,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
     border-radius: 100% 0 50% 0;
     background-position: center;
     background-color: #f6f6f6;
@@ -863,7 +920,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
     border-radius: 100% 0 50% 0;
     background-position: center;
     background-color: #f6f6f6;
@@ -882,7 +939,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
     border-radius: 100% 0 50% 0;
     background-position: center;
     background-color: #f6f6f6;
@@ -900,7 +957,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
     border-radius: 100% 0 50% 0;
     background-position: center;
     background-color: #f6f6f6;
@@ -1714,10 +1771,10 @@ ul.howto-container__how li:before {
     height: 40px;
     background-color: rgba(53, 53, 53, 0.6);
     -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
     text-underline-offset: 5px;
     -webkit-text-decoration-color: #99E2D0;
-            text-decoration-color: #99E2D0;
+    text-decoration-color: #99E2D0;
     border-bottom: none;
     margin-top: 86px;
   }
@@ -1732,10 +1789,10 @@ ul.howto-container__how li:before {
     height: 48px;
     background-color: rgba(53, 53, 53, 0.6);
     -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
     text-underline-offset: 5px;
     -webkit-text-decoration-color: #99E2D0;
-            text-decoration-color: #99E2D0;
+    text-decoration-color: #99E2D0;
     border-bottom: none;
     margin-top: 136px;
   }
@@ -1790,10 +1847,10 @@ ul.howto-container__how li:before {
     height: 40px;
     background-color: rgba(53, 53, 53, 0.6);
     -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
     text-underline-offset: 5px;
     -webkit-text-decoration-color: #99E2D0;
-            text-decoration-color: #99E2D0;
+    text-decoration-color: #99E2D0;
     border-bottom: none;
   }
 }
@@ -1807,10 +1864,10 @@ ul.howto-container__how li:before {
     height: 48px;
     background-color: rgba(53, 53, 53, 0.6);
     -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
     text-underline-offset: 5px;
     -webkit-text-decoration-color: #99E2D0;
-            text-decoration-color: #99E2D0;
+    text-decoration-color: #99E2D0;
     border-bottom: none;
   }
 }
@@ -1863,10 +1920,10 @@ ul.howto-container__how li:before {
     height: 40px;
     background-color: rgba(53, 53, 53, 0.6);
     -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
     text-underline-offset: 5px;
     -webkit-text-decoration-color: #99E2D0;
-            text-decoration-color: #99E2D0;
+    text-decoration-color: #99E2D0;
     border-bottom: none;
   }
 }
@@ -1880,10 +1937,10 @@ ul.howto-container__how li:before {
     height: 48px;
     background-color: rgba(53, 53, 53, 0.6);
     -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
     text-underline-offset: 5px;
     -webkit-text-decoration-color: #99E2D0;
-            text-decoration-color: #99E2D0;
+    text-decoration-color: #99E2D0;
     border-bottom: none;
   }
 }
