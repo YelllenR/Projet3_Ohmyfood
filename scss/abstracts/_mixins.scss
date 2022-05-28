@@ -196,12 +196,19 @@
     position: absolute;
     font-family: 'Font Awesome 5 Free';
     top: 35%;
-    left: 91%;
+    left: 90%;
     font-weight: 900;
     font-size: 24px;
     color: $txt-btn;
-    align-self: center;
+    text-align: center;
     z-index: 2;
+    width: 20px;
+    height: 20px;
+
+    @include media-phone(){
+        left: 89%;
+        font-size: 16px;
+    }
 }
 
 @mixin heart-home-cards {
