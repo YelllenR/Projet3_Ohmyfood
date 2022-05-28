@@ -12,13 +12,14 @@
 // Using before and after to use and style the icon heart without putting it on html
 // font-weight 900 to specify that it is a filled (solid) icon. f-weight 400 = regular.
 
-.click-heart:active, .click-heart:hover{
+.click-heart:active,
+.click-heart:hover {
 
     &::before {
-        content:'\f004';
+        content: '\f004';
         font-size: 24px;
         font-weight: 900;
-        background-image: linear-gradient( $gradient-heart);
+        background-image: linear-gradient($gradient-heart);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -34,38 +35,35 @@
         text-shadow: $shadow-cards-menu;
         left: 0;
         border-radius: 45%;
-        -webkit-animation: fill-up 1.5s cubic-bezier(.11,.22,.42,.34) forwards;
-                animation: fill-up 1.5s cubic-bezier(.11,.22,.42,.34) forwards;
-        
-    // For cubic bezier, i've used the online generator.
+        -webkit-animation: fill-up 1.5s cubic-bezier(.11, .22, .42, .34) forwards;
+        animation: fill-up 800ms cubic-bezier(.11, .22, .42, .34) forwards;
+
+        // For cubic bezier, i've used the online generator.
     }
 
-    @-webkit-keyframes fill-up{
+    @-webkit-keyframes fill-up {
         0% {
-            transform: translateY(-1) rotate(0);
+            transform: translateY(-1);
             background-image: none;
         }
 
-        100%{
+        100% {
             transform: translateY(-95%);
-            background-image:linear-gradient( $gradient-heart);
-        
+            background-image: linear-gradient($gradient-heart);
+
         }
     }
 
-    @keyframes fill-up{
+    @keyframes fill-up {
         0% {
-            transform: translateY(0) rotate(0);
+            transform: translateY(0);
         }
 
-        100%{
-            transform: translateY(-95%) ;
+        100% {
+            transform: translateY(-95%);
         }
     }
-
 }
-
-
 
 
 
@@ -74,18 +72,95 @@
 .maincorse__choice,
 .desserts__choice {
     position: relative;
+    overflow: hidden;
+
 
     &:hover {
-        padding-right: 15%;
-        transition: 700ms;
+        padding-right: 12%;
+        transition: 1000ms;
 
-        .icon-check::before {
-            content: '';
-            width: 0;
+        .icon-bg::before {
+            content: "";
+            display: block;
         }
 
-        .icon-check::after {
+        .icon-bg::after {
+            content: "";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            background-color: $tertiary-color;
+            top: 0;
+            left: 86%;
+            border-radius: 0 16px 16px 0;
+            height: 100%;
+            min-width: 15%;
+            -webkit-animation: move-left 900ms ease-in-out forwards;
+            animation: move-left 900ms ease forwards;
+        }
+
+        .icon-bg:hover::after {
+
+            @-webkit-keyframes move-left {
+                0% {
+                    transform: translateX(100%);
+                    transform: scaleX(0);
+                }
+
+                100% {
+                    transform: translateX(0%);
+                }
+            }
+
+            @keyframes move-left {
+                0% {
+                    transform: translateX(100%);
+                    opacity: 0.5;
+                }
+
+                100% {
+                    transform: translateX(0%);
+                    opacity: 1;
+                }
+            }
+        }
+
+        .i-hover::before {
+            content: "";
+        }
+
+        .i-hover::after {
             @include icon-check-after;
+            -webkit-animation: spin-icon 1200ms ease forwards;
+            animation: spin-icon 1200ms ease forwards;
+        }
+
+        .i-hover:hover::after {
+            @-webkit-keyframes spin-icon {
+                0% {
+                    transform: translateX(100%) rotate(360deg);
+                    opacity: 0.5;
+                }
+
+                100% {
+                    transform: translateX(0%) rotate(0deg);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes spin-icon  {
+                0% {
+                    transform: translateX(100%) rotate(360deg);
+                    opacity: 0.5;
+                }
+
+                100% {
+                    transform: translateX(0%) rotate(0deg);
+                    opacity: 1;
+                }
+            }
         }
     }
+
 }
