@@ -45,7 +45,7 @@
     }
 
     &__container {
-        
+
         &--1,
         &--2,
         &--3,
@@ -115,9 +115,9 @@
         height: 70%;
         z-index: 1;
         -o-object-fit: cover;
-           object-fit: cover;
+        object-fit: cover;
         -o-object-position: center;
-           object-position: center;
+        object-position: center;
     }
 
     &__img--cards2 {
@@ -128,9 +128,9 @@
         height: 70%;
         z-index: 1;
         -o-object-fit: cover;
-           object-fit: cover;
+        object-fit: cover;
         -o-object-position: center;
-           object-position: center;
+        object-position: center;
     }
 
     // images with new tag
@@ -164,7 +164,7 @@
         width: 100%;
         border-radius: $img-radius-restaurant;
         -o-object-fit: cover;
-           object-fit: cover;
+        object-fit: cover;
     }
 
     .name-restaurant {
@@ -205,21 +205,24 @@
 //----------------------cards for menu pages-----------------------
 
 // starters
-.starters__choice {
-    @include cards-menu-pages;
 
 
-    @include media-tablet {
-        box-shadow: $shadow-cards-menu-desktop;
-        height: auto;
+@for $i from 1 to 5 {
+    .starters__choice--#{$i} {
+        opacity: 0;
+        @include cards-menu-pages;
+
+
+        @include media-tablet {
+            box-shadow: $shadow-cards-menu-desktop;
+            height: auto;
+        }
+
+        @include media-desktop {
+            box-shadow: $shadow-cards-menu-desktop;
+            height: auto;
+        }
     }
-
-    @include media-desktop {
-        box-shadow: $shadow-cards-menu-desktop;
-        height: auto;
-    }
-
-
 }
 
 .starters__name {
@@ -265,29 +268,32 @@
 
 
 // main corse
-.maincorse__choice {
-    @include cards-menu-pages;
-
-    @include media-tablet {
-        box-shadow: $shadow-cards-menu-desktop;
-        height: auto;
-    }
-
-    @include media-desktop {
-        box-shadow: $shadow-cards-menu-desktop;
-        height: auto;
-    }
-
-    .maincorse__name {
-        @include in-cards-titles-menu;
+@for $i from 1 to 5 {
+    .maincorse__choice--#{$i} {
+        opacity: 0;
+        @include cards-menu-pages;
 
         @include media-tablet {
-            @include in-cards-titles-menu-tablet;
+            box-shadow: $shadow-cards-menu-desktop;
+            height: auto;
         }
 
         @include media-desktop {
-            padding: 16px 16px 0 16px;
-            font-size: $fs-card-title-desktop - 4;
+            box-shadow: $shadow-cards-menu-desktop;
+            height: auto;
+        }
+
+        .maincorse__name {
+            @include in-cards-titles-menu;
+
+            @include media-tablet {
+                @include in-cards-titles-menu-tablet;
+            }
+
+            @include media-desktop {
+                padding: 16px 16px 0 16px;
+                font-size: $fs-card-title-desktop - 4;
+            }
         }
     }
 }
@@ -318,29 +324,33 @@
 }
 
 // Desserts
-.desserts__choice {
-    @include cards-menu-pages;
 
-    @include media-tablet {
-        box-shadow: $shadow-cards-menu-desktop;
-        height: auto;
-    }
-
-    @include media-desktop {
-        box-shadow: $shadow-cards-menu-desktop - 4;
-        height: auto;
-    }
-
-    .desserts__name {
-        @include in-cards-titles-menu;
+@for $i from 1 to 4 {
+    .desserts__choice--#{$i} {
+        opacity: 0;
+        @include cards-menu-pages;
 
         @include media-tablet {
-            @include in-cards-titles-menu-tablet
+            box-shadow: $shadow-cards-menu-desktop;
+            height: auto;
         }
 
         @include media-desktop {
-            padding: 16px 16px 0 16px;
-            font-size: $fs-card-title-desktop - 4;
+            box-shadow: $shadow-cards-menu-desktop - 4;
+            height: auto;
+        }
+
+        .desserts__name {
+            @include in-cards-titles-menu;
+
+            @include media-tablet {
+                @include in-cards-titles-menu-tablet
+            }
+
+            @include media-desktop {
+                padding: 16px 16px 0 16px;
+                font-size: $fs-card-title-desktop - 4;
+            }
         }
     }
 }

@@ -68,99 +68,142 @@
 
 
 // animations on menu pages
+
+// Animation on check icon on hover
 .starters__choice,
 .maincorse__choice,
 .desserts__choice {
-    position: relative;
-    overflow: hidden;
+
+    &--1,
+    &--2,
+    &--3 {
+
+        position: relative;
+        overflow: hidden;
 
 
-    &:hover {
-        padding-right: 12%;
-        transition: 1000ms;
+        &:hover {
+            padding-right: 12%;
+            transition: 1000ms;
 
-        .icon-bg::before {
-            content: "";
-            display: block;
-        }
+            .icon-bg::before {
+                content: "";
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
-        .icon-bg::after {
-            content: "";
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            background-color: $tertiary-color;
-            top: 0;
-            left: 86%;
-            border-radius: 0 16px 16px 0;
-            height: 100%;
-            min-width: 15%;
-            -webkit-animation: move-left 900ms ease-in-out forwards;
-            animation: move-left 900ms ease forwards;
-        }
+            .icon-bg::after {
+                content: "";
+                position: absolute;
+                background-color: $tertiary-color;
+                top: 0;
+                left: 86%;
+                border-radius: 0 16px 16px 0;
+                height: 100%;
+                min-width: 15%;
+                -webkit-animation: move-left 900ms ease-in-out forwards;
+                animation: move-left 700ms ease forwards;
+            }
 
-        .icon-bg:hover::after {
+            .icon-bg:hover::after {
+                border-radius: 0 16px 16px 0;
 
-            @-webkit-keyframes move-left {
-                0% {
-                    transform: translateX(100%);
-                    transform: scaleX(0);
+                @-webkit-keyframes move-left {
+                    0% {
+                        transform: translateX(100%);
+                        transform: scaleX(0);
+                    }
+
+                    100% {
+                        transform: translateX(0%);
+                    }
                 }
 
-                100% {
-                    transform: translateX(0%);
+                @keyframes move-left {
+                    0% {
+                        transform: translateX(100%);
+                        opacity: 0.5;
+                    }
+
+                    100% {
+                        transform: translateX(0%);
+                        opacity: 1;
+                    }
                 }
             }
 
-            @keyframes move-left {
-                0% {
-                    transform: translateX(100%);
-                    opacity: 0.5;
-                }
-
-                100% {
-                    transform: translateX(0%);
-                    opacity: 1;
-                }
-            }
-        }
-
-        .i-hover::before {
-            content: "";
-        }
-
-        .i-hover::after {
-            @include icon-check-after;
-            -webkit-animation: spin-icon 1200ms ease forwards;
-            animation: spin-icon 1200ms ease forwards;
-        }
-
-        .i-hover:hover::after {
-            @-webkit-keyframes spin-icon {
-                0% {
-                    transform: translateX(100%) rotate(360deg);
-                    opacity: 0.5;
-                }
-
-                100% {
-                    transform: translateX(0%) rotate(0deg);
-                    opacity: 1;
-                }
+            .i-hover::before {
+                content: "";
             }
 
-            @keyframes spin-icon  {
-                0% {
-                    transform: translateX(100%) rotate(360deg);
-                    opacity: 0.5;
+            .i-hover::after {
+                @include icon-check-after;
+                -webkit-animation: spin-icon 1200ms ease forwards;
+                animation: spin-icon 700ms ease forwards;
+            }
+
+            .i-hover:hover::after {
+                @-webkit-keyframes spin-icon {
+                    0% {
+                        transform: translateX(100%) rotate(360deg);
+                        opacity: 0;
+                    }
+
+                    100% {
+                        transform: translateX(0%) rotate(0deg);
+                        opacity: 1;
+                    }
                 }
 
-                100% {
-                    transform: translateX(0%) rotate(0deg);
-                    opacity: 1;
+                @keyframes spin-icon {
+                    0% {
+                        transform: translateX(100%) rotate(360deg);
+                        opacity: 0.5;
+                    }
+
+                    100% {
+                        transform: translateX(0%) rotate(0deg);
+                        opacity: 1;
+                    }
                 }
             }
         }
     }
-
 }
+
+
+// Animation of cards on menu pages. 
+
+
+@for $i from 1 to 5 {
+    .starters__choice--#{$i}, 
+    .maincorse__choice--#{$i},
+    .desserts__choice--#{$i}  {
+        -webkit-animation: fade-in 800ms ease forwards;
+        animation: fade-in 800ms ease-in-out forwards;
+        -webkit-animation-delay: $i * 300ms;
+        animation-delay: $i * 300ms;
+
+        @-webkit-keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+
+            100%{
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+
+            100%{
+                opacity: 1;
+            }
+        }
+    }
+}
+
