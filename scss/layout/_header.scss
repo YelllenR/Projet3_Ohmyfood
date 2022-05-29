@@ -1,6 +1,6 @@
 // Menu page - La palette du goût
 .nav {
-
+    
     &--palette,
     &--enchantee,
     &--sens,
@@ -29,6 +29,7 @@
             background-color: $txt-btn;
             box-shadow: 0px 4px 5px 0px rgba(98, 98, 98, 0.41);
             z-index: 2;
+            max-height: 60px;
             position: fixed;
             top: 0;
 
@@ -38,7 +39,6 @@
                 i {
                     font-size: 24px;
                     color: $text-color;
-                    padding-top: 8px;
                 }
             }
         }

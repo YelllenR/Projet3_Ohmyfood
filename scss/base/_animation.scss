@@ -1,209 +1,289 @@
-// homepage animations
-.list:hover {
-    background-color: lighten($color: $primary-color, $amount: 30%);
+// Loader animation
 
-    &:hover>i {
-        color: $primary-color;
-    }
-}
-
-
-
-// Using before and after to use and style the icon heart without putting it on html
-// font-weight 900 to specify that it is a filled (solid) icon. f-weight 400 = regular.
-
-.click-heart:active,
-.click-heart:hover {
-
-    &::before {
-        content: '\f004';
-        font-size: 24px;
-        font-weight: 900;
-        background-image: linear-gradient($gradient-heart);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    &::after {
+    #load {
         position: absolute;
-        content: '';
-        font-weight: 900;
+        top: 10%;
+        left: 0%;
+        transform: translate(-20%, 50%);
+        transform: scale(0.9);
         height: 100%;
         width: 100%;
-        background: darken($color: $txt-btn, $amount: 3%);
-        text-shadow: $shadow-cards-menu;
-        left: 0;
-        border-radius: 45%;
-        -webkit-animation: fill-up 1.5s cubic-bezier(.11, .22, .42, .34) forwards;
-        animation: fill-up 800ms cubic-bezier(.11, .22, .42, .34) forwards;
+        border: 5px solid red;
+        z-index: 1;
 
-        // For cubic bezier, i've used the online generator.
+        @for $i from 1 to 10 {
+            path:nth-child(#{$i}) {
+
+                -webkit-animation-delay: $i + 375ms;
+                animation-delay: $i + 375ms;
+
+                -webkit-animation-duration: $i + 375ms;
+                animation-duration: $i + 375ms;
+
+                -webkit-animation: slide-down 3000ms linear forwards;
+                animation: slide-down 3000ms linear forwards;
+
+                @-webkit-keyframes slide-down {
+                    from{
+                        transform: translateY(-800px);
+                    }
+
+                    to{
+                        transform: translateY(0);
+                    }
+                }
+
+                @keyframes slide-down {
+                    from{
+                        transform: translateY(-500px);
+                    }
+
+                    to{
+                        transform: translateY(0);
+                    }
+                }
+
+            }
+
+        }
+            // g .let--#{$i} {
+            //     -webkit-animation-delay: $i + 375ms;
+            //     animation-delay: $i + 375ms;
+
+            //     -webkit-animation-duration: $i + 375ms;
+            //     animation-duration: $i + 375ms;
+
+            //     -webkit-animation: slide-down 3000ms linear forwards;
+            //     animation: slide-down 3000ms linear forwards;
+
+            //     @-webkit-keyframes slide-down {
+            //         0% {
+            //             top: 100%;
+            //             background-color: rgba(147, 86, 220, 0);
+            //             opacity: 0;
+            //         }
+
+            //         100% {
+            //             top: 0%;
+            //             -webkit-filter: brightness(0) saturate(100%) invert(41%) sepia(68%) saturate(2467%) hue-rotate(240deg) brightness(89%) contrast(93%);
+            //             filter: brightness(0) saturate(100%) invert(41%) sepia(68%) saturate(2467%) hue-rotate(240deg) brightness(89%) contrast(93%);
+            //             opacity: 1;
+            //             fill: $primary-color;
+            //         }
+            //     }
+
+            //     @keyframes slide-down {
+            //         0% {
+            //             transform: translateY(100%);
+            //             background-color: rgba(147, 86, 220, 0);
+            //             opacity: 0;
+            //         }
+
+            //         100% {
+            //             transform: translateY(0%);
+            //             -webkit-filter: brightness(0) saturate(100%) invert(41%) sepia(68%) saturate(2467%) hue-rotate(240deg) brightness(89%) contrast(93%);
+            //             filter: brightness(0) saturate(100%) invert(41%) sepia(68%) saturate(2467%) hue-rotate(240deg) brightness(89%) contrast(93%);
+            //             opacity: 1;
+            //             color: $primary-color;
+            //         }
+            //     }
+
+            // }
+        }
+    
+
+
+
+
+
+
+
+
+    // homepage animations
+    .list:hover {
+        background-color: lighten($color: $primary-color, $amount: 30%);
+
+        &:hover>i {
+            color: $primary-color;
+        }
     }
 
-    @-webkit-keyframes fill-up {
-        0% {
-            transform: translateY(-1);
-            background-image: none;
-        }
 
-        100% {
-            transform: translateY(-95%);
+
+    // Using before and after to use and style the icon heart without putting it on html
+    // font-weight 900 to specify that it is a filled (solid) icon. f-weight 400 = regular.
+
+    .click-heart:active,
+    .click-heart:hover {
+
+        &::before {
+            content: '\f004';
+            font-size: 24px;
+            font-weight: 900;
             background-image: linear-gradient($gradient-heart);
-
-        }
-    }
-
-    @keyframes fill-up {
-        0% {
-            transform: translateY(0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        100% {
-            transform: translateY(-95%);
+        &::after {
+            position: absolute;
+            content: '';
+            font-weight: 900;
+            height: 100%;
+            width: 100%;
+            background: darken($color: $txt-btn, $amount: 3%);
+            text-shadow: $shadow-cards-menu;
+            left: 0;
+            border-radius: 45%;
+            -webkit-animation: fill-up 1.5s cubic-bezier(.11, .22, .42, .34) forwards;
+            animation: fill-up 800ms cubic-bezier(.11, .22, .42, .34) forwards;
+
+            // For cubic bezier, i've used the online generator.
         }
-    }
-}
 
-
-
-// animations on menu pages
-
-// Animation on check icon on hover
-.starters__choice,
-.maincorse__choice,
-.desserts__choice {
-
-    &--1,
-    &--2,
-    &--3 {
-
-        position: relative;
-        overflow: hidden;
-
-
-        &:hover {
-            padding-right: 12%;
-            transition: 1000ms;
-
-            .icon-bg::before {
-                content: "";
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .icon-bg::after {
-                content: "";
-                position: absolute;
-                background-color: $tertiary-color;
-                top: 0;
-                left: 86%;
-                border-radius: 0 16px 16px 0;
-                height: 100%;
-                min-width: 15%;
-                -webkit-animation: move-left 900ms ease-in-out forwards;
-                animation: move-left 700ms ease forwards;
-            }
-
-            .icon-bg:hover::after {
-                border-radius: 0 16px 16px 0;
-
-                @-webkit-keyframes move-left {
-                    0% {
-                        transform: translateX(100%);
-                        transform: scaleX(0);
-                    }
-
-                    100% {
-                        transform: translateX(0%);
-                    }
-                }
-
-                @keyframes move-left {
-                    0% {
-                        transform: translateX(100%);
-                        opacity: 0.5;
-                    }
-
-                    100% {
-                        transform: translateX(0%);
-                        opacity: 1;
-                    }
-                }
-            }
-
-            .i-hover::before {
-                content: "";
-            }
-
-            .i-hover::after {
-                @include icon-check-after;
-                -webkit-animation: spin-icon 1200ms ease forwards;
-                animation: spin-icon 700ms ease forwards;
-            }
-
-            .i-hover:hover::after {
-                @-webkit-keyframes spin-icon {
-                    0% {
-                        transform: translateX(100%) rotate(360deg);
-                        opacity: 0;
-                    }
-
-                    100% {
-                        transform: translateX(0%) rotate(0deg);
-                        opacity: 1;
-                    }
-                }
-
-                @keyframes spin-icon {
-                    0% {
-                        transform: translateX(100%) rotate(360deg);
-                        opacity: 0.5;
-                    }
-
-                    100% {
-                        transform: translateX(0%) rotate(0deg);
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-// Animation of cards on menu pages. 
-
-
-@for $i from 1 to 5 {
-    .starters__choice--#{$i}, 
-    .maincorse__choice--#{$i},
-    .desserts__choice--#{$i}  {
-        -webkit-animation: fade-in 800ms ease forwards;
-        animation: fade-in 800ms ease-in-out forwards;
-        -webkit-animation-delay: $i * 300ms;
-        animation-delay: $i * 300ms;
-
-        @-webkit-keyframes fade-in {
+        @-webkit-keyframes fill-up {
             0% {
-                opacity: 0;
+                transform: translateY(-1);
+                background-image: none;
             }
 
-            100%{
-                opacity: 1;
+            100% {
+                transform: translateY(-95%);
+                background-image: linear-gradient($gradient-heart);
+
             }
         }
 
-        @keyframes fade-in {
+        @keyframes fill-up {
             0% {
-                opacity: 0;
+                transform: translateY(0);
             }
 
-            100%{
-                opacity: 1;
+            100% {
+                transform: translateY(-95%);
             }
         }
     }
-}
 
+
+
+    // animations on menu pages
+
+    // Animation on check icon on hover
+
+    @for $i from 1 to 5 {
+
+        .starters__choice--#{$i},
+        .maincorse__choice--#{$i},
+        .desserts__choice--#{$i} {
+
+            position: relative;
+            overflow: hidden;
+
+            &:hover {
+                padding-right: 12%;
+                transition: 800ms;
+
+                .icon-bg::before {
+                    content: "";
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .icon-bg::after {
+                    content: "";
+                    position: absolute;
+                    background-color: $tertiary-color;
+                    top: 0;
+                    left: 86%;
+                    border-radius: 0 16px 16px 0;
+                    height: 100%;
+                    min-width: 15%;
+                    -webkit-animation: move-left 700ms ease-in-out forwards;
+                    animation: move-left 700ms ease forwards;
+                }
+
+                .icon-bg:hover::after {
+                    border-radius: 0 16px 16px 0;
+
+                    @-webkit-keyframes move-left {
+                        0% {
+                            transform: translateX(100%);
+                            transform: scaleX(0);
+                        }
+
+                        100% {
+                            transform: translateX(0%);
+                        }
+                    }
+
+                    @keyframes move-left {
+                        0% {
+                            transform: translateX(100%);
+                            opacity: 0.5;
+                        }
+
+                        100% {
+                            transform: translateX(0%);
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .i-hover::before {
+                    content: "";
+                }
+
+                .i-hover::after {
+                    @include icon-check-after;
+                    -webkit-animation: spin-icon 700ms ease forwards;
+                    animation: spin-icon 700ms ease forwards;
+                }
+
+                .i-hover:hover::after {
+                    @include spin-icon-check;
+                }
+
+                .i-hover::active::after {
+                    @include spin-icon-check;
+                }
+            }
+        }
+    }
+
+
+    // Animation of cards on menu pages. 
+
+    @for $i from 1 to 5 {
+
+        .starters__choice--#{$i},
+        .maincorse__choice--#{$i},
+        .desserts__choice--#{$i} {
+            -webkit-animation: fade-in 800ms ease forwards;
+            animation: fade-in 800ms ease-in-out forwards;
+            -webkit-animation-delay: $i * 300ms;
+            animation-delay: $i * 300ms;
+
+            @-webkit-keyframes fade-in {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes fade-in {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+    }

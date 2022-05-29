@@ -196,7 +196,7 @@
     position: absolute;
     font-family: 'Font Awesome 5 Free';
     top: 35%;
-    left: 90%;
+    left: 91%;
     font-weight: 900;
     font-size: 24px;
     color: $txt-btn;
@@ -205,9 +205,9 @@
     width: 20px;
     height: 20px;
 
-    @include media-phone(){
-        left: 89%;
-        font-size: 16px;
+    @include media-phone{
+        font-size: 24px - 5;
+        text-align: center;
     }
 }
 
@@ -306,4 +306,30 @@
     padding-right: 16px;
     padding-left: 16px;
     font-weight: bold;
+}
+
+@mixin spin-icon-check{
+    @-webkit-keyframes spin-icon {
+        0% {
+            transform: translateX(100%) rotate(360deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0%) rotate(0deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes spin-icon {
+        0% {
+            transform: translateX(100%) rotate(360deg);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translateX(0%) rotate(0deg);
+            opacity: 1;
+        }
+    }
 }
