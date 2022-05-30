@@ -133,7 +133,18 @@
     }
 }
 
+@mixin search-hover {
+    background: linear-gradient(260deg, #A7A7A7 0%, #FEFEFE 86.32%);
+    box-shadow: -10.7569px 2.77837px 32px rgba(43, 43, 43, 0.3625), 
+    inset 4.12769px -1.08048px 6.22222px #9B9B9B, inset -4.12769px 1.08048px 6.22222px #FFFFFF;
 
+}
+
+@mixin btn-click {
+    background: linear-gradient(174deg, #FF79DA 20.36%, #9356DC 100%);
+    box-shadow: 2px 10px 4px rgba(0, 0, 0, 0.25), inset -3.78824e-16px -2px 6.18667px #4B4949, inset 3.78824e-16px 0px 3px #FFFFFF, inset 9.79717e-16px 11px 32px rgba(43, 43, 43, 0.359);
+    border-radius: 32px;
+}
 
 // -------------------------Logo---------------------------
 
@@ -196,7 +207,7 @@
     position: absolute;
     font-family: 'Font Awesome 5 Free';
     top: 35%;
-    left: 90%;
+    left: 91%;
     font-weight: 900;
     font-size: 24px;
     color: $txt-btn;
@@ -205,9 +216,9 @@
     width: 20px;
     height: 20px;
 
-    @include media-phone(){
-        left: 89%;
-        font-size: 16px;
+    @include media-phone {
+        font-size: 24px - 5;
+        text-align: center;
     }
 }
 
@@ -306,4 +317,30 @@
     padding-right: 16px;
     padding-left: 16px;
     font-weight: bold;
+}
+
+@mixin spin-icon-check {
+    @-webkit-keyframes spin-icon {
+        0% {
+            transform: translateX(100%) rotate(360deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0%) rotate(0deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes spin-icon {
+        0% {
+            transform: translateX(100%) rotate(360deg);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translateX(0%) rotate(0deg);
+            opacity: 1;
+        }
+    }
 }

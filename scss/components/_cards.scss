@@ -44,7 +44,7 @@
         color: $text-color;
     }
 
-    &__container {
+    &__container{
 
         &--1,
         &--2,
@@ -234,7 +234,6 @@
 
     @include media-desktop {
         padding: 16px 16px 0 16px;
-
         font-size: $fs-card-title-desktop - 4;
     }
 }

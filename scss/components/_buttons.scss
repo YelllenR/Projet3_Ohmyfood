@@ -3,6 +3,10 @@
     @include btn-styling;
     margin-bottom: 48px;
     cursor: pointer;
+
+    &:active{
+        @include btn-click;
+    }
 }
 
 
@@ -12,6 +16,10 @@
     @include btn-styling;
     cursor: pointer;
     margin-bottom: 48px;
+
+    &:active{
+        @include btn-click;
+    }
 
     @include media-desktop{
         margin-bottom: 48px;

@@ -1,3 +1,223 @@
+// Loader animation
+
+#load {
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    transform: translate(-50%, -50%);
+    transform: scale(1);
+    height: 100%;
+    width: 100%;
+    background-color: lighten($color: $primary-color, $amount: 2%);
+    -webkit-animation: bg-anim 800ms linear forwards;
+    animation: bg-anim 800ms linear forwards;
+    -webkit-animation-delay: 2200ms;
+    animation-delay: 2200ms;
+
+    @-webkit-keyframes bg-anim {
+        0% {
+            opacity: 1;
+
+        }
+
+        50% {
+            opacity: 1;
+
+        }
+
+        60% {
+            opacity: 0.7;
+
+
+        }
+
+        70% {
+            opacity: 0.5;
+
+        }
+
+        85% {
+            opacity: 0.2;
+            z-index: -99;
+        }
+
+        100% {
+            opacity: 0;
+            z-index: -99;
+        }
+    }
+
+
+
+    @keyframes bg-anim {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        60% {
+            opacity: 0.7;
+        }
+
+        70% {
+            opacity: 0.5;
+        }
+
+        85% {
+            opacity: 0.2;
+            z-index: -99;
+        }
+
+        100% {
+            opacity: 0;
+            z-index: -99;
+        }
+    }
+
+
+    path {
+        stroke: black;
+        fill: black;
+        stroke-dasharray: 1200;
+        stroke-width: 0.5%;
+        opacity: 10;
+        -webkit-animation: logo-anim 2200ms cubic-bezier(.01, .7, .91, .56) forwards;
+        animation: logo-anim 2200ms cubic-bezier(.01, .7, .91, .56) forwards;
+
+
+        @-webkit-keyframes logo-anim {
+            0% {
+                opacity: 0.2;
+                fill: none;
+                stroke-dashoffset: 500;
+            }
+
+            10% {
+                opacity: 0.4;
+                fill: none;
+                stroke-dashoffset: 800;
+                fill: rgba(19, 19, 19, 0.1);
+            }
+
+            20% {
+                opacity: 0.5;
+                fill: none;
+                stroke-dashoffset: 900;
+                fill: rgba(19, 19, 19, 0.2);
+            }
+
+            40% {
+                opacity: 0.7;
+                fill: none;
+                stroke-dashoffset: 1000;
+                fill: rgba(19, 19, 19, 0.3);
+            }
+
+            60% {
+                opacity: 0.9;
+                stroke-dashoffset: 1100;
+                fill: rgba(19, 19, 19, 0.4);
+                stroke: darken($color: $primary-color, $amount: 3%);
+            }
+
+            70% {
+                opacity: 1;
+                fill: rgba(19, 19, 19, 0.5);
+                stroke-dashoffset: 1200;
+                stroke: darken($color: $primary-color, $amount: 5%);
+            }
+
+            80% {
+                opacity: 10;
+                fill: rgba(19, 19, 19, 1);
+            }
+
+            85% {
+                opacity: 0.2;
+                fill: none;
+            }
+
+            90% {
+                opacity: 0.1;
+                fill: none;
+            }
+
+            100% {
+                opacity: 0;
+                display: none;
+            }
+        }
+
+
+        @keyframes logo-anim {
+            0% {
+                opacity: 0.2;
+                fill: none;
+                stroke-dashoffset: 500;
+            }
+
+            10% {
+                opacity: 0.4;
+                fill: none;
+                stroke-dashoffset: 800;
+                fill: rgba(19, 19, 19, 0.1);
+            }
+
+            20% {
+                opacity: 0.5;
+                fill: none;
+                stroke-dashoffset: 900;
+                fill: rgba(19, 19, 19, 0.2);
+            }
+
+            40% {
+                opacity: 0.7;
+                fill: none;
+                stroke-dashoffset: 1000;
+                fill: rgba(19, 19, 19, 0.3);
+            }
+
+            60% {
+                opacity: 0.9;
+                stroke-dashoffset: 1100;
+                fill: rgba(19, 19, 19, 0.4);
+                stroke: darken($color: $primary-color, $amount: 3%);
+            }
+
+            70% {
+                opacity: 1;
+                fill: rgba(19, 19, 19, 0.5);
+                stroke-dashoffset: 1200;
+                stroke: darken($color: $primary-color, $amount: 5%);
+            }
+
+            80% {
+                opacity: 10;
+                fill: rgba(19, 19, 19, 1);
+            }
+
+            85% {
+                opacity: 0.2;
+                fill: none;
+            }
+
+            90% {
+                opacity: 0.1;
+                fill: none;
+            }
+
+            100% {
+                opacity: 0;
+                display: none;
+            }
+        }
+    }
+
+}
+
 // homepage animations
 .list:hover {
     background-color: lighten($color: $primary-color, $amount: 30%);
@@ -35,7 +255,7 @@
         text-shadow: $shadow-cards-menu;
         left: 0;
         border-radius: 45%;
-        -webkit-animation: fill-up 1.5s cubic-bezier(.11, .22, .42, .34) forwards;
+        -webkit-animation: fill-up 800ms cubic-bezier(.11, .22, .42, .34) forwards;
         animation: fill-up 800ms cubic-bezier(.11, .22, .42, .34) forwards;
 
         // For cubic bezier, i've used the online generator.
@@ -70,21 +290,19 @@
 // animations on menu pages
 
 // Animation on check icon on hover
-.starters__choice,
-.maincorse__choice,
-.desserts__choice {
 
-    &--1,
-    &--2,
-    &--3 {
+@for $i from 1 to 5 {
+
+    .starters__choice--#{$i},
+    .maincorse__choice--#{$i},
+    .desserts__choice--#{$i} {
 
         position: relative;
         overflow: hidden;
 
-
         &:hover {
             padding-right: 12%;
-            transition: 1000ms;
+            transition: 800ms;
 
             .icon-bg::before {
                 content: "";
@@ -102,7 +320,7 @@
                 border-radius: 0 16px 16px 0;
                 height: 100%;
                 min-width: 15%;
-                -webkit-animation: move-left 900ms ease-in-out forwards;
+                -webkit-animation: move-left 700ms ease-in-out forwards;
                 animation: move-left 700ms ease forwards;
             }
 
@@ -139,34 +357,16 @@
 
             .i-hover::after {
                 @include icon-check-after;
-                -webkit-animation: spin-icon 1200ms ease forwards;
+                -webkit-animation: spin-icon 700ms ease forwards;
                 animation: spin-icon 700ms ease forwards;
             }
 
             .i-hover:hover::after {
-                @-webkit-keyframes spin-icon {
-                    0% {
-                        transform: translateX(100%) rotate(360deg);
-                        opacity: 0;
-                    }
+                @include spin-icon-check;
+            }
 
-                    100% {
-                        transform: translateX(0%) rotate(0deg);
-                        opacity: 1;
-                    }
-                }
-
-                @keyframes spin-icon {
-                    0% {
-                        transform: translateX(100%) rotate(360deg);
-                        opacity: 0.5;
-                    }
-
-                    100% {
-                        transform: translateX(0%) rotate(0deg);
-                        opacity: 1;
-                    }
-                }
+            .i-hover:active::after {
+                @include spin-icon-check;
             }
         }
     }
@@ -175,22 +375,24 @@
 
 // Animation of cards on menu pages. 
 
-
 @for $i from 1 to 5 {
-    .starters__choice--#{$i}, 
+
+    .starters__choice--#{$i},
     .maincorse__choice--#{$i},
-    .desserts__choice--#{$i}  {
-        -webkit-animation: fade-in 800ms ease forwards;
-        animation: fade-in 800ms ease-in-out forwards;
-        -webkit-animation-delay: $i * 300ms;
-        animation-delay: $i * 300ms;
+    .desserts__choice--#{$i} {
+        
+        -webkit-animation: fade-in 900ms ease forwards;
+        animation: fade-in 900ms ease-in-out forwards;
+        -webkit-animation-delay: $i * 350ms;
+        animation-delay: 3005ms, $i * 350ms;
+
 
         @-webkit-keyframes fade-in {
             0% {
                 opacity: 0;
             }
 
-            100%{
+            100% {
                 opacity: 1;
             }
         }
@@ -200,10 +402,9 @@
                 opacity: 0;
             }
 
-            100%{
+            100% {
                 opacity: 1;
             }
         }
     }
 }
-
