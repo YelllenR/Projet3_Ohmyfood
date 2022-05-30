@@ -1,289 +1,410 @@
 // Loader animation
 
-    #load {
+#load {
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    transform: translate(-50%, -50%);
+    transform: scale(1);
+    height: 100%;
+    width: 100%;
+    background-color: lighten($color: $primary-color, $amount: 2%);
+    -webkit-animation: bg-anim 800ms linear forwards;
+    animation: bg-anim 800ms linear forwards;
+    -webkit-animation-delay: 2200ms;
+    animation-delay: 2200ms;
+
+    @-webkit-keyframes bg-anim {
+        0% {
+            opacity: 1;
+
+        }
+
+        50% {
+            opacity: 1;
+
+        }
+
+        60% {
+            opacity: 0.7;
+
+
+        }
+
+        70% {
+            opacity: 0.5;
+
+        }
+
+        85% {
+            opacity: 0.2;
+            z-index: -99;
+        }
+
+        100% {
+            opacity: 0;
+            z-index: -99;
+        }
+    }
+
+
+
+    @keyframes bg-anim {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        60% {
+            opacity: 0.7;
+        }
+
+        70% {
+            opacity: 0.5;
+        }
+
+        85% {
+            opacity: 0.2;
+            z-index: -99;
+        }
+
+        100% {
+            opacity: 0;
+            z-index: -99;
+        }
+    }
+
+
+    path {
+        stroke: black;
+        fill: black;
+        stroke-dasharray: 1200;
+        stroke-width: 0.5%;
+        opacity: 10;
+        -webkit-animation: logo-anim 2200ms cubic-bezier(.01, .7, .91, .56) forwards;
+        animation: logo-anim 2200ms cubic-bezier(.01, .7, .91, .56) forwards;
+
+
+        @-webkit-keyframes logo-anim {
+            0% {
+                opacity: 0.2;
+                fill: none;
+                stroke-dashoffset: 500;
+            }
+
+            10% {
+                opacity: 0.4;
+                fill: none;
+                stroke-dashoffset: 800;
+                fill: rgba(19, 19, 19, 0.1);
+            }
+
+            20% {
+                opacity: 0.5;
+                fill: none;
+                stroke-dashoffset: 900;
+                fill: rgba(19, 19, 19, 0.2);
+            }
+
+            40% {
+                opacity: 0.7;
+                fill: none;
+                stroke-dashoffset: 1000;
+                fill: rgba(19, 19, 19, 0.3);
+            }
+
+            60% {
+                opacity: 0.9;
+                stroke-dashoffset: 1100;
+                fill: rgba(19, 19, 19, 0.4);
+                stroke: darken($color: $primary-color, $amount: 3%);
+            }
+
+            70% {
+                opacity: 1;
+                fill: rgba(19, 19, 19, 0.5);
+                stroke-dashoffset: 1200;
+                stroke: darken($color: $primary-color, $amount: 5%);
+            }
+
+            80% {
+                opacity: 10;
+                fill: rgba(19, 19, 19, 1);
+            }
+
+            85% {
+                opacity: 0.2;
+                fill: none;
+            }
+
+            90% {
+                opacity: 0.1;
+                fill: none;
+            }
+
+            100% {
+                opacity: 0;
+                display: none;
+            }
+        }
+
+
+        @keyframes logo-anim {
+            0% {
+                opacity: 0.2;
+                fill: none;
+                stroke-dashoffset: 500;
+            }
+
+            10% {
+                opacity: 0.4;
+                fill: none;
+                stroke-dashoffset: 800;
+                fill: rgba(19, 19, 19, 0.1);
+            }
+
+            20% {
+                opacity: 0.5;
+                fill: none;
+                stroke-dashoffset: 900;
+                fill: rgba(19, 19, 19, 0.2);
+            }
+
+            40% {
+                opacity: 0.7;
+                fill: none;
+                stroke-dashoffset: 1000;
+                fill: rgba(19, 19, 19, 0.3);
+            }
+
+            60% {
+                opacity: 0.9;
+                stroke-dashoffset: 1100;
+                fill: rgba(19, 19, 19, 0.4);
+                stroke: darken($color: $primary-color, $amount: 3%);
+            }
+
+            70% {
+                opacity: 1;
+                fill: rgba(19, 19, 19, 0.5);
+                stroke-dashoffset: 1200;
+                stroke: darken($color: $primary-color, $amount: 5%);
+            }
+
+            80% {
+                opacity: 10;
+                fill: rgba(19, 19, 19, 1);
+            }
+
+            85% {
+                opacity: 0.2;
+                fill: none;
+            }
+
+            90% {
+                opacity: 0.1;
+                fill: none;
+            }
+
+            100% {
+                opacity: 0;
+                display: none;
+            }
+        }
+    }
+
+}
+
+// homepage animations
+.list:hover {
+    background-color: lighten($color: $primary-color, $amount: 30%);
+
+    &:hover>i {
+        color: $primary-color;
+    }
+}
+
+
+
+// Using before and after to use and style the icon heart without putting it on html
+// font-weight 900 to specify that it is a filled (solid) icon. f-weight 400 = regular.
+
+.click-heart:active,
+.click-heart:hover {
+
+    &::before {
+        content: '\f004';
+        font-size: 24px;
+        font-weight: 900;
+        background-image: linear-gradient($gradient-heart);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &::after {
         position: absolute;
-        top: 10%;
-        left: 0%;
-        transform: translate(-20%, 50%);
-        transform: scale(0.9);
+        content: '';
+        font-weight: 900;
         height: 100%;
         width: 100%;
-        border: 5px solid red;
-        z-index: 1;
+        background: darken($color: $txt-btn, $amount: 3%);
+        text-shadow: $shadow-cards-menu;
+        left: 0;
+        border-radius: 45%;
+        -webkit-animation: fill-up 800ms cubic-bezier(.11, .22, .42, .34) forwards;
+        animation: fill-up 800ms cubic-bezier(.11, .22, .42, .34) forwards;
 
-        @for $i from 1 to 10 {
-            path:nth-child(#{$i}) {
-
-                -webkit-animation-delay: $i + 375ms;
-                animation-delay: $i + 375ms;
-
-                -webkit-animation-duration: $i + 375ms;
-                animation-duration: $i + 375ms;
-
-                -webkit-animation: slide-down 3000ms linear forwards;
-                animation: slide-down 3000ms linear forwards;
-
-                @-webkit-keyframes slide-down {
-                    from{
-                        transform: translateY(-800px);
-                    }
-
-                    to{
-                        transform: translateY(0);
-                    }
-                }
-
-                @keyframes slide-down {
-                    from{
-                        transform: translateY(-500px);
-                    }
-
-                    to{
-                        transform: translateY(0);
-                    }
-                }
-
-            }
-
-        }
-            // g .let--#{$i} {
-            //     -webkit-animation-delay: $i + 375ms;
-            //     animation-delay: $i + 375ms;
-
-            //     -webkit-animation-duration: $i + 375ms;
-            //     animation-duration: $i + 375ms;
-
-            //     -webkit-animation: slide-down 3000ms linear forwards;
-            //     animation: slide-down 3000ms linear forwards;
-
-            //     @-webkit-keyframes slide-down {
-            //         0% {
-            //             top: 100%;
-            //             background-color: rgba(147, 86, 220, 0);
-            //             opacity: 0;
-            //         }
-
-            //         100% {
-            //             top: 0%;
-            //             -webkit-filter: brightness(0) saturate(100%) invert(41%) sepia(68%) saturate(2467%) hue-rotate(240deg) brightness(89%) contrast(93%);
-            //             filter: brightness(0) saturate(100%) invert(41%) sepia(68%) saturate(2467%) hue-rotate(240deg) brightness(89%) contrast(93%);
-            //             opacity: 1;
-            //             fill: $primary-color;
-            //         }
-            //     }
-
-            //     @keyframes slide-down {
-            //         0% {
-            //             transform: translateY(100%);
-            //             background-color: rgba(147, 86, 220, 0);
-            //             opacity: 0;
-            //         }
-
-            //         100% {
-            //             transform: translateY(0%);
-            //             -webkit-filter: brightness(0) saturate(100%) invert(41%) sepia(68%) saturate(2467%) hue-rotate(240deg) brightness(89%) contrast(93%);
-            //             filter: brightness(0) saturate(100%) invert(41%) sepia(68%) saturate(2467%) hue-rotate(240deg) brightness(89%) contrast(93%);
-            //             opacity: 1;
-            //             color: $primary-color;
-            //         }
-            //     }
-
-            // }
-        }
-    
-
-
-
-
-
-
-
-
-    // homepage animations
-    .list:hover {
-        background-color: lighten($color: $primary-color, $amount: 30%);
-
-        &:hover>i {
-            color: $primary-color;
-        }
+        // For cubic bezier, i've used the online generator.
     }
 
+    @-webkit-keyframes fill-up {
+        0% {
+            transform: translateY(-1);
+            background-image: none;
+        }
 
-
-    // Using before and after to use and style the icon heart without putting it on html
-    // font-weight 900 to specify that it is a filled (solid) icon. f-weight 400 = regular.
-
-    .click-heart:active,
-    .click-heart:hover {
-
-        &::before {
-            content: '\f004';
-            font-size: 24px;
-            font-weight: 900;
+        100% {
+            transform: translateY(-95%);
             background-image: linear-gradient($gradient-heart);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
 
-        &::after {
-            position: absolute;
-            content: '';
-            font-weight: 900;
-            height: 100%;
-            width: 100%;
-            background: darken($color: $txt-btn, $amount: 3%);
-            text-shadow: $shadow-cards-menu;
-            left: 0;
-            border-radius: 45%;
-            -webkit-animation: fill-up 1.5s cubic-bezier(.11, .22, .42, .34) forwards;
-            animation: fill-up 800ms cubic-bezier(.11, .22, .42, .34) forwards;
-
-            // For cubic bezier, i've used the online generator.
-        }
-
-        @-webkit-keyframes fill-up {
-            0% {
-                transform: translateY(-1);
-                background-image: none;
-            }
-
-            100% {
-                transform: translateY(-95%);
-                background-image: linear-gradient($gradient-heart);
-
-            }
-        }
-
-        @keyframes fill-up {
-            0% {
-                transform: translateY(0);
-            }
-
-            100% {
-                transform: translateY(-95%);
-            }
         }
     }
 
+    @keyframes fill-up {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-95%);
+        }
+    }
+}
 
 
-    // animations on menu pages
 
-    // Animation on check icon on hover
+// animations on menu pages
 
-    @for $i from 1 to 5 {
+// Animation on check icon on hover
 
-        .starters__choice--#{$i},
-        .maincorse__choice--#{$i},
-        .desserts__choice--#{$i} {
+@for $i from 1 to 5 {
 
-            position: relative;
-            overflow: hidden;
+    .starters__choice--#{$i},
+    .maincorse__choice--#{$i},
+    .desserts__choice--#{$i} {
 
-            &:hover {
-                padding-right: 12%;
-                transition: 800ms;
+        position: relative;
+        overflow: hidden;
 
-                .icon-bg::before {
-                    content: "";
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
+        &:hover {
+            padding-right: 12%;
+            transition: 800ms;
 
-                .icon-bg::after {
-                    content: "";
-                    position: absolute;
-                    background-color: $tertiary-color;
-                    top: 0;
-                    left: 86%;
-                    border-radius: 0 16px 16px 0;
-                    height: 100%;
-                    min-width: 15%;
-                    -webkit-animation: move-left 700ms ease-in-out forwards;
-                    animation: move-left 700ms ease forwards;
-                }
+            .icon-bg::before {
+                content: "";
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
-                .icon-bg:hover::after {
-                    border-radius: 0 16px 16px 0;
+            .icon-bg::after {
+                content: "";
+                position: absolute;
+                background-color: $tertiary-color;
+                top: 0;
+                left: 86%;
+                border-radius: 0 16px 16px 0;
+                height: 100%;
+                min-width: 15%;
+                -webkit-animation: move-left 700ms ease-in-out forwards;
+                animation: move-left 700ms ease forwards;
+            }
 
-                    @-webkit-keyframes move-left {
-                        0% {
-                            transform: translateX(100%);
-                            transform: scaleX(0);
-                        }
+            .icon-bg:hover::after {
+                border-radius: 0 16px 16px 0;
 
-                        100% {
-                            transform: translateX(0%);
-                        }
+                @-webkit-keyframes move-left {
+                    0% {
+                        transform: translateX(100%);
+                        transform: scaleX(0);
                     }
 
-                    @keyframes move-left {
-                        0% {
-                            transform: translateX(100%);
-                            opacity: 0.5;
-                        }
-
-                        100% {
-                            transform: translateX(0%);
-                            opacity: 1;
-                        }
+                    100% {
+                        transform: translateX(0%);
                     }
                 }
 
-                .i-hover::before {
-                    content: "";
-                }
+                @keyframes move-left {
+                    0% {
+                        transform: translateX(100%);
+                        opacity: 0.5;
+                    }
 
-                .i-hover::after {
-                    @include icon-check-after;
-                    -webkit-animation: spin-icon 700ms ease forwards;
-                    animation: spin-icon 700ms ease forwards;
+                    100% {
+                        transform: translateX(0%);
+                        opacity: 1;
+                    }
                 }
+            }
 
-                .i-hover:hover::after {
-                    @include spin-icon-check;
-                }
+            .i-hover::before {
+                content: "";
+            }
 
-                .i-hover::active::after {
-                    @include spin-icon-check;
-                }
+            .i-hover::after {
+                @include icon-check-after;
+                -webkit-animation: spin-icon 700ms ease forwards;
+                animation: spin-icon 700ms ease forwards;
+            }
+
+            .i-hover:hover::after {
+                @include spin-icon-check;
+            }
+
+            .i-hover:active::after {
+                @include spin-icon-check;
             }
         }
     }
+}
 
 
-    // Animation of cards on menu pages. 
+// Animation of cards on menu pages. 
 
-    @for $i from 1 to 5 {
+@for $i from 1 to 5 {
 
-        .starters__choice--#{$i},
-        .maincorse__choice--#{$i},
-        .desserts__choice--#{$i} {
-            -webkit-animation: fade-in 800ms ease forwards;
-            animation: fade-in 800ms ease-in-out forwards;
-            -webkit-animation-delay: $i * 300ms;
-            animation-delay: $i * 300ms;
+    .starters__choice--#{$i},
+    .maincorse__choice--#{$i},
+    .desserts__choice--#{$i} {
+        
+        -webkit-animation: fade-in 900ms ease forwards;
+        animation: fade-in 900ms ease-in-out forwards;
+        -webkit-animation-delay: $i * 350ms;
+        animation-delay: 3005ms, $i * 350ms;
 
-            @-webkit-keyframes fade-in {
-                0% {
-                    opacity: 0;
-                }
 
-                100% {
-                    opacity: 1;
-                }
+        @-webkit-keyframes fade-in {
+            0% {
+                opacity: 0;
             }
 
-            @keyframes fade-in {
-                0% {
-                    opacity: 0;
-                }
+            100% {
+                opacity: 1;
+            }
+        }
 
-                100% {
-                    opacity: 1;
-                }
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
             }
         }
     }
+}

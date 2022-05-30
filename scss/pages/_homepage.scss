@@ -21,6 +21,8 @@
         width: 100%;
         background-color: $bg-clr-search;
 
+       
+
         @include media-tablet {
             height: 80px;
 
@@ -30,16 +32,22 @@
         }
 
         @include media-desktop {
-            width: 280px;
-            height: 60px;
+            width: 300px;
+            height: 80px;
             margin-top: 32px;
             margin-bottom: 32px;
             border-radius: 32px;
-            box-shadow: 4px 8px 8px -8px rgba(147, 86, 220, 0.47);
+            
 
             i {
                 padding-left: 16px;
-                color: $primary-color;
+            }
+
+            &:hover{
+                @include search-hover;
+                & input{
+                        background: rgba(217, 217, 217, 0.1);
+                }
             }
         }
 
@@ -110,9 +118,11 @@
             }
 
             @include media-desktop {
-                width: 184px;
+                width: 200px;
                 font-size: $fs-card-texts-desktop;
                 color: $primary-color;
+             
+                
 
                 &::-webkit-input-placeholder {
                     color: $primary-color;
@@ -127,6 +137,10 @@
                 }
 
                 &::-ms-input-placeholder {
+                    color: $primary-color;
+                }
+
+                &::-webkit-input-placeholder {
                     color: $primary-color;
                 }
 
@@ -189,7 +203,7 @@
     margin-bottom: 56px;
 
     @include media-tablet {
-        width: 80%; 
+        width: 80%;
     }
 
     @include media-desktop {
@@ -239,6 +253,7 @@ ul.howto-container__how {
         text-align: center;
         position: relative;
         left: -8px;
+
     }
 
     @include media-tablet {
@@ -314,9 +329,9 @@ ul.howto-container__how {
 
         // for list class 
         &--1,
-        &--2{
+        &--2 {
             margin-right: 24px;
-         }
+        }
 
         &--text {
 
