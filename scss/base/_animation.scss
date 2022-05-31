@@ -8,7 +8,7 @@
     transform: scale(1);
     height: 100%;
     width: 100%;
-    background-color: lighten($color: $primary-color, $amount: 2%);
+    background-color: lighten($color: $primary-color, $amount: 15%);
     -webkit-animation: bg-anim 800ms linear forwards;
     animation: bg-anim 800ms linear forwards;
     -webkit-animation-delay: 2200ms;
@@ -17,28 +17,26 @@
     @-webkit-keyframes bg-anim {
         0% {
             opacity: 1;
-
+            z-index: 99;
         }
 
         50% {
             opacity: 1;
-
+            z-index: 99;
         }
 
         60% {
             opacity: 0.7;
-
-
+            z-index: 99;
         }
 
         70% {
             opacity: 0.5;
-
+            z-index: 99;
         }
 
         85% {
-            opacity: 0.2;
-            z-index: -99;
+            opacity: 0.2;z-index: 99;
         }
 
         100% {
@@ -52,23 +50,26 @@
     @keyframes bg-anim {
         0% {
             opacity: 1;
+            z-index: 99;
         }
 
         50% {
             opacity: 1;
+            z-index: 99;
         }
 
         60% {
             opacity: 0.7;
+            z-index: 99;
         }
 
         70% {
             opacity: 0.5;
+            z-index: 99;
         }
 
         85% {
-            opacity: 0.2;
-            z-index: -99;
+            opacity: 0.2;z-index: 99;
         }
 
         100% {
@@ -99,40 +100,41 @@
                 opacity: 0.4;
                 fill: none;
                 stroke-dashoffset: 800;
-                fill: rgba(19, 19, 19, 0.1);
+                fill: rgba(147, 86, 220, 0.1);
             }
 
             20% {
                 opacity: 0.5;
                 fill: none;
                 stroke-dashoffset: 900;
-                fill: rgba(19, 19, 19, 0.2);
+                fill: rgba(147, 86, 220, 0.2);
             }
 
             40% {
                 opacity: 0.7;
                 fill: none;
                 stroke-dashoffset: 1000;
-                fill: rgba(19, 19, 19, 0.3);
+                fill: rgba(147, 86, 220, 0.3);
             }
 
             60% {
                 opacity: 0.9;
                 stroke-dashoffset: 1100;
-                fill: rgba(19, 19, 19, 0.4);
+                fill: rgba(147, 86, 220, 0.4);
                 stroke: darken($color: $primary-color, $amount: 3%);
             }
 
             70% {
                 opacity: 1;
-                fill: rgba(19, 19, 19, 0.5);
+                fill: rgba(147, 86, 220, 0.5);
                 stroke-dashoffset: 1200;
                 stroke: darken($color: $primary-color, $amount: 5%);
             }
 
+
             80% {
                 opacity: 10;
-                fill: rgba(19, 19, 19, 1);
+                fill: rgba(147, 86, 220, 1);
             }
 
             85% {
@@ -159,44 +161,45 @@
                 stroke-dashoffset: 500;
             }
 
+
             10% {
                 opacity: 0.4;
                 fill: none;
                 stroke-dashoffset: 800;
-                fill: rgba(19, 19, 19, 0.1);
+                fill: rgba(147, 86, 220, 0.1);
             }
 
             20% {
                 opacity: 0.5;
                 fill: none;
                 stroke-dashoffset: 900;
-                fill: rgba(19, 19, 19, 0.2);
+                fill: rgba(147, 86, 220, 0.2);
             }
 
             40% {
                 opacity: 0.7;
                 fill: none;
                 stroke-dashoffset: 1000;
-                fill: rgba(19, 19, 19, 0.3);
+                fill: rgba(147, 86, 220, 0.3);
             }
 
             60% {
                 opacity: 0.9;
                 stroke-dashoffset: 1100;
-                fill: rgba(19, 19, 19, 0.4);
+                fill: rgba(147, 86, 220, 0.4);
                 stroke: darken($color: $primary-color, $amount: 3%);
             }
 
             70% {
                 opacity: 1;
-                fill: rgba(19, 19, 19, 0.5);
+                fill: rgba(147, 86, 220, 0.5);
                 stroke-dashoffset: 1200;
                 stroke: darken($color: $primary-color, $amount: 5%);
             }
 
             80% {
                 opacity: 10;
-                fill: rgba(19, 19, 19, 1);
+                fill: rgba(147, 86, 220, 1);
             }
 
             85% {
@@ -212,6 +215,7 @@
             100% {
                 opacity: 0;
                 display: none;
+                
             }
         }
     }
