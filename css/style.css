@@ -83,7 +83,7 @@
     opacity: 0.4;
     fill: none;
     stroke-dashoffset: 800;
-    fill: rgba(147, 86, 220, 0.1);
+    fill: rgba(0, 0, 0, 0.1);
   }
   20% {
     opacity: 0.5;
@@ -95,27 +95,26 @@
     opacity: 0.7;
     fill: none;
     stroke-dashoffset: 1000;
-    fill: rgba(147, 86, 220, 0.3);
+    fill: rgba(0, 0, 0, 0.3);
   }
   60% {
     opacity: 0.9;
     stroke-dashoffset: 1100;
-    fill: rgba(147, 86, 220, 0.4);
-    stroke: #8b49d9;
+    fill: rgba(0, 0, 0, 0.4);
+    stroke: rgb(147, 86, 220);
   }
   70% {
     opacity: 1;
-    fill: rgba(147, 86, 220, 0.5);
+    fill: rgba(0, 0, 0, 0.5);
     stroke-dashoffset: 1200;
-    stroke: #8641d8;
+    stroke: rgb(147, 86, 220);
   }
   80% {
-    opacity: 10;
-    fill: rgb(147, 86, 220);
+    opacity: 1;
+    fill: rgb(0, 0, 0);
   }
   85% {
     opacity: 0.2;
-    fill: none;
   }
   90% {
     opacity: 0.1;
@@ -136,7 +135,7 @@
     opacity: 0.4;
     fill: none;
     stroke-dashoffset: 800;
-    fill: rgba(147, 86, 220, 0.1);
+    fill: rgba(0, 0, 0, 0.1);
   }
   20% {
     opacity: 0.5;
@@ -148,27 +147,26 @@
     opacity: 0.7;
     fill: none;
     stroke-dashoffset: 1000;
-    fill: rgba(147, 86, 220, 0.3);
+    fill: rgba(0, 0, 0, 0.3);
   }
   60% {
     opacity: 0.9;
     stroke-dashoffset: 1100;
-    fill: rgba(147, 86, 220, 0.4);
-    stroke: #8b49d9;
+    fill: rgba(0, 0, 0, 0.4);
+    stroke: rgb(147, 86, 220);
   }
   70% {
     opacity: 1;
-    fill: rgba(147, 86, 220, 0.5);
+    fill: rgba(0, 0, 0, 0.5);
     stroke-dashoffset: 1200;
-    stroke: #8641d8;
+    stroke: rgb(147, 86, 220);
   }
   80% {
-    opacity: 10;
-    fill: rgb(147, 86, 220);
+    opacity: 1;
+    fill: rgb(0, 0, 0);
   }
   85% {
     opacity: 0.2;
-    fill: none;
   }
   90% {
     opacity: 0.1;
@@ -240,7 +238,14 @@
 .maincorse__choice--1:hover,
 .desserts__choice--1:hover {
   padding-right: 12%;
-  transition: 800ms;
+  transition: 400ms;
+}
+@media screen and (min-width: 991px) {
+  .starters__choice--1:hover,
+.maincorse__choice--1:hover,
+.desserts__choice--1:hover {
+    padding-right: 15%;
+  }
 }
 .starters__choice--1:hover .icon-bg::before,
 .maincorse__choice--1:hover .icon-bg::before,
@@ -261,8 +266,8 @@
   border-radius: 0 16px 16px 0;
   height: 100%;
   min-width: 15%;
-  -webkit-animation: move-left 700ms ease-in-out forwards;
-  animation: move-left 700ms ease forwards;
+  -webkit-animation: move-left 400ms ease-in-out forwards;
+  animation: move-left 400ms ease-in-out forwards;
 }
 .starters__choice--1:hover .icon-bg:hover::after,
 .maincorse__choice--1:hover .icon-bg:hover::after,
@@ -308,8 +313,8 @@
   z-index: 2;
   width: 20px;
   height: 20px;
-  -webkit-animation: spin-icon 700ms ease forwards;
-  animation: spin-icon 700ms ease forwards;
+  -webkit-animation: spin-icon 400ms ease forwards;
+  animation: spin-icon 400ms ease forwards;
 }
 @media screen and (min-width: 200px) and (max-width: fablet) {
   .starters__choice--1:hover .i-hover::after,
@@ -371,7 +376,14 @@
 .maincorse__choice--2:hover,
 .desserts__choice--2:hover {
   padding-right: 12%;
-  transition: 800ms;
+  transition: 400ms;
+}
+@media screen and (min-width: 991px) {
+  .starters__choice--2:hover,
+.maincorse__choice--2:hover,
+.desserts__choice--2:hover {
+    padding-right: 15%;
+  }
 }
 .starters__choice--2:hover .icon-bg::before,
 .maincorse__choice--2:hover .icon-bg::before,
@@ -392,8 +404,8 @@
   border-radius: 0 16px 16px 0;
   height: 100%;
   min-width: 15%;
-  -webkit-animation: move-left 700ms ease-in-out forwards;
-  animation: move-left 700ms ease forwards;
+  -webkit-animation: move-left 400ms ease-in-out forwards;
+  animation: move-left 400ms ease-in-out forwards;
 }
 .starters__choice--2:hover .icon-bg:hover::after,
 .maincorse__choice--2:hover .icon-bg:hover::after,
@@ -439,8 +451,8 @@
   z-index: 2;
   width: 20px;
   height: 20px;
-  -webkit-animation: spin-icon 700ms ease forwards;
-  animation: spin-icon 700ms ease forwards;
+  -webkit-animation: spin-icon 400ms ease forwards;
+  animation: spin-icon 400ms ease forwards;
 }
 @media screen and (min-width: 200px) and (max-width: fablet) {
   .starters__choice--2:hover .i-hover::after,
@@ -502,7 +514,14 @@
 .maincorse__choice--3:hover,
 .desserts__choice--3:hover {
   padding-right: 12%;
-  transition: 800ms;
+  transition: 400ms;
+}
+@media screen and (min-width: 991px) {
+  .starters__choice--3:hover,
+.maincorse__choice--3:hover,
+.desserts__choice--3:hover {
+    padding-right: 15%;
+  }
 }
 .starters__choice--3:hover .icon-bg::before,
 .maincorse__choice--3:hover .icon-bg::before,
@@ -523,8 +542,8 @@
   border-radius: 0 16px 16px 0;
   height: 100%;
   min-width: 15%;
-  -webkit-animation: move-left 700ms ease-in-out forwards;
-  animation: move-left 700ms ease forwards;
+  -webkit-animation: move-left 400ms ease-in-out forwards;
+  animation: move-left 400ms ease-in-out forwards;
 }
 .starters__choice--3:hover .icon-bg:hover::after,
 .maincorse__choice--3:hover .icon-bg:hover::after,
@@ -570,8 +589,8 @@
   z-index: 2;
   width: 20px;
   height: 20px;
-  -webkit-animation: spin-icon 700ms ease forwards;
-  animation: spin-icon 700ms ease forwards;
+  -webkit-animation: spin-icon 400ms ease forwards;
+  animation: spin-icon 400ms ease forwards;
 }
 @media screen and (min-width: 200px) and (max-width: fablet) {
   .starters__choice--3:hover .i-hover::after,
@@ -633,7 +652,14 @@
 .maincorse__choice--4:hover,
 .desserts__choice--4:hover {
   padding-right: 12%;
-  transition: 800ms;
+  transition: 400ms;
+}
+@media screen and (min-width: 991px) {
+  .starters__choice--4:hover,
+.maincorse__choice--4:hover,
+.desserts__choice--4:hover {
+    padding-right: 15%;
+  }
 }
 .starters__choice--4:hover .icon-bg::before,
 .maincorse__choice--4:hover .icon-bg::before,
@@ -654,8 +680,8 @@
   border-radius: 0 16px 16px 0;
   height: 100%;
   min-width: 15%;
-  -webkit-animation: move-left 700ms ease-in-out forwards;
-  animation: move-left 700ms ease forwards;
+  -webkit-animation: move-left 400ms ease-in-out forwards;
+  animation: move-left 400ms ease-in-out forwards;
 }
 .starters__choice--4:hover .icon-bg:hover::after,
 .maincorse__choice--4:hover .icon-bg:hover::after,
@@ -701,8 +727,8 @@
   z-index: 2;
   width: 20px;
   height: 20px;
-  -webkit-animation: spin-icon 700ms ease forwards;
-  animation: spin-icon 700ms ease forwards;
+  -webkit-animation: spin-icon 400ms ease forwards;
+  animation: spin-icon 400ms ease forwards;
 }
 @media screen and (min-width: 200px) and (max-width: fablet) {
   .starters__choice--4:hover .i-hover::after,
@@ -757,14 +783,17 @@
 .starters__choice--1,
 .maincorse__choice--1,
 .desserts__choice--1 {
-  -webkit-animation: fade-in 900ms ease forwards;
-  animation: fade-in 900ms ease-in-out forwards;
-  -webkit-animation-delay: 350ms;
-  animation-delay: 3005ms, 350ms;
+  -webkit-animation: fade-in 800ms ease-in forwards;
+  animation: fade-in 800ms ease-in forwards;
+  -webkit-animation-delay: 250ms;
+  animation-delay: 3005ms, 250ms;
 }
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -773,6 +802,9 @@
 @keyframes fade-in {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -782,14 +814,17 @@
 .starters__choice--2,
 .maincorse__choice--2,
 .desserts__choice--2 {
-  -webkit-animation: fade-in 900ms ease forwards;
-  animation: fade-in 900ms ease-in-out forwards;
-  -webkit-animation-delay: 700ms;
-  animation-delay: 3005ms, 700ms;
+  -webkit-animation: fade-in 800ms ease-in forwards;
+  animation: fade-in 800ms ease-in forwards;
+  -webkit-animation-delay: 500ms;
+  animation-delay: 3005ms, 500ms;
 }
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -798,6 +833,9 @@
 @keyframes fade-in {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -807,14 +845,17 @@
 .starters__choice--3,
 .maincorse__choice--3,
 .desserts__choice--3 {
-  -webkit-animation: fade-in 900ms ease forwards;
-  animation: fade-in 900ms ease-in-out forwards;
-  -webkit-animation-delay: 1050ms;
-  animation-delay: 3005ms, 1050ms;
+  -webkit-animation: fade-in 800ms ease-in forwards;
+  animation: fade-in 800ms ease-in forwards;
+  -webkit-animation-delay: 750ms;
+  animation-delay: 3005ms, 750ms;
 }
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -823,6 +864,9 @@
 @keyframes fade-in {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -832,14 +876,17 @@
 .starters__choice--4,
 .maincorse__choice--4,
 .desserts__choice--4 {
-  -webkit-animation: fade-in 900ms ease forwards;
-  animation: fade-in 900ms ease-in-out forwards;
-  -webkit-animation-delay: 1400ms;
-  animation-delay: 3005ms, 1400ms;
+  -webkit-animation: fade-in 800ms ease-in forwards;
+  animation: fade-in 800ms ease-in forwards;
+  -webkit-animation-delay: 1000ms;
+  animation-delay: 3005ms, 1000ms;
 }
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -848,6 +895,9 @@
 @keyframes fade-in {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
