@@ -6,7 +6,7 @@
   transform: scale(1);
   height: 100%;
   width: 100%;
-  background-color: #985ede;
+  background-color: #bc95e9;
   -webkit-animation: bg-anim 800ms linear forwards;
   animation: bg-anim 800ms linear forwards;
   -webkit-animation-delay: 2200ms;
@@ -15,19 +15,23 @@
 @-webkit-keyframes bg-anim {
   0% {
     opacity: 1;
+    z-index: 99;
   }
   50% {
     opacity: 1;
+    z-index: 99;
   }
   60% {
     opacity: 0.7;
+    z-index: 99;
   }
   70% {
     opacity: 0.5;
+    z-index: 99;
   }
   85% {
     opacity: 0.2;
-    z-index: -99;
+    z-index: 99;
   }
   100% {
     opacity: 0;
@@ -37,19 +41,23 @@
 @keyframes bg-anim {
   0% {
     opacity: 1;
+    z-index: 99;
   }
   50% {
     opacity: 1;
+    z-index: 99;
   }
   60% {
     opacity: 0.7;
+    z-index: 99;
   }
   70% {
     opacity: 0.5;
+    z-index: 99;
   }
   85% {
     opacity: 0.2;
-    z-index: -99;
+    z-index: 99;
   }
   100% {
     opacity: 0;
@@ -75,35 +83,35 @@
     opacity: 0.4;
     fill: none;
     stroke-dashoffset: 800;
-    fill: rgba(19, 19, 19, 0.1);
+    fill: rgba(147, 86, 220, 0.1);
   }
   20% {
     opacity: 0.5;
     fill: none;
     stroke-dashoffset: 900;
-    fill: rgba(19, 19, 19, 0.2);
+    fill: rgba(147, 86, 220, 0.2);
   }
   40% {
     opacity: 0.7;
     fill: none;
     stroke-dashoffset: 1000;
-    fill: rgba(19, 19, 19, 0.3);
+    fill: rgba(147, 86, 220, 0.3);
   }
   60% {
     opacity: 0.9;
     stroke-dashoffset: 1100;
-    fill: rgba(19, 19, 19, 0.4);
+    fill: rgba(147, 86, 220, 0.4);
     stroke: #8b49d9;
   }
   70% {
     opacity: 1;
-    fill: rgba(19, 19, 19, 0.5);
+    fill: rgba(147, 86, 220, 0.5);
     stroke-dashoffset: 1200;
     stroke: #8641d8;
   }
   80% {
     opacity: 10;
-    fill: rgb(19, 19, 19);
+    fill: rgb(147, 86, 220);
   }
   85% {
     opacity: 0.2;
@@ -128,35 +136,35 @@
     opacity: 0.4;
     fill: none;
     stroke-dashoffset: 800;
-    fill: rgba(19, 19, 19, 0.1);
+    fill: rgba(147, 86, 220, 0.1);
   }
   20% {
     opacity: 0.5;
     fill: none;
     stroke-dashoffset: 900;
-    fill: rgba(19, 19, 19, 0.2);
+    fill: rgba(147, 86, 220, 0.2);
   }
   40% {
     opacity: 0.7;
     fill: none;
     stroke-dashoffset: 1000;
-    fill: rgba(19, 19, 19, 0.3);
+    fill: rgba(147, 86, 220, 0.3);
   }
   60% {
     opacity: 0.9;
     stroke-dashoffset: 1100;
-    fill: rgba(19, 19, 19, 0.4);
+    fill: rgba(147, 86, 220, 0.4);
     stroke: #8b49d9;
   }
   70% {
     opacity: 1;
-    fill: rgba(19, 19, 19, 0.5);
+    fill: rgba(147, 86, 220, 0.5);
     stroke-dashoffset: 1200;
     stroke: #8641d8;
   }
   80% {
     opacity: 10;
-    fill: rgb(19, 19, 19);
+    fill: rgb(147, 86, 220);
   }
   85% {
     opacity: 0.2;
@@ -857,7 +865,6 @@ html,
   height: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  z-index: 99;
 }
 @media screen and (min-width: 991px) {
   html,
@@ -1001,7 +1008,7 @@ p {
   .home-cards {
     margin: 48px 24px 48px 24px;
     width: 90%;
-    height: 800px;
+    height: 750px;
   }
 }
 .home-cards__title {
@@ -1019,15 +1026,17 @@ p {
 }
 @media screen and (min-width: 991px) {
   .home-cards__title {
-    grid-area: 1/1/2/4;
+    grid-area: 1/1/2/3;
     font-size: 24px;
     padding-top: 0;
-    padding-bottom: 24px;
     text-align: center;
   }
 }
-.home-cards a {
+.home-cards .in-card {
   color: rgb(0, 0, 0);
+  width: 100%;
+  height: 288px;
+  align-self: center;
 }
 .home-cards__container--1, .home-cards__container--2, .home-cards__container--3, .home-cards__container--4 {
   text-decoration: none;
@@ -1041,6 +1050,7 @@ p {
   text-decoration: none;
   color: rgb(0, 0, 0);
   margin-bottom: 32px;
+  z-index: 1;
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .home-cards__container--1 {
@@ -1069,43 +1079,53 @@ p {
     grid-area: 2/2/3/3;
   }
   .home-cards__container--3 {
-    grid-area: 2/3/3/4;
+    grid-area: 3/1/4/2;
   }
   .home-cards__container--4 {
     grid-area: 3/2/4/3;
   }
 }
 .home-cards__img--cards {
+  display: flex;
+  justify-content: flex-start;
   position: relative;
-  top: -32px;
+  top: -55px;
   border-radius: 16px 16px 0 0;
   width: 100%;
   height: 70%;
-  z-index: 1;
+  z-index: -1;
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .home-cards__img--cards {
+    top: -70px;
+  }
 }
 .home-cards__img--cards2 {
+  display: flex;
+  justify-content: center;
   position: relative;
-  top: -32px;
+  top: -55px;
   border-radius: 16px 16px 0 0;
   width: 100%;
   height: 70%;
-  z-index: 1;
+  z-index: -1;
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
 }
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .home-cards__img--cards2 {
+    top: -70px;
+  }
+}
 .home-cards__img--new, .home-cards__img--new2 {
-  position: relative;
-  top: 32px;
-  right: -60%;
   z-index: 2;
   height: 32px;
-  width: 80px;
   background-color: #99E2D0;
   padding: 8px;
   text-align: center;
@@ -1113,13 +1133,24 @@ p {
   font-size: 16px;
   border-radius: 8px;
   font-family: "Roboto", sans-serif;
+  width: 88px;
+  margin-left: 60%;
+  margin-top: 24px;
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .home-cards__img--new, .home-cards__img--new2 {
-    right: -55%;
-    height: 40px;
     width: 88px;
+    height: 40px;
     text-align: center;
+    margin-left: 60%;
+  }
+}
+@media screen and (min-width: 991px) {
+  .home-cards__img--new, .home-cards__img--new2 {
+    margin-left: 75%;
+    text-align: center;
+    width: 90px;
+    height: 40px;
   }
 }
 .home-cards__cards-img {
@@ -1135,7 +1166,7 @@ p {
   padding-bottom: 8px;
   padding-left: 16px;
   position: relative;
-  top: -20px;
+  top: -35px;
 }
 .home-cards .name-restaurant--top {
   align-self: flex-start;
@@ -1144,19 +1175,29 @@ p {
   padding-left: 16px;
   padding-top: 16px;
 }
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .home-cards .name-restaurant {
+    top: -50px;
+  }
+}
 .home-cards .restaurant-location {
   align-self: flex-start;
   padding-bottom: 8px;
   padding-left: 16px;
   font-family: "Roboto", sans-serif;
   position: relative;
-  top: -20px;
+  top: -35px;
 }
 .home-cards .restaurant-location--top {
   align-self: flex-start;
   padding-bottom: 8px;
   padding-left: 16px;
   font-family: "Roboto", sans-serif;
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .home-cards .restaurant-location {
+    top: -50px;
+  }
 }
 
 .starters__choice--1 {
@@ -2177,18 +2218,17 @@ ul.howto-container__how {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
+    grid-column-gap: 24px;
+    grid-row-gap: 0px;
   }
 }
 @media screen and (min-width: 991px) {
   .home-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 100px repeat(2, 1fr);
-    grid-column-gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 32px;
     grid-row-gap: 32px;
-    height: 80%;
   }
 }
 
