@@ -135,8 +135,8 @@
 
 @mixin search-hover {
     background: linear-gradient(260deg, #A7A7A7 0%, #FEFEFE 86.32%);
-    box-shadow: -10.7569px 2.77837px 32px rgba(43, 43, 43, 0.3625), 
-    inset 4.12769px -1.08048px 6.22222px #9B9B9B, inset -4.12769px 1.08048px 6.22222px #FFFFFF;
+    box-shadow: -10.7569px 2.77837px 32px rgba(43, 43, 43, 0.3625),
+        inset 4.12769px -1.08048px 6.22222px #9B9B9B, inset -4.12769px 1.08048px 6.22222px #FFFFFF;
 
 }
 
@@ -236,6 +236,10 @@
     overflow: hidden;
 }
 
+@mixin shadow-cards-hover {
+    background: linear-gradient(180deg, #909090 0%, #FFFFFF 0.01%);
+    box-shadow: 2.73504e-15px 27px 89.3333px rgba(41, 41, 41, 0.4955), inset -1.29459e-15px -13px 21.1422px #808080, inset 1.29459e-15px 21.1422px 21.1422px #FFFFFF;
+}
 
 @mixin card-title-desktop {
     color: $txt-btn;

@@ -1102,6 +1102,10 @@ p {
   margin-bottom: 32px;
   z-index: 1;
 }
+.home-cards__container--1:hover, .home-cards__container--2:hover, .home-cards__container--3:hover, .home-cards__container--4:hover {
+  background: linear-gradient(180deg, #909090 0%, #FFFFFF 0.01%);
+  box-shadow: 0px 27px 89.3333px rgba(41, 41, 41, 0.4955), inset 0px -13px 21.1422px #808080, inset 0px 21.1422px 21.1422px #FFFFFF;
+}
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .home-cards__container--1 {
     grid-area: 2/1/3/2;
@@ -1154,6 +1158,11 @@ p {
     top: -70px;
   }
 }
+@media screen and (min-width: 991px) {
+  .home-cards__img--cards {
+    top: -70px;
+  }
+}
 .home-cards__img--cards2 {
   display: flex;
   justify-content: center;
@@ -1169,6 +1178,11 @@ p {
   object-position: center;
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
+  .home-cards__img--cards2 {
+    top: -70px;
+  }
+}
+@media screen and (min-width: 991px) {
   .home-cards__img--cards2 {
     top: -70px;
   }
@@ -1230,6 +1244,11 @@ p {
     top: -50px;
   }
 }
+@media screen and (min-width: 991px) {
+  .home-cards .name-restaurant {
+    top: -50px;
+  }
+}
 .home-cards .restaurant-location {
   align-self: flex-start;
   padding-bottom: 8px;
@@ -1245,6 +1264,11 @@ p {
   font-family: "Roboto", sans-serif;
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
+  .home-cards .restaurant-location {
+    top: -50px;
+  }
+}
+@media screen and (min-width: 991px) {
   .home-cards .restaurant-location {
     top: -50px;
   }
