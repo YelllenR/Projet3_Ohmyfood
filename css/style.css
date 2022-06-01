@@ -1,4 +1,6 @@
 #load {
+  height: 100%;
+  width: 100%;
   position: fixed;
   z-index: 99;
   left: 0;
@@ -14,6 +16,7 @@
 }
 @media screen and (min-width: 200px) and (max-width: 600px) {
   #load {
+    height: 100%;
     width: 100%;
   }
 }
@@ -77,11 +80,6 @@
   opacity: 10;
   -webkit-animation: logo-anim 2200ms cubic-bezier(0.01, 0.7, 0.91, 0.56) forwards;
   animation: logo-anim 2200ms cubic-bezier(0.01, 0.7, 0.91, 0.56) forwards;
-}
-@media screen and (min-width: 200px) and (max-width: 600px) {
-  #load path {
-    width: 100%;
-  }
 }
 @-webkit-keyframes logo-anim {
   0% {
@@ -343,21 +341,13 @@
   -webkit-animation: spin-icon 600ms ease forwards;
   animation: spin-icon 600ms ease forwards;
 }
-.starters__choice--1:hover .i-hover:hover::after,
-.maincorse__choice--1:hover .i-hover:hover::after,
-.desserts__choice--1:hover .i-hover:hover::after {
-  content: "\f058";
-  position: absolute;
-  font-family: "Font Awesome 5 Free";
-  top: 35%;
-  left: 91%;
-  font-weight: 900;
-  font-size: 24px;
-  color: #ffffff;
-  text-align: center;
-  z-index: 2;
-  width: 20px;
-  height: 20px;
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .starters__choice--1:hover .i-hover::after,
+.maincorse__choice--1:hover .i-hover::after,
+.desserts__choice--1:hover .i-hover::after {
+    left: 90%;
+    font-size: 20px;
+  }
 }
 @-webkit-keyframes spin-icon {
   0% {
@@ -378,22 +368,6 @@
     transform: translateX(0%) rotate(0deg);
     opacity: 1;
   }
-}
-.starters__choice--1:hover .i-hover:active::after,
-.maincorse__choice--1:hover .i-hover:active::after,
-.desserts__choice--1:hover .i-hover:active::after {
-  content: "\f058";
-  position: absolute;
-  font-family: "Font Awesome 5 Free";
-  top: 35%;
-  left: 91%;
-  font-weight: 900;
-  font-size: 24px;
-  color: #ffffff;
-  text-align: center;
-  z-index: 2;
-  width: 20px;
-  height: 20px;
 }
 @-webkit-keyframes spin-icon {
   0% {
@@ -518,21 +492,13 @@
   -webkit-animation: spin-icon 600ms ease forwards;
   animation: spin-icon 600ms ease forwards;
 }
-.starters__choice--2:hover .i-hover:hover::after,
-.maincorse__choice--2:hover .i-hover:hover::after,
-.desserts__choice--2:hover .i-hover:hover::after {
-  content: "\f058";
-  position: absolute;
-  font-family: "Font Awesome 5 Free";
-  top: 35%;
-  left: 91%;
-  font-weight: 900;
-  font-size: 24px;
-  color: #ffffff;
-  text-align: center;
-  z-index: 2;
-  width: 20px;
-  height: 20px;
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .starters__choice--2:hover .i-hover::after,
+.maincorse__choice--2:hover .i-hover::after,
+.desserts__choice--2:hover .i-hover::after {
+    left: 90%;
+    font-size: 20px;
+  }
 }
 @-webkit-keyframes spin-icon {
   0% {
@@ -553,22 +519,6 @@
     transform: translateX(0%) rotate(0deg);
     opacity: 1;
   }
-}
-.starters__choice--2:hover .i-hover:active::after,
-.maincorse__choice--2:hover .i-hover:active::after,
-.desserts__choice--2:hover .i-hover:active::after {
-  content: "\f058";
-  position: absolute;
-  font-family: "Font Awesome 5 Free";
-  top: 35%;
-  left: 91%;
-  font-weight: 900;
-  font-size: 24px;
-  color: #ffffff;
-  text-align: center;
-  z-index: 2;
-  width: 20px;
-  height: 20px;
 }
 @-webkit-keyframes spin-icon {
   0% {
@@ -693,21 +643,13 @@
   -webkit-animation: spin-icon 600ms ease forwards;
   animation: spin-icon 600ms ease forwards;
 }
-.starters__choice--3:hover .i-hover:hover::after,
-.maincorse__choice--3:hover .i-hover:hover::after,
-.desserts__choice--3:hover .i-hover:hover::after {
-  content: "\f058";
-  position: absolute;
-  font-family: "Font Awesome 5 Free";
-  top: 35%;
-  left: 91%;
-  font-weight: 900;
-  font-size: 24px;
-  color: #ffffff;
-  text-align: center;
-  z-index: 2;
-  width: 20px;
-  height: 20px;
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .starters__choice--3:hover .i-hover::after,
+.maincorse__choice--3:hover .i-hover::after,
+.desserts__choice--3:hover .i-hover::after {
+    left: 90%;
+    font-size: 20px;
+  }
 }
 @-webkit-keyframes spin-icon {
   0% {
@@ -728,22 +670,6 @@
     transform: translateX(0%) rotate(0deg);
     opacity: 1;
   }
-}
-.starters__choice--3:hover .i-hover:active::after,
-.maincorse__choice--3:hover .i-hover:active::after,
-.desserts__choice--3:hover .i-hover:active::after {
-  content: "\f058";
-  position: absolute;
-  font-family: "Font Awesome 5 Free";
-  top: 35%;
-  left: 91%;
-  font-weight: 900;
-  font-size: 24px;
-  color: #ffffff;
-  text-align: center;
-  z-index: 2;
-  width: 20px;
-  height: 20px;
 }
 @-webkit-keyframes spin-icon {
   0% {
@@ -868,21 +794,13 @@
   -webkit-animation: spin-icon 600ms ease forwards;
   animation: spin-icon 600ms ease forwards;
 }
-.starters__choice--4:hover .i-hover:hover::after,
-.maincorse__choice--4:hover .i-hover:hover::after,
-.desserts__choice--4:hover .i-hover:hover::after {
-  content: "\f058";
-  position: absolute;
-  font-family: "Font Awesome 5 Free";
-  top: 35%;
-  left: 91%;
-  font-weight: 900;
-  font-size: 24px;
-  color: #ffffff;
-  text-align: center;
-  z-index: 2;
-  width: 20px;
-  height: 20px;
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .starters__choice--4:hover .i-hover::after,
+.maincorse__choice--4:hover .i-hover::after,
+.desserts__choice--4:hover .i-hover::after {
+    left: 90%;
+    font-size: 20px;
+  }
 }
 @-webkit-keyframes spin-icon {
   0% {
@@ -903,22 +821,6 @@
     transform: translateX(0%) rotate(0deg);
     opacity: 1;
   }
-}
-.starters__choice--4:hover .i-hover:active::after,
-.maincorse__choice--4:hover .i-hover:active::after,
-.desserts__choice--4:hover .i-hover:active::after {
-  content: "\f058";
-  position: absolute;
-  font-family: "Font Awesome 5 Free";
-  top: 35%;
-  left: 91%;
-  font-weight: 900;
-  font-size: 24px;
-  color: #ffffff;
-  text-align: center;
-  z-index: 2;
-  width: 20px;
-  height: 20px;
 }
 @-webkit-keyframes spin-icon {
   0% {
@@ -1530,7 +1432,7 @@ p {
 
 .starters__name {
   padding: 16px 0 0 16px;
-  width: 100%;
+  width: 95%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   white-space: nowrap;
@@ -1613,7 +1515,7 @@ p {
 }
 .maincorse__choice--1 .maincorse__name {
   padding: 16px 0 0 16px;
-  width: 100%;
+  width: 95%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   white-space: nowrap;
@@ -1658,7 +1560,7 @@ p {
 }
 .maincorse__choice--2 .maincorse__name {
   padding: 16px 0 0 16px;
-  width: 100%;
+  width: 95%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   white-space: nowrap;
@@ -1703,7 +1605,7 @@ p {
 }
 .maincorse__choice--3 .maincorse__name {
   padding: 16px 0 0 16px;
-  width: 100%;
+  width: 95%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   white-space: nowrap;
@@ -1748,7 +1650,7 @@ p {
 }
 .maincorse__choice--4 .maincorse__name {
   padding: 16px 0 0 16px;
-  width: 100%;
+  width: 95%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   white-space: nowrap;
@@ -1830,7 +1732,7 @@ p {
 }
 .desserts__choice--1 .desserts__name {
   padding: 16px 0 0 16px;
-  width: 100%;
+  width: 95%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   white-space: nowrap;
@@ -1875,7 +1777,7 @@ p {
 }
 .desserts__choice--2 .desserts__name {
   padding: 16px 0 0 16px;
-  width: 100%;
+  width: 95%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   white-space: nowrap;
@@ -1920,7 +1822,7 @@ p {
 }
 .desserts__choice--3 .desserts__name {
   padding: 16px 0 0 16px;
-  width: 100%;
+  width: 95%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   white-space: nowrap;
@@ -2591,11 +2493,6 @@ ul.howto-container__how {
   padding-top: 24px;
   padding-bottom: 32px;
 }
-@media screen and (min-width: 200px) and (max-width: 600px) {
-  .footercontainer {
-    width: 100%;
-  }
-}
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .footercontainer {
     width: 100%;
@@ -2662,11 +2559,6 @@ ul.howto-container__how {
   margin-top: 16px;
   margin-bottom: 16px;
 }
-@media screen and (min-width: 200px) and (max-width: 600px) {
-  .nav--palette, .nav--enchantee, .nav--sens, .nav--france {
-    width: 100%;
-  }
-}
 .nav--palette a, .nav--enchantee a, .nav--sens a, .nav--france a {
   align-self: flex-start;
 }
@@ -2726,11 +2618,6 @@ ul.howto-container__how {
 .nav-home {
   font-family: "Roboto", sans-serif;
 }
-@media screen and (min-width: 200px) and (max-width: 600px) {
-  .nav-home {
-    width: 100%;
-  }
-}
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .nav-home {
     width: 100%;
@@ -2751,11 +2638,6 @@ ul.howto-container__how {
   height: 52px;
   width: 100%;
   background-color: #eaeaea;
-}
-@media screen and (min-width: 200px) and (max-width: 600px) {
-  .nav-home__search {
-    width: 100%;
-  }
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .nav-home__search {
@@ -2844,11 +2726,6 @@ ul.howto-container__how {
   margin: 0 24px 0 24px;
   background-color: #f6f6f6;
 }
-@media screen and (min-width: 200px) and (max-width: 600px) {
-  .nav-home__styling {
-    width: 100%;
-  }
-}
 @media screen and (min-width: 991px) {
   .nav-home__styling {
     background-color: transparent;
@@ -2905,11 +2782,6 @@ ul.howto-container__how {
   margin: 0 24px 0 24px;
   margin-top: 56px;
   margin-bottom: 56px;
-}
-@media screen and (min-width: 200px) and (max-width: 600px) {
-  .howto-container {
-    width: 100%;
-  }
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .howto-container {
@@ -3108,11 +2980,6 @@ ul.howto-container__how li:before {
   background-color: #f6f6f6;
   height: auto;
 }
-@media screen and (min-width: 200px) and (max-width: 600px) {
-  .starters {
-    width: 100%;
-  }
-}
 .starters__title {
   width: 50px;
   font-family: "Roboto", sans-serif;
@@ -3186,11 +3053,6 @@ ul.howto-container__how li:before {
   background-color: #f6f6f6;
   height: auto;
 }
-@media screen and (min-width: 200px) and (max-width: 600px) {
-  .maincorse {
-    width: 100%;
-  }
-}
 .maincorse__title {
   width: 50px;
   font-family: "Roboto", sans-serif;
@@ -3260,11 +3122,6 @@ ul.howto-container__how li:before {
   justify-content: flex-start;
   background-color: #f6f6f6;
   height: auto;
-}
-@media screen and (min-width: 200px) and (max-width: 600px) {
-  .desserts {
-    width: 100%;
-  }
 }
 .desserts__title {
   width: 50px;

@@ -1,19 +1,24 @@
 // Loader animation
 
-#load {
-    @include media-phone;
-    position: fixed;
-    z-index: 99;
-    left: 0;
-    transform: translate(-50%, -50%);
-    transform: scale(1);
-    height: 100%;
-    width: 100%;
-    background-color: lighten($color: $primary-color, $amount: 20%);
-    -webkit-animation: bg-anim 800ms linear forwards;
-    animation: bg-anim 800ms linear forwards;
-    -webkit-animation-delay: 2200ms;
-    animation-delay: 2200ms;
+#load { 
+    @include media-phone {
+        height: 100%;
+        width: 100%;
+    } 
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 99;
+        left: 0;
+        transform: translate(-50%, -50%);
+        transform: scale(1);
+        height: 100%;
+        width: 100%;
+        background-color: lighten($color: $primary-color, $amount: 20%);
+        -webkit-animation: bg-anim 800ms linear forwards;
+        animation: bg-anim 800ms linear forwards;
+        -webkit-animation-delay: 2200ms;
+        animation-delay: 2200ms;
 
     @-webkit-keyframes bg-anim {
         0% {
@@ -83,7 +88,7 @@
 
 
     path {
-        @include media-phone;
+        
         stroke: black;
         fill: black;
         stroke-dasharray: 1200;
@@ -381,12 +386,12 @@
 
             .i-hover:hover::after {
                 @include spin-icon-check;
-                @include icon-check-after;
+
             }
 
             .i-hover:active::after {
                 @include spin-icon-check;
-                @include icon-check-after;
+
             }
         }
 

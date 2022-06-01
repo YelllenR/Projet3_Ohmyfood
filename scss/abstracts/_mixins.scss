@@ -4,7 +4,6 @@
     @media screen and (min-width: map-get($breakpoints, 'mobile')) and (max-width: map-get($breakpoints, 'fablet')) {
         & {
             @content;
-            width: 100%;
         }
     }
 }
@@ -215,6 +214,11 @@
     z-index: 2;
     width: 20px;
     height: 20px;
+
+    @include media-phone(){
+        left: 90%;
+        font-size: 20px;
+    }
 }
 
 @mixin heart-home-cards {
@@ -287,7 +291,7 @@
 
 @mixin in-cards-titles-menu {
     padding: 16px 0 0 16px;
-    width: 100%;
+    width: 95%;
     font-family: $font-texts-titles;
     font-size: $fs-text-xs-phone;
     white-space: nowrap;

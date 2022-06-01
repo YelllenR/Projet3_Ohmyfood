@@ -258,6 +258,7 @@
 
 @for $i from 1 to 5 {
     .starters__choice--#{$i} {
+        @include media-phone;
         opacity: 0;
         @include cards-menu-pages;
 
@@ -288,6 +289,7 @@
 }
 
 .starters__infoprice {
+
     @include container-price-info;
     text-align: justify;
 
@@ -318,7 +320,7 @@
 // main corse
 @for $i from 1 to 5 {
     .maincorse__choice--#{$i} {
-
+        @include media-phone;
         opacity: 0;
         @include cards-menu-pages;
 
@@ -378,6 +380,7 @@
 
 @for $i from 1 to 4 {
     .desserts__choice--#{$i} {
+        @include media-phone;
         opacity: 0;
         @include cards-menu-pages;
 
