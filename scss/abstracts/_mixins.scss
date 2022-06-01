@@ -238,7 +238,14 @@
 
 @mixin shadow-cards-hover {
     background: linear-gradient(180deg, #909090 0%, #FFFFFF 0.01%);
-    box-shadow: 2.73504e-15px 27px 89.3333px rgba(41, 41, 41, 0.4955), inset -1.29459e-15px -13px 21.1422px #808080, inset 1.29459e-15px 21.1422px 21.1422px #FFFFFF;
+    box-shadow: 2.73504e-15px 27px 75.3333px rgba(41, 41, 41, 0.4955), inset -1.29459e-15px -5px 21.1422px #808080, inset 1.29459e-15px 15.1422px 21.1422px #FFFFFF;
+}
+
+
+@mixin hover-style-shadow{
+    box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.16), inset 0px -4px 3px rgba(0, 0, 0, 0.23);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
 }
 
 @mixin card-title-desktop {

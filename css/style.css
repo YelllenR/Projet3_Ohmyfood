@@ -6,11 +6,16 @@
   transform: scale(1);
   height: 100%;
   width: 100%;
-  background-color: #bc95e9;
+  background-color: #c9abee;
   -webkit-animation: bg-anim 800ms linear forwards;
   animation: bg-anim 800ms linear forwards;
   -webkit-animation-delay: 2200ms;
   animation-delay: 2200ms;
+}
+@media screen and (min-width: 200px) and (max-width: fablet) {
+  #load {
+    width: 100%;
+  }
 }
 @-webkit-keyframes bg-anim {
   0% {
@@ -72,6 +77,11 @@
   opacity: 10;
   -webkit-animation: logo-anim 2200ms cubic-bezier(0.01, 0.7, 0.91, 0.56) forwards;
   animation: logo-anim 2200ms cubic-bezier(0.01, 0.7, 0.91, 0.56) forwards;
+}
+@media screen and (min-width: 200px) and (max-width: fablet) {
+  #load path {
+    width: 100%;
+  }
 }
 @-webkit-keyframes logo-anim {
   0% {
@@ -180,6 +190,9 @@
 
 .list:hover {
   background-color: #e4d5f6;
+  box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.16), inset 0px -4px 3px rgba(0, 0, 0, 0.23);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }
 .list:hover:hover > i {
   color: rgb(147, 86, 220);
@@ -238,7 +251,17 @@
 .maincorse__choice--1:hover,
 .desserts__choice--1:hover {
   padding-right: 12%;
+  box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.16), inset 0px -4px 3px rgba(0, 0, 0, 0.23);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   transition: 400ms;
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .starters__choice--1:hover,
+.maincorse__choice--1:hover,
+.desserts__choice--1:hover {
+    padding-right: 15%;
+  }
 }
 @media screen and (min-width: 991px) {
   .starters__choice--1:hover,
@@ -265,7 +288,7 @@
   left: 86%;
   border-radius: 0 16px 16px 0;
   height: 100%;
-  min-width: 15%;
+  width: 15%;
   -webkit-animation: move-left 400ms ease-in-out forwards;
   animation: move-left 400ms ease-in-out forwards;
 }
@@ -277,10 +300,11 @@
 @-webkit-keyframes move-left {
   0% {
     transform: translateX(100%);
-    transform: scaleX(0);
+    opacity: 0.5;
   }
   100% {
     transform: translateX(0%);
+    opacity: 1;
   }
 }
 @keyframes move-left {
@@ -291,6 +315,9 @@
   100% {
     transform: translateX(0%);
     opacity: 1;
+    box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.16), inset 0px -4px 3px rgba(0, 0, 0, 0.23);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
   }
 }
 .starters__choice--1:hover .i-hover::before,
@@ -313,8 +340,8 @@
   z-index: 2;
   width: 20px;
   height: 20px;
-  -webkit-animation: spin-icon 400ms ease forwards;
-  animation: spin-icon 400ms ease forwards;
+  -webkit-animation: spin-icon 600ms ease forwards;
+  animation: spin-icon 600ms ease forwards;
 }
 @media screen and (min-width: 200px) and (max-width: fablet) {
   .starters__choice--1:hover .i-hover::after,
@@ -376,7 +403,17 @@
 .maincorse__choice--2:hover,
 .desserts__choice--2:hover {
   padding-right: 12%;
+  box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.16), inset 0px -4px 3px rgba(0, 0, 0, 0.23);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   transition: 400ms;
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .starters__choice--2:hover,
+.maincorse__choice--2:hover,
+.desserts__choice--2:hover {
+    padding-right: 15%;
+  }
 }
 @media screen and (min-width: 991px) {
   .starters__choice--2:hover,
@@ -403,7 +440,7 @@
   left: 86%;
   border-radius: 0 16px 16px 0;
   height: 100%;
-  min-width: 15%;
+  width: 15%;
   -webkit-animation: move-left 400ms ease-in-out forwards;
   animation: move-left 400ms ease-in-out forwards;
 }
@@ -415,10 +452,11 @@
 @-webkit-keyframes move-left {
   0% {
     transform: translateX(100%);
-    transform: scaleX(0);
+    opacity: 0.5;
   }
   100% {
     transform: translateX(0%);
+    opacity: 1;
   }
 }
 @keyframes move-left {
@@ -429,6 +467,9 @@
   100% {
     transform: translateX(0%);
     opacity: 1;
+    box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.16), inset 0px -4px 3px rgba(0, 0, 0, 0.23);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
   }
 }
 .starters__choice--2:hover .i-hover::before,
@@ -451,8 +492,8 @@
   z-index: 2;
   width: 20px;
   height: 20px;
-  -webkit-animation: spin-icon 400ms ease forwards;
-  animation: spin-icon 400ms ease forwards;
+  -webkit-animation: spin-icon 600ms ease forwards;
+  animation: spin-icon 600ms ease forwards;
 }
 @media screen and (min-width: 200px) and (max-width: fablet) {
   .starters__choice--2:hover .i-hover::after,
@@ -514,7 +555,17 @@
 .maincorse__choice--3:hover,
 .desserts__choice--3:hover {
   padding-right: 12%;
+  box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.16), inset 0px -4px 3px rgba(0, 0, 0, 0.23);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   transition: 400ms;
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .starters__choice--3:hover,
+.maincorse__choice--3:hover,
+.desserts__choice--3:hover {
+    padding-right: 15%;
+  }
 }
 @media screen and (min-width: 991px) {
   .starters__choice--3:hover,
@@ -541,7 +592,7 @@
   left: 86%;
   border-radius: 0 16px 16px 0;
   height: 100%;
-  min-width: 15%;
+  width: 15%;
   -webkit-animation: move-left 400ms ease-in-out forwards;
   animation: move-left 400ms ease-in-out forwards;
 }
@@ -553,10 +604,11 @@
 @-webkit-keyframes move-left {
   0% {
     transform: translateX(100%);
-    transform: scaleX(0);
+    opacity: 0.5;
   }
   100% {
     transform: translateX(0%);
+    opacity: 1;
   }
 }
 @keyframes move-left {
@@ -567,6 +619,9 @@
   100% {
     transform: translateX(0%);
     opacity: 1;
+    box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.16), inset 0px -4px 3px rgba(0, 0, 0, 0.23);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
   }
 }
 .starters__choice--3:hover .i-hover::before,
@@ -589,8 +644,8 @@
   z-index: 2;
   width: 20px;
   height: 20px;
-  -webkit-animation: spin-icon 400ms ease forwards;
-  animation: spin-icon 400ms ease forwards;
+  -webkit-animation: spin-icon 600ms ease forwards;
+  animation: spin-icon 600ms ease forwards;
 }
 @media screen and (min-width: 200px) and (max-width: fablet) {
   .starters__choice--3:hover .i-hover::after,
@@ -652,7 +707,17 @@
 .maincorse__choice--4:hover,
 .desserts__choice--4:hover {
   padding-right: 12%;
+  box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.16), inset 0px -4px 3px rgba(0, 0, 0, 0.23);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   transition: 400ms;
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .starters__choice--4:hover,
+.maincorse__choice--4:hover,
+.desserts__choice--4:hover {
+    padding-right: 15%;
+  }
 }
 @media screen and (min-width: 991px) {
   .starters__choice--4:hover,
@@ -679,7 +744,7 @@
   left: 86%;
   border-radius: 0 16px 16px 0;
   height: 100%;
-  min-width: 15%;
+  width: 15%;
   -webkit-animation: move-left 400ms ease-in-out forwards;
   animation: move-left 400ms ease-in-out forwards;
 }
@@ -691,10 +756,11 @@
 @-webkit-keyframes move-left {
   0% {
     transform: translateX(100%);
-    transform: scaleX(0);
+    opacity: 0.5;
   }
   100% {
     transform: translateX(0%);
+    opacity: 1;
   }
 }
 @keyframes move-left {
@@ -705,6 +771,9 @@
   100% {
     transform: translateX(0%);
     opacity: 1;
+    box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.16), inset 0px -4px 3px rgba(0, 0, 0, 0.23);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
   }
 }
 .starters__choice--4:hover .i-hover::before,
@@ -727,8 +796,8 @@
   z-index: 2;
   width: 20px;
   height: 20px;
-  -webkit-animation: spin-icon 400ms ease forwards;
-  animation: spin-icon 400ms ease forwards;
+  -webkit-animation: spin-icon 600ms ease forwards;
+  animation: spin-icon 600ms ease forwards;
 }
 @media screen and (min-width: 200px) and (max-width: fablet) {
   .starters__choice--4:hover .i-hover::after,
@@ -783,10 +852,10 @@
 .starters__choice--1,
 .maincorse__choice--1,
 .desserts__choice--1 {
-  -webkit-animation: fade-in 800ms ease-in forwards;
-  animation: fade-in 800ms ease-in forwards;
-  -webkit-animation-delay: 250ms;
-  animation-delay: 3005ms, 250ms;
+  -webkit-animation: fade-in 600ms ease-in forwards;
+  animation: fade-in 600ms ease-in forwards;
+  -webkit-animation-delay: 200ms;
+  animation-delay: 3005ms, 200ms;
 }
 @-webkit-keyframes fade-in {
   0% {
@@ -814,10 +883,10 @@
 .starters__choice--2,
 .maincorse__choice--2,
 .desserts__choice--2 {
-  -webkit-animation: fade-in 800ms ease-in forwards;
-  animation: fade-in 800ms ease-in forwards;
-  -webkit-animation-delay: 500ms;
-  animation-delay: 3005ms, 500ms;
+  -webkit-animation: fade-in 600ms ease-in forwards;
+  animation: fade-in 600ms ease-in forwards;
+  -webkit-animation-delay: 400ms;
+  animation-delay: 3005ms, 400ms;
 }
 @-webkit-keyframes fade-in {
   0% {
@@ -845,10 +914,10 @@
 .starters__choice--3,
 .maincorse__choice--3,
 .desserts__choice--3 {
-  -webkit-animation: fade-in 800ms ease-in forwards;
-  animation: fade-in 800ms ease-in forwards;
-  -webkit-animation-delay: 750ms;
-  animation-delay: 3005ms, 750ms;
+  -webkit-animation: fade-in 600ms ease-in forwards;
+  animation: fade-in 600ms ease-in forwards;
+  -webkit-animation-delay: 600ms;
+  animation-delay: 3005ms, 600ms;
 }
 @-webkit-keyframes fade-in {
   0% {
@@ -876,10 +945,10 @@
 .starters__choice--4,
 .maincorse__choice--4,
 .desserts__choice--4 {
-  -webkit-animation: fade-in 800ms ease-in forwards;
-  animation: fade-in 800ms ease-in forwards;
-  -webkit-animation-delay: 1000ms;
-  animation-delay: 3005ms, 1000ms;
+  -webkit-animation: fade-in 600ms ease-in forwards;
+  animation: fade-in 600ms ease-in forwards;
+  -webkit-animation-delay: 800ms;
+  animation-delay: 3005ms, 800ms;
 }
 @-webkit-keyframes fade-in {
   0% {
@@ -1103,8 +1172,9 @@ p {
   z-index: 1;
 }
 .home-cards__container--1:hover, .home-cards__container--2:hover, .home-cards__container--3:hover, .home-cards__container--4:hover {
-  background: linear-gradient(180deg, #909090 0%, #FFFFFF 0.01%);
-  box-shadow: 0px 27px 89.3333px rgba(41, 41, 41, 0.4955), inset 0px -13px 21.1422px #808080, inset 0px 21.1422px 21.1422px #FFFFFF;
+  box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.16), inset 0px -4px 3px rgba(0, 0, 0, 0.23);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .home-cards__container--1 {
@@ -1878,6 +1948,10 @@ p {
   .footercontainer__box--icon-fork {
     padding-top: 0;
     font-size: 20px;
+    scale: 1;
+  }
+  .footercontainer__box--icon-fork:hover {
+    transform: scale(1.2);
   }
 }
 .footercontainer__box--icon-hands {
@@ -1898,6 +1972,10 @@ p {
   .footercontainer__box--icon-hands {
     padding-top: 0;
     font-size: 20px;
+    scale: 1;
+  }
+  .footercontainer__box--icon-hands:hover {
+    transform: scale(1.2);
   }
 }
 
@@ -2479,6 +2557,10 @@ ul.howto-container__how {
   .footercontainer__box--legal, .footercontainer__box--contact {
     padding-top: 0;
     font-size: 20px;
+    scale: 1;
+  }
+  .footercontainer__box--legal:hover, .footercontainer__box--contact:hover {
+    transform: scale(1.2);
   }
 }
 

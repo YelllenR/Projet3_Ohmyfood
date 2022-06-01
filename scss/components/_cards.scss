@@ -65,7 +65,7 @@
             z-index: 1;
             
             &:hover{
-                @include shadow-cards-hover;
+                @include hover-style-shadow;
             }
         }
     
