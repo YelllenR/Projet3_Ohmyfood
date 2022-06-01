@@ -4,24 +4,24 @@
     margin-bottom: 48px;
     cursor: pointer;
 
-    &:active{
+    &:active {
         @include btn-click;
     }
 }
 
 
 //  ------Button menu pages-------
-.orderbtn{
+.orderbtn {
     width: 100%;
     @include btn-styling;
     cursor: pointer;
     margin-bottom: 48px;
 
-    &:active{
+    &:active {
         @include btn-click;
     }
 
-    @include media-desktop{
+    @include media-desktop {
         margin-bottom: 48px;
     }
 }

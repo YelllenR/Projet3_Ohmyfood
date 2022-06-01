@@ -38,15 +38,15 @@
     }
 
 
-@include media-tablet {
-    &__img {
-        @include flex-center;
-
-        &__search {
+    @include media-tablet {
+        &__img {
             @include flex-center;
+
+            &__search {
+                @include flex-center;
+            }
         }
     }
-}
 }
 
 

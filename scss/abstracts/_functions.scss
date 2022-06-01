@@ -2,4 +2,3 @@
 @function hover-card($color, $amount: 100%) {
     @return light($color, $hue($color) - 50);
 }
-

@@ -1,5 +1,6 @@
 // Menu page - La palette du goût
 .nav {
+
     &--palette,
     &--enchantee,
     &--sens,
@@ -12,6 +13,7 @@
 
         a {
             align-self: flex-start;
+
             i {
                 color: $text-color;
                 font-size: 20px;
