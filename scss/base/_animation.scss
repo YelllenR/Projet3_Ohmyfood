@@ -381,12 +381,15 @@
 
             .i-hover:hover::after {
                 @include spin-icon-check;
+                @include icon-check-after;
             }
 
             .i-hover:active::after {
                 @include spin-icon-check;
+                @include icon-check-after;
             }
         }
+
     }
 }
 

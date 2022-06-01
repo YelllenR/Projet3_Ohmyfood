@@ -1,7 +1,7 @@
 // ------------------Breakpoints-----------------------
 
 @mixin media-phone {
-    @media screen and (min-width: map-get($breakpoints, 'mobile')) and (max-width: 'fablet') {
+    @media screen and (min-width: map-get($breakpoints, 'mobile')) and (max-width: map-get($breakpoints, 'fablet')) {
         & {
             @content;
             width: 100%;
@@ -215,11 +215,6 @@
     z-index: 2;
     width: 20px;
     height: 20px;
-
-    @include media-phone {
-        font-size: 24px - 5;
-        text-align: center;
-    }
 }
 
 @mixin heart-home-cards {
