@@ -2944,6 +2944,9 @@ ul.howto-container__how li:before {
 }
 
 .iconheart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 32px 32px 0 0;
   z-index: 1;
   padding: 24px;
@@ -2989,23 +2992,17 @@ ul.howto-container__how li:before {
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .iconheart__title {
     padding-top: 0;
-    padding-right: 16px;
     font-size: 24px;
-    justify-content: center;
-  }
-  .iconheart__title i {
-    padding-left: 15%;
+    max-width: 60%;
   }
 }
 @media screen and (min-width: 991px) {
   .iconheart__title {
-    justify-content: center;
     padding-right: 24px;
+    padding-left: 24px;
     padding-top: 0;
     font-size: 32px;
-  }
-  .iconheart__title i {
-    padding-left: 20%;
+    max-width: 55%;
   }
 }
 

@@ -1,6 +1,7 @@
 // // Menu page - La palette du goût
 
 .iconheart {
+    @include flex-center;
     border-radius: 32px 32px 0 0;
     z-index: 1;
     padding: 24px;
@@ -37,32 +38,25 @@
         padding-top: 32px;
         font-family: $font-titles-pages;
         font-size: $fs-title-phone + 2;
-        
 
-        i{
+        i {
             padding: 0;
         }
 
-        @include media-tablet{
+        @include media-tablet {
             padding-top: 0;
-            padding-right: 16px;
             font-size: $fs-card-title-desktop;
-            justify-content:center;
+            max-width: 60%;
 
-           i{
-                padding-left: 15%;
-            }
         }
 
         @include media-desktop {
-            justify-content:center;
             padding-right: 24px;
+            padding-left: 24px;
             padding-top: 0;
             font-size: $fs-titles-desktop;
+            max-width: 55%;
 
-            i{
-                padding-left: 20%;
-            }
         }
     }
 }
@@ -85,8 +79,8 @@
         font-size: $fs-text-xs-phone;
         border-bottom: 3px solid $tertiary-color;
         margin-bottom: 24px;
-        
-        @include media-tablet{
+
+        @include media-tablet {
             @include card-title-tablet;
             margin-top: 86px;
             margin-bottom: 32px;
@@ -99,7 +93,7 @@
         }
     }
 
-    @include media-tablet{
+    @include media-tablet {
         background-color: transparent;
         max-width: 60%;
         height: auto;
@@ -133,18 +127,18 @@
         border-bottom: 3px solid $tertiary-color;
         margin-bottom: 24px;
 
-        @include media-tablet{
+        @include media-tablet {
             @include card-title-tablet;
             margin-bottom: 32px;
         }
-        
+
         @include media-desktop {
             @include card-title-desktop;
             margin-bottom: 32px;
         }
     }
 
-    @include media-tablet{
+    @include media-tablet {
         background-color: transparent;
         max-width: 60%;
         height: auto;
@@ -177,7 +171,7 @@
         border-bottom: 3px solid $tertiary-color;
         margin-bottom: 24px;
 
-        @include media-tablet{
+        @include media-tablet {
             @include card-title-tablet;
             margin-bottom: 32px;
         }
@@ -188,7 +182,7 @@
         }
     }
 
-    @include media-tablet{
+    @include media-tablet {
         background-color: transparent;
         max-width: 60%;
         height: auto;
