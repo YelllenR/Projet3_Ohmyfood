@@ -16,19 +16,19 @@
 
 // icon heart on homepage cards
 
-.click-heart{
+.click-heart {
     @include heart-home-cards;
     position: absolute;
-    font-weight:400;
+    font-weight: 400;
     font-size: 24px;
 
-    &::before{
+    &::before {
         content: '';
     }
 
-    &::after{
+    &::after {
         position: relative;
-        content:'\f004';
+        content: '\f004';
         font-size: 24px;
         font-weight: 400;
     }
@@ -54,6 +54,12 @@
         @include media-desktop {
             padding-top: 0;
             font-size: $fs-title-phone;
+            scale: 1;
+
+            &:hover {
+                transform: scale(1.2)
+            }
+
         }
     }
 
@@ -74,6 +80,13 @@
         @include media-desktop {
             padding-top: 0;
             font-size: $fs-title-phone;
+
+            scale: 1;
+
+            &:hover {
+                transform: scale(1.2)
+            }
+
         }
     }
 }

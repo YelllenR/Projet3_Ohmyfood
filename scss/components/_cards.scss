@@ -63,8 +63,12 @@
             color: $text-color;
             margin-bottom: 32px;
             z-index: 1;
+            
+            &:hover{
+                @include hover-style-shadow;
+            }
         }
-
+    
         @include media-tablet {
             &--1 {
                 grid-area: 2 / 1 / 3 / 2;
@@ -124,6 +128,10 @@
         @include media-tablet{
             top: -70px;
         }
+
+        @include media-desktop{
+            top: -70px;
+        }
     }
 
     &__img--cards2 {
@@ -141,6 +149,10 @@
         object-position: center;
 
         @include media-tablet{
+            top: -70px;
+        }
+
+        @include media-desktop{
             top: -70px;
         }
     }
@@ -206,6 +218,10 @@
         @include media-tablet{
             top: -50px;
         }
+        
+        @include media-desktop{
+            top: -50px;
+        }
     }
 
     .restaurant-location {
@@ -224,6 +240,10 @@
         }
 
         @include media-tablet{
+            top: -50px;
+        }
+
+        @include media-desktop{
             top: -50px;
         }
     }
@@ -297,6 +317,7 @@
 // main corse
 @for $i from 1 to 5 {
     .maincorse__choice--#{$i} {
+
         opacity: 0;
         @include cards-menu-pages;
 
@@ -323,6 +344,8 @@
             }
         }
     }
+
+
 }
 
 .maincorse__infoprice {

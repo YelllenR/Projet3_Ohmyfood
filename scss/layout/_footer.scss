@@ -7,7 +7,8 @@
     padding-top: 24px;
     padding-bottom: 32px;
 
-    @include media-tablet{
+
+    @include media-tablet {
         width: 100%;
         align-items: center;
     }
@@ -22,11 +23,11 @@
     &__box {
         display: flex;
         flex-direction: column;
-        
-        @include media-tablet{
+
+        @include media-tablet {
             text-align: center;
         }
-        
+
         @include media-desktop {
             width: 80%;
             flex-direction: row;
@@ -40,10 +41,11 @@
 
         &--legal,
         &--contact {
+
             @include typography-footer;
             padding-top: 8px;
 
-            @include media-tablet{
+            @include media-tablet {
                 font-size: $fs-text-xs-phone + 2;
                 padding: 8px;
             }
@@ -51,8 +53,13 @@
             @include media-desktop {
                 padding-top: 0;
                 font-size: $fs-title-phone;
+
+                scale: 1;
+
+                &:hover {
+                    transform: scale(1.2)
+                }
             }
         }
     }
-
 }
