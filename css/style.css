@@ -1,23 +1,55 @@
-#load {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 99;
-  left: 0;
-  transform: translate(-50%, -50%);
-  transform: scale(1);
-  height: 100%;
-  width: 100%;
-  background-color: #c9abee;
-  -webkit-animation: bg-anim 800ms linear forwards;
-  animation: bg-anim 800ms linear forwards;
-  -webkit-animation-delay: 2200ms;
-  animation-delay: 2200ms;
-}
 @media screen and (min-width: 200px) and (max-width: 600px) {
   #load {
     height: 100%;
     width: 100%;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    transform: translate(-50%, -50%);
+    transform: scale(1);
+    height: 100%;
+    width: 100%;
+    background-color: #c9abee;
+    -webkit-animation: bg-anim 800ms linear forwards;
+    animation: bg-anim 800ms linear forwards;
+    -webkit-animation-delay: 2200ms;
+    animation-delay: 2200ms;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  #load {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    transform: translate(-50%, -50%);
+    transform: scale(1);
+    height: 100%;
+    width: 100%;
+    background-color: #c9abee;
+    -webkit-animation: bg-anim 800ms linear forwards;
+    animation: bg-anim 800ms linear forwards;
+    -webkit-animation-delay: 2200ms;
+    animation-delay: 2200ms;
+  }
+}
+@media screen and (min-width: 991px) {
+  #load {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    transform: translate(-50%, -50%);
+    transform: scale(1);
+    height: 100%;
+    width: 100%;
+    background-color: #c9abee;
+    -webkit-animation: bg-anim 800ms linear forwards;
+    animation: bg-anim 800ms linear forwards;
+    -webkit-animation-delay: 2200ms;
+    animation-delay: 2200ms;
   }
 }
 @-webkit-keyframes bg-anim {
@@ -72,14 +104,38 @@
     z-index: -99;
   }
 }
-#load path {
-  stroke: black;
-  fill: black;
-  stroke-dasharray: 1200;
-  stroke-width: 0.5%;
-  opacity: 10;
-  -webkit-animation: logo-anim 2200ms cubic-bezier(0.01, 0.7, 0.91, 0.56) forwards;
-  animation: logo-anim 2200ms cubic-bezier(0.01, 0.7, 0.91, 0.56) forwards;
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  #load path {
+    stroke: black;
+    fill: black;
+    stroke-dasharray: 1200;
+    stroke-width: 0.5%;
+    opacity: 10;
+    -webkit-animation: logo-anim 2200ms cubic-bezier(0.01, 0.7, 0.91, 0.56) forwards;
+    animation: logo-anim 2200ms cubic-bezier(0.01, 0.7, 0.91, 0.56) forwards;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  #load path {
+    stroke: black;
+    fill: black;
+    stroke-dasharray: 1200;
+    stroke-width: 0.5%;
+    opacity: 10;
+    -webkit-animation: logo-anim 2200ms cubic-bezier(0.01, 0.7, 0.91, 0.56) forwards;
+    animation: logo-anim 2200ms cubic-bezier(0.01, 0.7, 0.91, 0.56) forwards;
+  }
+}
+@media screen and (min-width: 991px) {
+  #load path {
+    stroke: black;
+    fill: black;
+    stroke-dasharray: 1200;
+    stroke-width: 0.5%;
+    opacity: 10;
+    -webkit-animation: logo-anim 2200ms cubic-bezier(0.01, 0.7, 0.91, 0.56) forwards;
+    animation: logo-anim 2200ms cubic-bezier(0.01, 0.7, 0.91, 0.56) forwards;
+  }
 }
 @-webkit-keyframes logo-anim {
   0% {
