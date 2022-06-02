@@ -26,7 +26,7 @@
 
         @include media-tablet {
             grid-area: 1 / 1 / 2 / 3;
-            padding-bottom: 32;
+            padding-bottom: 32px;
             text-align: center;
         }
 
@@ -284,7 +284,7 @@
 
     @include media-desktop {
         padding: 16px 16px 0 16px;
-        font-size: $fs-card-title-desktop - 4;
+        font-size: $fs-card-title-desktop - 4px;
     }
 }
 
@@ -343,7 +343,7 @@
 
             @include media-desktop {
                 padding: 16px 16px 0 16px;
-                font-size: $fs-card-title-desktop - 4;
+                font-size: $fs-card-title-desktop - 4px;
             }
         }
     }
@@ -390,7 +390,7 @@
         }
 
         @include media-desktop {
-            box-shadow: $shadow-cards-menu-desktop - 4;
+            box-shadow: $shadow-cards-menu-desktop - 4px;
             height: auto;
         }
 
@@ -403,7 +403,7 @@
 
             @include media-desktop {
                 padding: 16px 16px 0 16px;
-                font-size: $fs-card-title-desktop - 4;
+                font-size: $fs-card-title-desktop - 4px;
             }
         }
     }

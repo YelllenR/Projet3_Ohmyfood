@@ -1,17 +1,16 @@
 // Loader animation
 
-#load {
-    @include media-phone {
-        @include loader;
-    }
-
-    @include media-tablet {
-        @include loader;
-    }
-
-    @include media-desktop {
-        @include loader;
-    }
+#loader-container {
+    @include flex-center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99;
+    background-color: $light-purple;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -webkit-animation: bg-anim 3000ms forwards;
+    animation: bg-anim 3000ms forwards;
 
     @-webkit-keyframes bg-anim {
         0% {
@@ -46,7 +45,6 @@
     }
 
 
-
     @keyframes bg-anim {
         0% {
             opacity: 1;
@@ -78,151 +76,128 @@
             z-index: -99;
         }
     }
+}
+
+.bar-container {
+    position: relative;
+    height: 15%;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+}
+
+.loader-bar {
+    position: absolute;
+    height: 15%;
+    width: 70%;
+    top: 85%;
+    border-bottom: 8px solid $tertiary-color;
+    margin: 0 auto;
+}
+
+.spin-loader {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: -80px;
+    left: 0;
+    margin-left: -40px;
+    background-color: $tertiary-color;
+    border-radius: 30%;
+    -webkit-animation: load-spin 2800ms forwards;
+    animation: load-spin 2800ms forwards;
 
 
-    path {
-        @include media-phone{
-            @include path-animations
+    @-webkit-keyframes load-spin {
+        0% {
+            left: 0;
         }
 
-        @include media-tablet{
-            @include path-animations
+        50% {
+            left: 103%;
+            transform: rotate(450deg);
+            width: 300px;
+            height: 150px;
         }
 
-        @include media-desktop{
-            @include path-animations
-        }
-
-        @-webkit-keyframes logo-anim {
-            0% {
-                opacity: 0.2;
-                fill: none;
-                stroke-dashoffset: 500;
-            }
-
-
-            10% {
-                opacity: 0.4;
-                fill: none;
-                stroke-dashoffset: 800;
-                fill: rgba(0, 0, 0, 0.1);
-            }
-
-            20% {
-                opacity: 0.5;
-                fill: none;
-                stroke-dashoffset: 900;
-                fill: rgba(147, 86, 220, 0.2);
-            }
-
-            40% {
-                opacity: 0.7;
-                fill: none;
-                stroke-dashoffset: 1000;
-                fill: rgba(0, 0, 0, 0.3);
-            }
-
-            60% {
-                opacity: 0.9;
-                stroke-dashoffset: 1100;
-                fill: rgba(0, 0, 0, 0.4);
-                stroke: $primary-color;
-            }
-
-            70% {
-                opacity: 1;
-                fill: rgba(0, 0, 0, 0.5);
-                stroke-dashoffset: 1200;
-                stroke: $primary-color;
-            }
-
-            80% {
-                opacity: 1;
-                fill: rgba(0, 0, 0, 1);
-            }
-
-            85% {
-                opacity: 0.2;
-            }
-
-            90% {
-                opacity: 0.1;
-                fill: none;
-            }
-
-            100% {
-                opacity: 0;
-                display: none;
-
-            }
-        }
-
-        @keyframes logo-anim {
-            0% {
-                opacity: 0.2;
-                fill: none;
-                stroke-dashoffset: 500;
-            }
-
-
-            10% {
-                opacity: 0.4;
-                fill: none;
-                stroke-dashoffset: 800;
-                fill: rgba(0, 0, 0, 0.1);
-            }
-
-            20% {
-                opacity: 0.5;
-                fill: none;
-                stroke-dashoffset: 900;
-                fill: rgba(147, 86, 220, 0.2);
-            }
-
-            40% {
-                opacity: 0.7;
-                fill: none;
-                stroke-dashoffset: 1000;
-                fill: rgba(0, 0, 0, 0.3);
-            }
-
-            60% {
-                opacity: 0.9;
-                stroke-dashoffset: 1100;
-                fill: rgba(0, 0, 0, 0.4);
-                stroke: $primary-color;
-            }
-
-            70% {
-                opacity: 1;
-                fill: rgba(0, 0, 0, 0.5);
-                stroke-dashoffset: 1200;
-                stroke: $primary-color;
-            }
-
-            80% {
-                opacity: 1;
-                fill: rgba(0, 0, 0, 1);
-            }
-
-            85% {
-                opacity: 0.2;
-            }
-
-            90% {
-                opacity: 0.1;
-                fill: none;
-            }
-
-            100% {
-                opacity: 0;
-                display: none;
-
-            }
+        100% {
+            left: 103%;
+            transform: rotate(450deg);
+            width: 300px;
+            height: 300px;
         }
     }
 
+
+    @keyframes load-spin {
+        0% {
+            left: 0;
+        }
+
+        50% {
+                left: 100%;
+                transform: rotate(450deg);
+                width: 320px;
+                height: 310px;
+        }
+
+        100% {
+            left: 100%;
+            transform: rotate(450deg);
+            width: 320px;
+            height: 310px;
+        }
+    }
 }
+
+.logo-preloader {
+    position: absolute;
+    left: 70%;
+    top: 52%;
+    height: 50px;
+    width: 230px;
+    opacity: 1;
+
+    -webkit-animation: load-opacity 2800ms forwards;
+            animation: load-opacity 2800ms forwards;
+
+    @-webkit-keyframes load-opacity {
+        0%{
+            opacity: 0;
+        }
+
+        50%{
+            opacity: 0;
+        }
+
+        90%{
+            opacity: 1;
+        }
+
+        100%{
+            opacity: 1;
+        }
+    }
+
+    @keyframes load-opacity {
+        0%{
+            opacity: 0;
+        }
+
+        50%{
+            opacity: 0;
+        }
+
+        90%{
+            opacity: 1;
+        }
+
+        100%{
+            opacity: 0;
+        }
+    }
+}
+
 
 // homepage animations
 .list:hover {
@@ -259,7 +234,7 @@
         height: 100%;
         width: 100%;
         background: darken($color: $txt-btn, $amount: 3%);
-        text-shadow: $shadow-cards-menu;
+
         left: 0;
         border-radius: 45%;
         -webkit-animation: fill-up 800ms cubic-bezier(.11, .22, .42, .34) forwards;
@@ -270,14 +245,11 @@
 
     @-webkit-keyframes fill-up {
         0% {
-            transform: translateY(-1);
-            background-image: none;
+            transform: translateY(0);
         }
 
         100% {
             transform: translateY(-95%);
-            background-image: linear-gradient($gradient-heart);
-
         }
     }
 

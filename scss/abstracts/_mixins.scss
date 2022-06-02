@@ -49,36 +49,6 @@
 }
 
 
-// ---------------------Loader---------------------------
-@mixin loader {
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        z-index: 99;
-        left: 0;
-        transform: translate(-50%, -50%);
-        transform: scale(1);
-        height: 100%;
-        width: 100%;
-        background-color: lighten($color: $primary-color, $amount: 20%);
-        -webkit-animation: bg-anim 800ms linear forwards;
-        animation: bg-anim 800ms linear forwards;
-        -webkit-animation-delay: 2200ms;
-        animation-delay: 2200ms;
-
-}
-
-@mixin path-animations {
-    stroke: black;
-    fill: black;
-    stroke-dasharray: 1200;
-    stroke-width: 0.5%;
-    opacity: 10;
-    -webkit-animation: logo-anim 2200ms cubic-bezier(.01, .7, .91, .56) forwards;
-    animation: logo-anim 2200ms cubic-bezier(.01, .7, .91, .56) forwards;
-}
-
-
 // ----------------------Typo----------------------------
 @mixin typography-title-pages {
     font-family: $font-titles-pages;
@@ -246,7 +216,7 @@
     width: 20px;
     height: 20px;
 
-    @include media-phone(){
+    @include media-phone() {
         left: 90%;
         font-size: 20px;
     }

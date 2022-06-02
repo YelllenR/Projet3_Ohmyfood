@@ -340,8 +340,8 @@ ul.howto-container__how {
             &--2,
             &--3 {
                 padding-left: 8px;
-                padding-top: -8px;
-                font-size: $fs-card-texts-desktop - 2;
+                padding-top: 8px;
+                font-size: $fs-card-texts-desktop - 2px;
             }
         }
     }
