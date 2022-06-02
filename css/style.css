@@ -1,3 +1,7 @@
+#loader-container {
+  -webkit-animation: bg-anim 3000ms forwards;
+  animation: bg-anim 3000ms forwards;
+}
 @media screen and (min-width: 200px) and (max-width: 600px) {
   #loader-container {
     display: flex;
@@ -10,8 +14,6 @@
     background-color: #c9abee;
     overflow-y: hidden;
     overflow-x: hidden;
-    -webkit-animation: bg-anim 3000ms forwards;
-    animation: bg-anim 3000ms forwards;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
@@ -26,8 +28,6 @@
     background-color: #c9abee;
     overflow-y: hidden;
     overflow-x: hidden;
-    -webkit-animation: bg-anim 3000ms forwards;
-    animation: bg-anim 3000ms forwards;
   }
 }
 @media screen and (min-width: 991px) {
@@ -42,8 +42,6 @@
     background-color: #c9abee;
     overflow-y: hidden;
     overflow-x: hidden;
-    -webkit-animation: bg-anim 3000ms forwards;
-    animation: bg-anim 3000ms forwards;
   }
 }
 @-webkit-keyframes bg-anim {
@@ -177,6 +175,8 @@
   .spin-loader {
     width: 20px;
     height: 20px;
+    -webkit-animation: load-spin 2800ms forwards;
+    animation: load-spin 2800ms forwards;
   }
   @-webkit-keyframes load-spin {
     0% {
@@ -219,6 +219,8 @@
   .spin-loader {
     width: 100px;
     height: 100px;
+    -webkit-animation: load-spin 2800ms forwards;
+    animation: load-spin 2800ms forwards;
   }
   @-webkit-keyframes load-spin {
     0% {
