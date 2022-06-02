@@ -77,7 +77,104 @@
     animation: load-spin 2800ms forwards;
 }
 
+@mixin load-spin-mobile {
+    @include media-phone() {
+        width: 20px;
+        height: 20px;
 
+        @-webkit-keyframes load-spin {
+            0% {
+                left: 0;
+                top: -30%;
+            }
+
+            50% {
+                left: 90%;
+                transform: rotate(360deg);
+                width: 150px;
+                height: 150px;
+            }
+
+            100% {
+                left: 90%;
+                transform: rotate(360deg);
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @keyframes load-spin {
+            0% {
+                left: 0;
+                top: -30%;
+            }
+
+            50% {
+                left: 90%;
+                transform: rotate(360deg);
+                width: 150px;
+                height: 150px;
+            }
+
+            100% {
+                left: 90%;
+                transform: rotate(360deg);
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}
+
+
+@mixin load-spin-tablet{
+    @include media-tablet() {
+        width: 100px;
+        height: 100px;
+
+        @-webkit-keyframes load-spin {
+            0% {
+                left: 0;
+                top: -30%;
+            }
+
+            50% {
+                left: 100%;
+                transform: rotate(360deg);
+                width: 200px;
+                height: 200px;
+            }
+
+            100% {
+                left: 100%;
+                transform: rotate(360deg);
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @keyframes load-spin {
+            0% {
+                left: 0;
+                top: -30%;
+            }
+
+            50% {
+                left: 100%;
+                transform: rotate(360deg);
+                width: 200px;
+                height: 200px;
+            }
+
+            100% {
+                left: 100%;
+                transform: rotate(360deg);
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+}
 
 // ----------------------Typo----------------------------
 @mixin typography-title-pages {
