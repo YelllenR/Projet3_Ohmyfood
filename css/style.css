@@ -1,16 +1,44 @@
-#loader-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 99;
-  background-color: #c9abee;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  -webkit-animation: bg-anim 3000ms forwards;
-  animation: bg-anim 3000ms forwards;
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  #loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99;
+    background-color: #c9abee;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  #loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99;
+    background-color: #c9abee;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+}
+@media screen and (min-width: 991px) {
+  #loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99;
+    background-color: #c9abee;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
 }
 @-webkit-keyframes bg-anim {
   0% {
@@ -72,6 +100,11 @@
   top: 0;
   overflow: hidden;
 }
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .bar-container {
+    height: 30%;
+  }
+}
 
 .loader-bar {
   position: absolute;
@@ -80,6 +113,11 @@
   top: 85%;
   border-bottom: 8px solid #99E2D0;
   margin: 0 auto;
+}
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .loader-bar {
+    max-width: 90%;
+  }
 }
 
 .spin-loader {
@@ -99,21 +137,22 @@
     left: 0;
   }
   50% {
-    left: 103%;
+    left: 100%;
     transform: rotate(450deg);
-    width: 300px;
-    height: 150px;
+    width: 320px;
+    height: 310px;
   }
   100% {
-    left: 103%;
+    left: 100%;
     transform: rotate(450deg);
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 310px;
   }
 }
 @keyframes load-spin {
   0% {
     left: 0;
+    top: -30%;
   }
   50% {
     left: 100%;
@@ -128,6 +167,90 @@
     height: 310px;
   }
 }
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .spin-loader {
+    width: 20px;
+    height: 20px;
+  }
+  @-webkit-keyframes load-spin {
+    0% {
+      left: 0;
+      top: -30%;
+    }
+    50% {
+      left: 90%;
+      transform: rotate(360deg);
+      width: 150px;
+      height: 150px;
+    }
+    100% {
+      left: 90%;
+      transform: rotate(360deg);
+      width: 150px;
+      height: 150px;
+    }
+  }
+  @keyframes load-spin {
+    0% {
+      left: 0;
+      top: -30%;
+    }
+    50% {
+      left: 90%;
+      transform: rotate(360deg);
+      width: 150px;
+      height: 150px;
+    }
+    100% {
+      left: 90%;
+      transform: rotate(360deg);
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .spin-loader {
+    width: 100px;
+    height: 100px;
+  }
+  @-webkit-keyframes load-spin {
+    0% {
+      left: 0;
+      top: -30%;
+    }
+    50% {
+      left: 100%;
+      transform: rotate(360deg);
+      width: 200px;
+      height: 200px;
+    }
+    100% {
+      left: 100%;
+      transform: rotate(360deg);
+      width: 200px;
+      height: 200px;
+    }
+  }
+  @keyframes load-spin {
+    0% {
+      left: 0;
+      top: -30%;
+    }
+    50% {
+      left: 100%;
+      transform: rotate(360deg);
+      width: 200px;
+      height: 200px;
+    }
+    100% {
+      left: 100%;
+      transform: rotate(360deg);
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
 
 .logo-preloader {
   position: absolute;
@@ -138,6 +261,22 @@
   opacity: 1;
   -webkit-animation: load-opacity 2800ms forwards;
   animation: load-opacity 2800ms forwards;
+}
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .logo-preloader {
+    top: 70%;
+    left: 58%;
+    width: 130px;
+    height: 50px;
+    padding-right: 24px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .logo-preloader {
+    height: 50px;
+    width: 160px;
+    left: 68%;
+  }
 }
 @-webkit-keyframes load-opacity {
   0% {
