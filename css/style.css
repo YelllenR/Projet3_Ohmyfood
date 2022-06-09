@@ -2347,7 +2347,8 @@ p {
 .footercontainer__logo {
   height: 24px;
   width: 104px;
-  filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(176deg);
+  -webkit-filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(176deg);
+          filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(176deg);
   margin-bottom: 16px;
 }
 @media screen and (min-width: 991px) {
@@ -2797,6 +2798,16 @@ ul.howto-container__how {
   font-size: 18px;
   font-weight: bold;
 }
+.nav-home__search input::-webkit-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+.nav-home__search input::-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
 .nav-home__search input::placeholder {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -2816,6 +2827,12 @@ ul.howto-container__how {
   .nav-home__search input:-ms-input-placeholder {
     font-size: 20px;
   }
+  .nav-home__search input::-webkit-input-placeholder {
+    font-size: 20px;
+  }
+  .nav-home__search input::-ms-input-placeholder {
+    font-size: 20px;
+  }
   .nav-home__search input::placeholder {
     font-size: 20px;
   }
@@ -2830,6 +2847,12 @@ ul.howto-container__how {
     color: rgb(147, 86, 220);
   }
   .nav-home__search input:-ms-input-placeholder {
+    color: rgb(147, 86, 220);
+  }
+  .nav-home__search input::-webkit-input-placeholder {
+    color: rgb(147, 86, 220);
+  }
+  .nav-home__search input::-ms-input-placeholder {
     color: rgb(147, 86, 220);
   }
   .nav-home__search input::placeholder {
@@ -3295,4 +3318,4 @@ ul.howto-container__how li:before {
     width: 50%;
     margin-top: 30px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
