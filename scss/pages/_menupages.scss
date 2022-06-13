@@ -73,12 +73,26 @@
     height: auto;
 
     &__title {
-        width: 50px;
         font-family: $font-texts-titles;
-        font-weight: lighter;
         font-size: $fs-text-xs-phone;
-        border-bottom: 3px solid $tertiary-color;
+        width: 45px;
+        font-weight: lighter;
         margin-bottom: 24px;
+        
+        &::before {
+            display: block;
+            content: "";
+        }
+
+        &::after {
+            display: block;
+            content: "";
+            border-bottom: 3px solid $tertiary-color;
+            -webkit-text-decoration-line: underline;
+                    text-decoration-line: underline;
+            text-underline-offset: 5px;
+            padding-top: 8px;
+        }
 
         @include media-tablet {
             @include card-title-tablet;
@@ -120,12 +134,26 @@
     height: auto;
 
     &__title {
-        width: 50px;
         font-family: $font-texts-titles;
-        font-weight: lighter;
         font-size: $fs-text-xs-phone;
-        border-bottom: 3px solid $tertiary-color;
+        width: 45px;
+        font-weight: lighter;
         margin-bottom: 24px;
+        
+        &::before {
+            display: block;
+            content: "";
+        }
+
+        &::after {
+            display: block;
+            content: "";
+            border-bottom: 3px solid $tertiary-color;
+            -webkit-text-decoration-line: underline;
+                    text-decoration-line: underline;
+            text-underline-offset: 5px;
+            padding-top: 8px;
+        }
 
         @include media-tablet {
             @include card-title-tablet;
@@ -164,12 +192,26 @@
     height: auto;
 
     &__title {
-        width: 50px;
         font-family: $font-texts-titles;
-        font-weight: lighter;
         font-size: $fs-text-xs-phone;
-        border-bottom: 3px solid $tertiary-color;
+        width: 45px;
+        font-weight: lighter;
         margin-bottom: 24px;
+        
+        &::before {
+            display: block;
+            content: "";
+        }
+
+        &::after {
+            display: block;
+            content: "";
+            border-bottom: 3px solid $tertiary-color;
+            -webkit-text-decoration-line: underline;
+                    text-decoration-line: underline;
+            text-underline-offset: 5px;
+            padding-top: 8px;
+        }
 
         @include media-tablet {
             @include card-title-tablet;

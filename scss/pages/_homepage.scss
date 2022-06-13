@@ -240,9 +240,9 @@ ul.howto-container__how {
     margin: $margin-page;
     counter-reset: li;
     list-style-type: none;
-    font-size: 20px;
+    font-size: 18px;
     height: auto;
-
+    font-family: $font-texts-titles;
     li:before {
         content: counter(li);
         counter-increment: li;
