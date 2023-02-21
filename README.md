@@ -1,7 +1,5 @@
 **Projet 3 - Ohmyfood**
 
-Ce projet consiste à faire l'intégration du site en HTML et CSS. Les spécifications techniques à respecter sont;
-
 **Les livrables:**
 - Affichage de la localisation des restaurants. À terme il sera possible de choisir sa localisation pour trouver des restaurants proches d’un certain lieu.
 - Une courte présentation de l’entreprise.
