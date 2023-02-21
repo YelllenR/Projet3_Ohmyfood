@@ -28,3 +28,6 @@ Points forts :
 Remarques :
 Belle présentation, dans les limites de temps accordées. Les différents livrables sont complets et pertinents, respectant les différents critères.
 Projet validé 👏🏾!
+
+
+Ecole: [Openclassrooms](https://openclassrooms.com/fr/paths/717-developpeur-web).
